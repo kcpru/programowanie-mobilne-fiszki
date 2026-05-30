@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Question, FlashcardState } from '../types';
 import { Button } from './Button';
-import { ArrowLeft, Search, Check, X, Calendar, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Search, Check, X, Calendar, TrendingUp, Filter, List } from 'lucide-react';
 
 type BrowseAllProps = {
   questions: Question[];
@@ -11,6 +11,7 @@ type BrowseAllProps = {
 
 export function BrowseAll({ questions, flashcardState, onExit }: BrowseAllProps) {
   const [searchTerm, setSearchTerm] = useState('');
+  const [showOnlyCorrect, setShowOnlyCorrect] = useState(false);
 
   const filtered = questions.filter(q => 
     q.question.toLowerCase().includes(searchTerm.toLowerCase()) || 
@@ -23,15 +24,25 @@ export function BrowseAll({ questions, flashcardState, onExit }: BrowseAllProps)
         <Button variant="text" onClick={onExit} className="p-2 -ml-2 shrink-0">
           <ArrowLeft className="w-5 h-5" />
         </Button>
-        <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark" />
-          <input
-            type="text"
-            placeholder="Szukaj pytań lub odpowiedzi..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 bg-surfaceContainer-light dark:bg-surfaceContainer-dark border-none rounded-full focus:ring-2 focus:ring-primary-500 outline-none shadow-sm"
-          />
+        <div className="relative flex-1 flex items-center gap-2">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark" />
+            <input
+              type="text"
+              placeholder="Szukaj pytań lub odpowiedzi..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 bg-surfaceContainer-light dark:bg-surfaceContainer-dark border-none rounded-full focus:ring-2 focus:ring-primary-500 outline-none shadow-sm"
+            />
+          </div>
+          <Button 
+            variant={showOnlyCorrect ? "tonal" : "outlined"} 
+            className="p-3 w-12 h-12 flex items-center justify-center shrink-0 rounded-full"
+            onClick={() => setShowOnlyCorrect(!showOnlyCorrect)}
+            title={showOnlyCorrect ? "Pokaż wszystkie odpowiedzi" : "Pokaż tylko poprawne odpowiedzi"}
+          >
+            {showOnlyCorrect ? <Filter className="w-5 h-5" /> : <List className="w-5 h-5" />}
+          </Button>
         </div>
       </div>
 
@@ -39,6 +50,7 @@ export function BrowseAll({ questions, flashcardState, onExit }: BrowseAllProps)
         {filtered.map(q => {
           const stats = flashcardState[q.id];
           const isNew = !stats;
+          const displayOptions = showOnlyCorrect ? q.options.filter(o => o.is_correct) : q.options;
           
           return (
           <div key={q.id} className="bg-surfaceContainer-light dark:bg-surfaceContainer-dark p-5 rounded-2xl">
@@ -67,7 +79,7 @@ export function BrowseAll({ questions, flashcardState, onExit }: BrowseAllProps)
             </div>
             
             <div className="space-y-2 mt-4">
-              {q.options.map(opt => (
+              {displayOptions.map(opt => (
                 <div key={opt.letter} className={`flex items-start text-sm ${opt.is_correct ? 'font-medium' : 'opacity-80'}`}>
                   {opt.is_correct ? (
                     <Check className="w-4 h-4 mr-2 mt-0.5 text-green-500 shrink-0" />
