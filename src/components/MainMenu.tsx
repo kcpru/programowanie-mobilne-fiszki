@@ -1,9 +1,9 @@
 import { Button } from './Button';
-import { BookOpen, RefreshCw, Layers } from 'lucide-react';
+import { BookOpen, RefreshCw, Layers, CalendarDays, Bug } from 'lucide-react';
 import { useState } from 'react';
 
 type MainMenuProps = {
-  onSelectMode: (mode: 'browse' | 'random' | 'smart', limit?: number) => void;
+  onSelectMode: (mode: 'browse' | 'random' | 'smart' | 'timeline', limit?: number) => void;
 };
 
 export function MainMenu({ onSelectMode }: MainMenuProps) {
@@ -26,6 +26,15 @@ export function MainMenu({ onSelectMode }: MainMenuProps) {
         >
           <BookOpen className="mr-3 h-5 w-5" />
           Przegląd wszystkich fiszek
+        </Button>
+
+        <Button 
+          variant="tonal" 
+          className="justify-start px-6 py-4 h-auto text-base"
+          onClick={() => onSelectMode('timeline')}
+        >
+          <CalendarDays className="mr-3 h-5 w-5" />
+          Oś czasu (Daty)
         </Button>
 
         <Button 
@@ -66,6 +75,21 @@ export function MainMenu({ onSelectMode }: MainMenuProps) {
             />
           </div>
         </div>
+
+        <a 
+          href="https://github.com/kcpru/programowanie-mobilne-fiszki/issues/new" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="w-full mt-4 block"
+        >
+          <Button 
+            variant="outlined" 
+            className="justify-center px-6 py-4 h-auto text-base w-full"
+          >
+            <Bug className="mr-3 h-5 w-5" />
+            Zgłoś błąd na GitHub
+          </Button>
+        </a>
       </div>
     </div>
   );

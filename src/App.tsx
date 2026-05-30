@@ -4,6 +4,7 @@ import { useTheme } from './hooks/useTheme';
 import { MainMenu } from './components/MainMenu';
 import { BrowseAll } from './components/BrowseAll';
 import { SessionView } from './components/SessionView';
+import { TimelineView } from './components/TimelineView';
 import type { FlashcardState, Question } from './types';
 import pytaniaData from './data/pytania.json';
 import { Moon, Sun } from 'lucide-react';
@@ -12,7 +13,7 @@ import { Button } from './components/Button';
 // Ensure data is typed correctly
 const questions: Question[] = pytaniaData as Question[];
 
-type ViewState = 'menu' | 'browse' | 'random' | 'smart';
+type ViewState = 'menu' | 'browse' | 'random' | 'smart' | 'timeline';
 
 function App() {
   const [view, setView] = useState<ViewState>('menu');
@@ -21,10 +22,12 @@ function App() {
   const [flashcardState, setFlashcardState] = useLocalStorage<FlashcardState>('flashcard-sm2-state', {});
   const { theme, toggleTheme } = useTheme();
 
-  const handleSelectMode = (mode: 'browse' | 'random' | 'smart', limit?: number) => {
+  const handleSelectMode = (mode: 'browse' | 'random' | 'smart' | 'timeline', limit?: number) => {
     setView(mode);
     setSessionLimit(limit);
-    setSessionKey(prev => prev + 1);
+    if (mode === 'random' || mode === 'smart') {
+      setSessionKey(prev => prev + 1);
+    }
   };
 
   const handleExit = () => {
@@ -56,6 +59,10 @@ function App() {
         
         {view === 'browse' && (
           <BrowseAll questions={questions} flashcardState={flashcardState} onExit={handleExit} />
+        )}
+
+        {view === 'timeline' && (
+          <TimelineView questions={questions} onExit={handleExit} />
         )}
 
         {(view === 'random' || view === 'smart') && (
