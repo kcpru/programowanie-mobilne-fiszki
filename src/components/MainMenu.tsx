@@ -1,9 +1,12 @@
-import { Button } from './Button';
-import { BookOpen, RefreshCw, Layers, CalendarDays, Bug } from 'lucide-react';
-import { useState } from 'react';
+import { Button } from "./Button";
+import { BookOpen, RefreshCw, Layers, CalendarDays, Bug } from "lucide-react";
+import { useState } from "react";
 
 type MainMenuProps = {
-  onSelectMode: (mode: 'browse' | 'random' | 'smart' | 'timeline', limit?: number) => void;
+  onSelectMode: (
+    mode: "browse" | "random" | "smart" | "timeline",
+    limit?: number,
+  ) => void;
 };
 
 export function MainMenu({ onSelectMode }: MainMenuProps) {
@@ -19,55 +22,49 @@ export function MainMenu({ onSelectMode }: MainMenuProps) {
       </div>
 
       <div className="flex flex-col w-full space-y-4">
-        <Button 
-          variant="tonal" 
+        <Button
+          variant="tonal"
           className="justify-start px-6 py-4 h-auto text-base"
-          onClick={() => onSelectMode('browse')}
+          onClick={() => onSelectMode("browse")}
         >
           <BookOpen className="mr-3 h-5 w-5" />
           Przegląd wszystkich fiszek
         </Button>
 
-        <Button 
-          variant="tonal" 
+        <Button
+          variant="tonal"
           className="justify-start px-6 py-4 h-auto text-base"
-          onClick={() => onSelectMode('timeline')}
-        >
-          <CalendarDays className="mr-3 h-5 w-5" />
-          Oś czasu (Daty)
-        </Button>
-
-        <Button 
-          variant="tonal" 
-          className="justify-start px-6 py-4 h-auto text-base"
-          onClick={() => onSelectMode('random')}
+          onClick={() => onSelectMode("random")}
         >
           <RefreshCw className="mr-3 h-5 w-5" />
           Masowo losowo
         </Button>
 
         <div className="flex flex-col space-y-2 bg-surfaceContainer-light dark:bg-surfaceContainer-dark p-4 rounded-3xl">
-          <Button 
-            variant="filled" 
+          <Button
+            variant="filled"
             className="justify-start px-6 py-4 h-auto text-base w-full"
-            onClick={() => onSelectMode('smart', limit)}
+            onClick={() => onSelectMode("smart", limit)}
           >
             <Layers className="mr-3 h-5 w-5" />
             Rozpocznij sesję
           </Button>
-          
+
           <p className="text-xs text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark px-4 py-2 leading-relaxed">
-            Tryb sesji wykorzystuje algorytm <strong>SuperMemo-2 (SM-2)</strong>. System priorytetyzuje fiszki, których termin powtórki już minął lub które są dla Ciebie nowe. Twoje oceny wpływają na to, jak szybko dane pytanie powróci w przyszłości.
+            Tryb sesji wykorzystuje algorytm <strong>SuperMemo-2 (SM-2)</strong>
+            . System priorytetyzuje fiszki, których termin powtórki już minął
+            lub które są dla Ciebie nowe. Twoje oceny wpływają na to, jak szybko
+            dane pytanie powróci w przyszłości.
           </p>
 
           <div className="flex items-center justify-between px-4 pt-2">
             <label htmlFor="limit" className="text-sm font-medium">
               Liczba fiszek:
             </label>
-            <input 
+            <input
               id="limit"
-              type="number" 
-              min={1} 
+              type="number"
+              min={1}
               max={222}
               value={limit}
               onChange={(e) => setLimit(Number(e.target.value))}
@@ -76,14 +73,14 @@ export function MainMenu({ onSelectMode }: MainMenuProps) {
           </div>
         </div>
 
-        <a 
-          href="https://github.com/kcpru/programowanie-mobilne-fiszki/issues/new" 
-          target="_blank" 
+        <a
+          href="https://github.com/kcpru/programowanie-mobilne-fiszki/issues/new"
+          target="_blank"
           rel="noopener noreferrer"
           className="w-full mt-4 block"
         >
-          <Button 
-            variant="outlined" 
+          <Button
+            variant="outlined"
             className="justify-center px-6 py-4 h-auto text-base w-full"
           >
             <Bug className="mr-3 h-5 w-5" />
