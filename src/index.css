@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-light text-onSurface-light dark:bg-surface-dark dark:text-onSurface-dark transition-colors duration-200 antialiased;
+  }
+}

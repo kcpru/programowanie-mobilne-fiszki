@@ -1,0 +1,5778 @@
+[
+  {
+    "id": 1,
+    "question": "Która z poniższych platform nie umożliwia publikacji aplikacji mobilnych?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Google Play",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Apple App Store",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "GitHub",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Huawei AppGallery",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Które z poniższych języków są natywnie wspierane na platformie iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Kotlin",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Swift",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Objective-C",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Java",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Które z poniższych systemów operacyjnych są obecnie aktywnie wspierane na rynku mobilnym (2025)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Android",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "iOS",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Windows Phone",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "HarmonyOS",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Które metody należą do pełnego cyklu życia aktywności (Activity) w aplikacji na platformę Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "onStart()",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "onResume()",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "onSleep()",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "onDestroy()",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Które z poniższych zdarzeń skutkują wywołaniem metody onStop() w cyklu życia aktywności?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Użytkownik przechodzi do innej aplikacji",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wywołano finish()",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Ekran został zablokowany",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Zmieniono orientację ekranu (bez obsługi konfiguracji)",
+        "is_correct": true
+      }
+    ],
+    "explanation": "(D: przy zmianie konfiguracji bez android:configChanges aktywność przechodzi m.in. przez onStop() przed onDestroy() i odtworzeniem.)"
+  },
+  {
+    "id": 6,
+    "question": "Które komponenty systemowe Androida mogą działać bez interfejsu graficznego?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Activity",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Service",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "BroadcastReceiver",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "ContentProvider",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "W jakim pliku w aplikacji na platformę Android zwykle definiuje się teksty interfejsu użytkownika?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "strings.xml",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "colors.xml",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "AndroidManifest.xml",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "build.gradle",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Które praktyki są zalecane przy tworzeniu aplikacji wielojęzycznych na platformę Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Unikanie twardo zakodowanych tekstów w plikach layout",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Stosowanie katalogów values-xx dla różnych języków",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Umieszczanie tekstów w kodzie Java/Kotlin",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wykorzystanie pliku strings.xml",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Jakie korzyści daje umieszczanie tekstów w pliku strings.xml w aplikacji na platformę Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Ułatwia lokalizację aplikacji",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Ułatwia zarządzanie tłumaczeniami",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Zwiększa rozmiar aplikacji",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Oddziela treść od logiki",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Które z poniższych stwierdzeń dotyczących Intent w Androidzie są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Intent może służyć do uruchomienia aktywności (startActivity)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Intent jawny (explicit) wskazuje klasę docelowego komponentu w tej samej aplikacji",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Intent zastępuje deklarację komponentów w AndroidManifest.xml",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Intent niejawny (implicit) może dopasować aktywność na podstawie action i category",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Które z poniższych komponentów systemu Android umożliwiają trwałe lub tymczasowe przechowywanie danych użytkownika?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "SharedPreferences",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "SQLite",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Toast",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Pliki wewnętrzne aplikacji",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Które komponenty w Androidzie nie wymagają interfejsu graficznego?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Activity",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "BroadcastReceiver",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Service",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "ContentProvider",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Które z poniższych cech dotyczą układu LinearLayout w aplikacji na platformę Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Umożliwia ułożenie elementów w jednej osi",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Może zawierać inne kontenery układu",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Obsługuje pozycjonowanie absolutne",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Jest dobrym wyborem dla prostych list",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Które z poniższych praktyk są zgodne z dobrym stylem organizacji zasobów w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Trzymanie tekstów w strings.xml",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Umieszczanie kolorów w colors.xml",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Twarde wpisywanie wartości w kodzie",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Oddzielenie logiki od wyglądu",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Które z poniższych atrybutów są często używane w plikach layout XML w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "android:layout_width",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "android:text",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "android:padding",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "android:onCreate",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Które z poniższych stwierdzeń o SharedPreferences są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Dane są usuwane po restarcie urządzenia",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Umożliwiają zapis danych prywatnych dostępnych tylko w obrębie aplikacji",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Pozwalają na zapis danych użytkownika między sesjami",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Służą głównie do przechowywania grafiki",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Które z poniższych stwierdzeń dotyczą BroadcastReceiver w aplikacji na platformę Android są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Może reagować na zdarzenia systemowe, np. zmiana stanu baterii",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zawsze działa z interfejsem graficznym",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Można go zarejestrować dynamicznie lub statycznie",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Działa tylko wewnątrz jednej aplikacji",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "question": "W jakich sytuacjach typowo używa się BroadcastReceiver w aplikacji na platformę Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Po uruchomieniu telefonu",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Przy zmianie stanu sieci",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Po kliknięciu przycisku",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Po zmianie języka systemowego",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Czym jest Main.storyboard w projekcie iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Plikiem konfigurującym systemowe powiadomienia",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Głównym plikiem z definicją struktury interfejsu aplikacji",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Biblioteką graficzną aplikacji",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Plikiem zawierającym dane użytkownika",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "question": "Które z poniższych stwierdzeń dotyczą klasy w Swift i jej dziedziczenia są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Klasa może dziedziczyć po jednej klasie bazowej",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Klasa może implementować wiele protokołów",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Klasa musi zawsze używać słowa kluczowego override, nawet jeśli nie nadpisuje nic z klasy bazowej",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Swift nie pozwala na dziedziczenie metod z klasy bazowej",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "question": "Które z poniższych zdań dotyczących protokołów w Swift są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Protokoły mogą definiować wymagane metody i właściwości",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Protokoły mogą być implementowane przez klasy, struktury i wyliczenia",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Protokoły zawierają wyłącznie implementację funkcji",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Protokoły są odpowiednikiem interfejsów w innych językach",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "question": "Do czego służy Main.storyboard w projekcie iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Do tworzenia interfejsu graficznego aplikacji",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Do opisywania logiki aplikacji w języku Swift",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Do zarządzania konfiguracją uprawnień",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Do definiowania ikon i grafik",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "question": "W której części interfejsu Xcode można znaleźć właściwości wybranego elementu interfejsu (np. przycisku)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Obszar debugowania",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Obszar narzędziowy (inspektor)",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Obszar nawigacyjny",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Obszar wyjściowy (console)",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "question": "Który z plików w projekcie iOS odpowiada za początkowy wygląd ekranu przed załadowaniem interfejsu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "AppDelegate.swift",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "LaunchScreen.storyboard",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Assets.xcassets",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Main.storyboard",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "question": "Do czego służą outlets (IBOutlet) w aplikacjach iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Do przechowywania danych pobieranych z internetu",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Do łączenia elementów interfejsu z kodem źródłowym",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Do przesyłania danych między aplikacjami",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Do kontrolowania animacji systemowych",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "question": "Czym są akcje (IBAction) w kontekście iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Funkcjami, które są wywoływane w odpowiedzi na zdarzenia użytkownika",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zmiennymi sterującymi cyklem życia aplikacji",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Widokami, które reagują na dotyk",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Segmentami storyboardu",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "question": "W jaki sposób w storyboardzie identyfikuje się przejście (segue), aby odwołać się do niego w kodzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Przez przypisany identyfikator",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Przez nazwę storyboardu",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Przez indeks kontrolera",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Przez typ przycisku",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "question": "Które z poniższych urządzeń wymagają projektowania z myślą o responsywności?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Smartfony",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tablety",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Urządzenia noszone (wearables)",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Smart TV",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "question": "Kto jest powiązany z jednym z pierwszych prototypów telefonu komórkowego montowanych w pojazdach (1956, MTA)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Motorola (pierwsze publiczne połączenie z telefonu przenośnego — 1973)",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Ericsson",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Nokia",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "IBM",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "question": "Które stwierdzenie najlepiej opisuje React Native?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Aplikacja działa wyłącznie w przeglądarce WebView bez dostępu do API urządzenia",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Framework oparty o JavaScript/React; komponenty mapowane są na widoki natywne platformy",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Można pisać w nim tylko na Androida, bez iOS",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zastępuje całkowicie kod natywny — nie używa mostu do platformy",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "question": "Które z poniższych nie jest standardowo wymieniane jako główna warstwa / element platformy Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Warstwa aplikacji i framework aplikacji",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Warstwa „iTunes” jako część stosu Android",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Biblioteki natywne i środowisko uruchomieniowe (ART)",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Jądro Linuxa i sterowniki (HAL)",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "question": "Czym jest Delphi w kontekście programowania?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Maszyna wirtualna Androida zastąpiona przez ART",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "IDE i język Object Pascal (Embarcadero), m.in. do aplikacji na Android i iOS (FireMonkey)",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Framework UI Google konkurencyjny wobec Flutter",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Skryptowy język konfiguracji Gradle",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "question": "Do czego służy Flutter?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Framework UI Google (Dart) do aplikacji na wiele platform z jednym kodem, m.in. Android i iOS",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie do testów jednostkowych w Xcode",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko do zarządzania bazą SQLite w Androidzie",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Oficjalny język apletów w przeglądarce Safari",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "question": "Czym jest AndroidManifest.xml i kiedy system go uwzględnia?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Główny manifest aplikacji — wczytywany przy starcie procesu; deklaruje m.in. aktywność startową i uprawnienia",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Plik z samymi tłumaczeniami UI",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Plik Gradle z zależnościami Maven",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Dopiero po pierwszym uruchomieniu każdej aktywności — manifest jest opcjonalny",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "question": "Co znajduje się typowo w index.js (React / React Native)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Punkt wejścia aplikacji — rejestracja głównego komponentu (AppRegistry.registerComponent w RN) i importy",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie konfiguracja ESLint",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Definicja ikon launchera w XML",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Schemat bazy Room",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "question": "W Bootstrapie (siatka 12-kolumnowa) jak uzyskać szerokość ok. ⅓ wiersza przy prefiksie md?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "col-md-4 (4/12 = 1/3)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "col-md-3",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "col-md-6",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "col-md-12",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "question": "Co oznacza skrót RWD?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Responsive Web Design — projekt UI dostosowujący się do szerokości / urządzenia",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Remote Workflow Daemon",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Random Width Distribution",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Rapid Web Deployment",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "question": "Czym są outlety (IBOutlet) w iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Właściwości w kodzie powiązane z obiektami z Interface Buildera / storyboarda",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Kanały powiadomień push APNs",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Punkty wyjścia z aplikacji do App Store Connect",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Typowe nazwy plików Info.plist",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "question": "Jak w Androidzie przygotować osobny layout na orientację poziomą?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Umieścić layout o tej samej nazwie w katalogu res/layout-land/",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Ustawić wyłącznie android:rotation=\"90\" na każdym widoku w jednym pliku",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Dodać wpis landscape tylko w strings.xml",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłączyć AndroidManifest.xml",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "question": "Czym jest funkcja zagnieżdżona w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Funkcja zdefiniowana wewnątrz innej funkcji, z dostępem do jej zakresu (closure)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Funkcja oznaczona słowem inline w innym module",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Metoda static w klasie Java importowana do Kotlina",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Funkcja generowana wyłącznie przez kompilator z adnotacji @Composable",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "question": "Co oznacza pojęcie zmienna / typ funkcyjny w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Typ postaci (Int, Int) -> Int przechowujący referencję do funkcji lub lambdy",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zmienna oznaczona fun zamiast var",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Każda zmienna typu Any",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tylko pole lateinit var",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "question": "Które zestawienie poprawnie wymienia typy aplikacji mobilnych?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Natywne, webowe, hybrydowe, cross-platformowe",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko natywne i webowe — inne kategorie nie istnieją",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie PWA i „desktopowe .exe”",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tylko aplikacje z App Store — Google Play to ten sam model dystrybucji co web",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "question": "Czym jest Fragment w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Modułowy fragment UI lub logiki z własnym cyklem życia, hostowany w Activity",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Pojedynczy plik .dex",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Typ intencji systemowej",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zamiennik pliku proguard-rules.pro",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "question": "Czym jest Activity?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Komponent UI reprezentujący zazwyczaj jeden ekran i zarządzający cyklem życia okna",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Usługa działająca w osobnym procesie bez UI",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko dostawca treści do innych aplikacji",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Mechanizm wyłącznie do obsługi SMS",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "question": "Czym jest Service w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Komponent działający w tle (bez własnego okna), np. długa operacja sieciowa lub odtwarzanie",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Plik XML layoutu",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zdarzenie kliknięcia przycisku w Jetpack Compose",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Synonim BroadcastReceiver",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "question": "Która metoda nie występuje w cyklu życia klasy android.app.Service?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "onCreate()",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "onPause() (należy do Activity)",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "onBind() (usługa związana)",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "onDestroy()",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "question": "Czym jest segue w ekosystemie iOS / Interface Builder?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Przejście (nawigacja) między scenami / kontrolerami zdefiniowane w storyboardzie",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Szyfrowanie dysku FileVault",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Mechanizm Core Data do migracji schematu",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Typ enum w Swift dla sieci",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "question": "Czym jest App Thinning?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Dostarczanie użytkownikowi mniejszej paczki aplikacji (m.in. app slicing, odpowiednie zasoby na urządzenie)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłączanie animacji w Ustawieniach iOS",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Kompresja zdjęć w iCloud bez wpływu na APK/IPA",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tryb oszczędzania baterii w Androidzie",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "question": "Domyślna polityka sieci w iOS (ATS) względem HTTP vs HTTPS:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Preferowane jest HTTPS; jawne HTTP często wymaga konfiguracji wyjątków w Info.plist",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "HTTP jest domyślnie identycznie traktowane jak HTTPS bez zmian",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Aplikacje nie mogą używać HTTPS",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Dotyczy tylko watchOS, nie iPhone",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "question": "Apache Cordova to przede wszystkim:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Platforma hybrydowa: HTML/CSS/JS + most do API urządzenia (pluginy natywne)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zamiennik języka Swift w czystym natywnym iOS",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie serwer CI/CD Google",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Format obrazów w drawable-nodpi",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "question": "W porównaniu do aplikacji natywnych, typowe cechy rozwiązań cross-platform (np. RN, Flutter, Ionic/Angular):",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Wspólna baza kodu i szybsze wdrożenie, czasem kosztem dopasowania UI lub dostępu do niszowych API",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zawsze identyczna wydajność jak kod C++ na GPU konsoli",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Brak możliwości wywołania kodu natywnego",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Obowiązkowy brak JavaScriptu we wszystkich frameworkach",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "question": "Który typ jest poprawny zarówno w Swift, jak i w Kotlinie (liczby całkowite)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Int",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "uint (identyczna składnia w obu językach)",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "number (wbudowany typ w obu)",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "long jako jedyny typ całkowity w Swift",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "question": "Czym był Dalvik w historii Androida?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Historyczna maszyna wirtualna uruchamiająca bytecode aplikacji (zastąpiona / połączona z ART)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Pierwsza wersja iOS SDK",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Nazwa oficjalnego sklepu Huawei przed AppGallery",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Format pliku .swiftinterface",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "question": "Do czego służy BroadcastReceiver?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Do odbierania rozgłoszeń (Intent) z systemu lub innych aplikacji (np. tryb samolotowy, boot)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Do rysowania layoutu XML",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Do przechowywania dużych blobów w pamięci GPU",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Do deklaracji wyłącznie ContentProvider",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "question": "Gdzie w Androidzie deklaruje się m.in. komponenty i uprawnienia aplikacji?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "AndroidManifest.xml (Gradle — osobna rola: zależności i konfiguracja buildu)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Info.plist — główny manifest Androida",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Main.storyboard",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Podfile",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "question": "Czym jest warstwa Core OS w iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Najniższa warstwa stosu — m.in. jądro Darwin, sterowniki, bezpieczeństwo na poziomie systemu",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Warstwa wyłącznie SwiftUI bez dostępu do sieci",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Sklep App Store jako moduł kernel",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Plik Assets.xcassets",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "question": "Za co odpowiada View Controller w iOS (MVC / UIKit)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Za prezentację widoków, obsługę interakcji i często koordynację przepływu danych do widoku",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie za kompilację projektu w LLVM",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Za podpis binarium certyfikatem dystrybucji",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Za zarządzanie wyłącznie Core Bluetooth bez UI",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "question": "Na czym polega podejście Mobile First?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Projekt zaczyna się od wersji na małe ekrany, potem rozszerza się layout na większe",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Pisanie wyłącznie aplikacji smartwatch przed telefonem",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłączenie responsywności na rzecz stałej szerokości 320 px globalnie",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Priorytet dla trybu druku A4 przed ekranem",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "question": "Kto jest powiązany z jednym z pierwszych prototypów telefonu komórkowego montowanych w pojazdach (1956, Ericsson MTA)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Motorola (pierwsze publiczne połączenie z telefonu przenośnego — 1973)",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Ericsson",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Nokia",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "IBM",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "question": "Które stwierdzenie najlepiej opisuje React Native?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Aplikacja działa wyłącznie w przeglądarce WebView bez dostępu do API urządzenia",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "Framework oparty o JavaScript/React; komponenty mapowane są na widoki natywne platformy",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Można pisać w nim tylko na Androida, bez iOS",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zastępuje całkowicie kod natywny — bez mostu do platformy",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "question": "Które elementy są zwykle wymieniane jako składowe platformy Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Aplikacje",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Framework aplikacji",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Biblioteki warstwy pośredniej / natywne + runtime (ART)",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Warstwa iTunes Apple jako część Androida",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "question": "Czym jest AndroidManifest.xml przy starcie aplikacji?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Główny manifest — wczytywany przy uruchomieniu procesu; m.in. aktywność startowa i uprawnienia",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Plik z samymi tłumaczeniami UI",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Plik Gradle z zależnościami Maven",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Opcjonalny — system może go pominąć",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "question": "Co znajduje się typowo w index.js (React Native)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Punkt wejścia — AppRegistry.registerComponent, importy, struktura startowa",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie konfiguracja ESLint",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Definicja ikon launchera w XML",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Schemat bazy Room",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "question": "W Bootstrapie (siatka 12-kolumnowa) jak uzyskać szerokość ok. ⅓ przy prefiksie md?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "col-md-4 (4/12)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "col-md-3",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "col-md-6",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "col-md-12",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "question": "Co oznacza skrót RWD?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Responsive Web Design — UI dostosowuje się do rozmiaru ekranu",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Remote Workflow Daemon",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Random Width Distribution",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Rapid Web Deployment",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "question": "Czym są outlety (IBOutlet) w iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Właściwości w kodzie powiązane z obiektami z storyboarda / IB",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Kanały powiadomień push APNs",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Punkty wyjścia do App Store Connect",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Synonim pliku Entitlements.plist",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "question": "Jak przygotować osobny layout na orientację poziomą w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "res/layout-land/ z layoutem o tej samej nazwie co domyślny",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Ustawić android:rotation=\"90\" na każdym widoku w jednym pliku",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Dodać wpis landscape tylko w strings.xml",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłączyć AndroidManifest.xml",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "question": "Czym jest funkcja zagnieżdżona w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Funkcja wewnątrz innej funkcji, z dostępem do jej zakresu",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Funkcja oznaczona wyłącznie inline w innym module",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Metoda static importowana z Javy",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Funkcja generowana tylko przez @Composable",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "question": "Co oznacza typ / zmienna funkcyjna w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Typ postaci (Int, Int) -> Int przechowujący referencję do funkcji lub lambdy",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Każda zmienna typu Any",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko pole lateinit var",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Synonim suspend fun",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Przykład: (Int, Int) -> Int = { x, y -> x + y } oraz var op: (Int, Int) -> Int = ::applyOperation"
+  },
+  {
+    "id": 70,
+    "question": "Które zestawienie poprawnie wymienia typy aplikacji mobilnych?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Natywne, webowe, hybrydowe, cross-platformowe",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko natywne i webowe",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie PWA i aplikacje desktopowe .exe",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tylko aplikacje z jednego sklepu — bez podziału",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "question": "Czym jest Fragment w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Modułowy fragment UI lub logiki z własnym cyklem życia, hostowany w Activity",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Pojedynczy plik .dex",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Typ intencji systemowej",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zamiennik proguard-rules.pro",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "question": "Czym jest Activity?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Komponent UI — zwykle jeden ekran, cykl życia, okno, obsługa intencji",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Usługa bez UI w osobnym procesie",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko ContentProvider do innych aplikacji",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Mechanizm wyłącznie SMS",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "question": "Czym jest usługa (Service) w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Komponent działający w tle bez własnego okna, np. długa operacja sieciowa",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Plik XML layoutu",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zdarzenie kliknięcia w Compose",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Synonim BroadcastReceiver",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "question": "Która metoda nie należy do cyklu życia android.app.Service?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "onCreate()",
+        "is_correct": false
+      },
+      {
+        "letter": "B",
+        "text": "onPause() (to Activity)",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "onBind()",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "onDestroy()",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Uzupełnienie: przy samej ścieżce bindService() (bez startService()) zwykle nie wywołuje się onStartCommand()."
+  },
+  {
+    "id": 75,
+    "question": "Czym jest segue w iOS / storyboardzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Przejście między scenami / kontrolerami zdefiniowane w storyboardzie",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Szyfrowanie FileVault",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Migracja schematu Core Data",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Typ enum dla sieci",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "question": "Czym jest App Thinning?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Mniejsza paczka aplikacji na urządzeniu (m.in. app slicing, odpowiednie zasoby, ODR)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłączanie animacji w Ustawieniach iOS",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Kompresja zdjęć w iCloud",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tryb oszczędzania baterii w Androidzie",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "question": "Domyślna polityka sieci w iOS (ATS) względem HTTP vs HTTPS:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Preferowane HTTPS; jawne HTTP często wymaga wpisów w Info.plist",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "HTTP i HTTPS są identycznie traktowane zawsze bez zmian",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Aplikacje nie mogą używać HTTPS",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Dotyczy tylko watchOS",
+        "is_correct": false
+      }
+    ],
+    "explanation": "Przykład wyjątku (skrótowo): NSAppTransportSecurity → NSAllowsArbitraryLoads (używać rozważnie)."
+  },
+  {
+    "id": 78,
+    "question": "Które stwierdzenia o Apache Cordova są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Hybryda: HTML, CSS, JavaScript + most do API urządzenia (pluginy)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Pozwala budować aplikacje na wiele systemów mobilnych",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Wymaga pisania całej logiki wyłącznie w Swift bez JS",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Pod Cordovę powstały m.in. frameworki typu Ionic",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "question": "Które stwierdzenia o aplikacjach cross-platform vs natywne są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Jedna baza kodu na wiele platform; czasem kompromisy wydajności / UI per platforma",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zawsze identyczna wydajność jak natywny C++ na GPU",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Brak możliwości wywołania kodu natywnego",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Popularne frameworki to m.in. React Native i Flutter (oraz hybrydy z Angular/Ionic)",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "question": "Które typy są wymieniane dla Swift i Kotlin?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Swift: Int, Float/Double, Bool, Character, String — Kotlin: m.in. String, Char, Boolean, Int, Double/Float, kolekcje listOf / setOf / mapOf",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "W Swift nie ma String",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "W Kotlinie nie ma Int",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Oba języki używają wyłącznie typu number",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "question": "Czym był Dalvik w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Historyczna maszyna wirtualna uruchamiająca bytecode aplikacji (obecnie dominuje ART)",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Pierwsza wersja iOS SDK",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Format .swiftinterface",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Nazwa sklepu aplikacji Huawei",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "question": "Do czego służy BroadcastReceiver?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Odbiór rozgłoszeń z systemu lub aplikacji; często po rejestracji w manifeście lub kontekście",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie do rysowania layoutu XML",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Do przechowywania blobów w GPU",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zastępuje ContentProvider",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "question": "Gdzie w iOS trzyma się typowe wpisy konfiguracyjne aplikacji (bundle identifier, ATS itd.)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Info.plist",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "AndroidManifest.xml (Android)",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "build.gradle.kts jako jedyny plik konfiguracyjny iOS",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Podfile.lock",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "question": "Czym jest warstwa Core OS w iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Najniższa warstwa stosu — m.in. jądro Darwin, sterowniki, fundamenty bezpieczeństwa",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Warstwa wyłącznie SwiftUI",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Moduł App Store w kernelu",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Katalog Assets.xcassets",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "question": "Za co odpowiada View Controller w iOS (UIKit)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Zarządzanie widokami, interakcją użytkownika, często przepływem danych do widoku",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Kompilacja LLVM",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Podpisywanie binarium",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłącznie Core Bluetooth bez UI",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "question": "Na czym polega podejście Mobile First?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Projekt od małego ekranu w górę; następnie większe breakpointy",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko aplikacje smartwatch przed telefonem",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Stała szerokość 320 px globalnie bez responsywności",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Priorytet wydruku A4 przed ekranem",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "question": "Które stwierdzenie o warstwie aplikacji na Androidzie jest prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Obejmuje aplikacje użytkownika i wbudowane (Camera, Gmail itd.).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Obejmuje wyłącznie aplikacje spoza sklepu Google Play.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "To ta sama warstwa co jądro Linux bez procesów użytkownika.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Nie obejmuje aplikacji systemowych Google.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "question": "Za co odpowiada framework aplikacji Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Uruchamianie aplikacji, API m.in. do czujników i usług systemowych.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko kompilacja kodu Kotlin do maszyny wirtualnej.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie renderowanie wideo bez API.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zastępuje całkowicie warstwę Linux kernel.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "question": "Co znajduje się w warstwie pośredniej platformy Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Biblioteki między OS a aplikacjami, m.in. storage i runtime (historycznie m.in. Dalvik/ART).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko pliki strings.xml projektu.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie kod źródłowy aplikacji użytkownika.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Warstwa identyczna z Cocoa Touch z iOS.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "question": "Jak najtrafniej opisać system operacyjny Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Oparty na Linuxie, sterowniki, obsługa sprzętu i wejścia użytkownika.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Oparty na jądrze Windows NT.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Nie używa sterowników urządzeń.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Jest wyłącznie interpreterem JavaScriptu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "question": "Co zapewnia pakiet Android SDK?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Biblioteki, framework, narzędzia buildu; kompilacja do .dex dla VM/ART.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko edytor graficzny bez kompilatora.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie podpis APK w App Store.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tylko dokumentację HTTP bez API systemu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "question": "Które stwierdzenie o Kotlinie jest prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "JVM/JetBrains (2011), oficjalny język Android obok Javy; także wieloplatformowy.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Interpretowany wyłącznie w przeglądarce bez JVM.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Stworzony przez Apple do zastąpienia Swift.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Nie wspiera klas ani funkcji.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "question": "Co oznacza skrót REPL?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Read–Evaluate–Print–Loop (interaktywna konsola poleceń).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Remote Process Execution Layer.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Runtime Embedded Plugin Library.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Recursive Exception Propagation List.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "question": "Jak w Kotlinie zadeklarować zmienną, której można ponownie przypisać wartość?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Słowo var, nazwa, typ (opcjonalnie), wartość przez =.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko const jak w C.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Słowo def jak w Pythonie.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłącznie mutable w nagłówku pliku.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "question": "Czym w Kotlinie deklaruje się wartość tylko do odczytu po inicjalizacji?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "val (read-only binding).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "final obowiązkowo w każdej klasie.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "let jak w Swift.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "readonly — słowo kluczowe Kotlina.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "question": "Kiedy w Kotlinie można pominąć jawny typ zmiennej?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Gdy kompilator wywnioskuje typ z inicjalizacji (val x = 1).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Nigdy — typ musi być zawsze podany dwukrotnie.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko dla typu Any.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tylko w plikach .kts poza Androidem.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "question": "Jak w Kotlinie oznacza się typ dopuszczający wartość null?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Dopisanie ? do typu, np. Int?.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Prefiks null przed nazwą zmiennej.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Operator ?? w deklaracji.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Słowo optional przy class.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "question": "Jak wstawić wartość zmiennej do łańcucha znaków w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "$name lub ${wyrażenie} w cudzysłowie.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko konkatenacja + bez $.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Funkcja sprintf z C — jedyna metoda.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Podwójny apostrof zamiast cudzysłowu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "question": "Czym w Kotlinie jest typ Unit?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Odpowiednik void — funkcja nie zwraca sensownej wartości.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Typ liczbowy 8-bitowy.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Klasa bazowa dla wszystkich kolekcji.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Synonim Nothing.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "question": "Co umożliwiają nazwane argumenty funkcji w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Wywołanie z inną kolejnością parametrów (foo(b = 2, a = 1)).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zakaz przekazywania wartości domyślnych.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko wywołania bez nawiasów.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Usunięcie typów z sygnatury.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "question": "Jak zapisuje się typową lambdę w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Wyrażenie w nawiasach klamrowych, często jako ostatni argument.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie słowo lambda przed nazwą funkcji.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko adnotacja @Lambda na klasie.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Nie istnieją — używa się wyłącznie refleksji.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "question": "Co opisują akcesory get i set właściwości w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "get — odczyt; set — zapis (tylko dla var).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Oba tylko dla stałych val.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Służą wyłącznie do serializacji JSON.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zastępują konstruktor podstawowy.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "question": "Po co są wartości domyślne parametrów konstruktora w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Można pominąć argument przy wywołaniu — użyta wartość domyślna.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wymuszają open na klasie.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zabraniają init bloku.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Usuwają potrzebę konstruktora podstawowego.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "question": "Jaką zasadę delegowania ma konstruktor dodatkowy w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Musi delegować do konstruktora podstawowego (lub łańcuch dodatkowych).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Może istnieć bez konstruktora podstawowego bez ograniczeń.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Nie może mieć parametrów.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Jest synonimem companion object.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "question": "Po co w Kotlinie używa się modyfikatora lateinit przy właściwości?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Odroczenie inicjalizacji właściwości poza konstruktor (z zastrzeżeniami kompilatora).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Stała znana w czasie kompilacji.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Automatyczne null dla każdego typu.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zastępuje lazy w każdym przypadku.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "question": "Które modyfikatory widoczności występują w Kotlinie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "public (domyślnie), private, protected, internal.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko public i secret.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko package i friend.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "export / import jako modyfikatory pola.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "question": "Jak w Kotlinie zezwolić na dziedziczenie klasy?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Słowo open na klasie bazowej.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Słowo extend przy imporcie.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Klasy zawsze są domyślnie otwarte — nic nie trzeba.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tylko interface może być dziedziczona.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "question": "Jak implementuje się interfejs w klasie Kotlin?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Lista po :, implementacje z override.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Słowo implements jak w Javie (identyczna składnia).",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko przez dziedziczenie po klasie abstrakcyjnej.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Automatycznie — interfejsy nie istnieją.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "question": "Kiedy i kto wykonał pierwsze szeroko znane publiczne połączenie z telefonu komórkowego?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "1973, Martin Cooper (Motorola), DynaTAC.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "1956, Ericsson MTA w kieszeni.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1992, pierwszy SMS.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "2007, premiera iPhone.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "question": "Kiedy wysłano pierwszego SMS-a?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "3 grudnia 1992, Wielka Brytania (Vodafone).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "1973, Motorola.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1999, Nokia WAP.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "2010, Samsung Galaxy S.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "question": "Kiedy wprowadzono pierwszy telefon z klapką?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "1996, Motorola.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2002, Nokia 7650.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "2019, premiera 5G.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1992, IBM Simon.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "question": "W jaki sposób można zarejestrować BroadcastReceiver?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "W AndroidManifest.xml (statycznie).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Programowo w kontekście (czas życia związany z kontekstem).",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Tylko przez adb shell bez kodu.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłącznie w pliku build.gradle jako plugin.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "question": "Które wywołania API dotyczą SharedPreferences?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "getSharedPreferences(name, mode) — wiele plików w aplikacji.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "getPreferences(mode) w Activity — jeden domyślny plik dla aktywności.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "findViewById dla preferencji.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "SQLiteOpenHelper bez tabel.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "question": "Czym w Androidzie jest layout?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Zasób XML (lub kod) opisujący UI ekranu.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko plik binarny .apk bez XML.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie klasa R bez XML.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Synonim Toast.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "question": "Które z poniższych to klasyczne komponenty aplikacji Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Activity.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Service.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "BroadcastReceiver.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "ContentProvider.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "question": "Jak w Swift zadeklarować wiązanie niezmienne po pierwszym przypisaniu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "let (immutable binding); var to zmienna.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "const jak w C — jedyna poprawna składnia.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "final przy każdej funkcji.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "def jak w Pythonie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "question": "Co z wymienionych elementów należy do typowego zestawu budowy aplikacji Android (UI, nawigacja, zasoby)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Widoki (View), układy, intencje, zasoby, manifest.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko Gradle bez widoków.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie JNI bez layoutu.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tylko SQLite bez UI.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "question": "Czym jest obiekt klasy Application w procesie aplikacji Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Jeden na proces; współdzielenie stanu między Activity/Service.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Każdy ekran ma osobny Application.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "To synonim Activity głównej.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Tworzony dopiero po onDestroy ostatniej aktywności wyłącznie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "question": "Które stwierdzenia o cyklu życia klasy Application są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "onCreate przy starcie aplikacji.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "onLowMemory przy presji pamięci.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "onTerminate bywa wywoływane tylko w emulatorze / rzadko w produkcji.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "onConfigurationChanged zastępuje cykl Activity zawsze.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "question": "Które metody należą do cyklu życia Activity?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "onCreate, onStart, onResume, onPause, onStop, onDestroy.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "onSleep — standardowa metoda Android.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "onBind — część cyklu każdej aktywności.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "onFetch przed każdym RecyclerView.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "question": "Które z poniższych to popularne kontenery lub menedżery layoutu w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "ConstraintLayout.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "FrameLayout.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "LinearLayout.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "RelativeLayout oraz TableLayout.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "question": "Które opisy pasują do cyklu usługi zbindowanej oraz uruchomionej?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Powiązana: onCreate, onBind, onUnbind, onDestroy.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Uruchomiona: onCreate, onStartCommand, onDestroy.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Obie zawsze wywołują onPause.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "onRestart jest pierwszą metodą usługi.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "question": "Co charakteryzuje usługę powiązaną (bound service)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Komunikacja z klientem; wiele klientów; zwykle koniec gdy ostatni klient się odłączy.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zawsze działa w osobnym urządzeniu fizycznym.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Nie używa onBind.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Identyczna z BroadcastReceiver.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "question": "Co charakteryzuje usługę uruchomioną (started service)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Długa operacja w tle; cykl niezależny od klienta UI; kończy się po pracy.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zawsze musi pokazywać pełnoekranowy dialog.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Nie ma onStartCommand.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Działa tylko w wątku UI głównym bez wyjątków.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "question": "Czym jest Toast w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Krótki komunikat nakładki; aktywność zostaje widoczna; auto znikanie.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Trwałe powiadomienie jak Notification z kanałem.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Baza danych Room.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zamiennik Snackbar zawsze modalny.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "question": "Czym jest Fragment w Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Moduł UI/logiki z własnym cyklem życia, hostowany przez Activity.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Osobny proces systemowy bez UI.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Plik proguard-rules.pro.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Typ Intent do aparatu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "question": "Które stwierdzenia o cyklu życia fragmentu są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "onAttach, onCreate, onCreateView, onViewCreated (opcjonalnie), onStart, onResume…",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "onDetach kończy cykl.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "onSleep jest wymagany.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "onFetch przed onAttach.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "question": "Jak dynamicznie dodać lub usunąć fragment podczas działania aktywności?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "FragmentManager + FragmentTransaction; kontener View w layoutcie aktywności.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko przez edycję AndroidManifest w locie.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie startActivity bez kontenera.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Bez FragmentManager w API 30+.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "question": "Jak dostarczyć inny layout albo teksty dla orientacji ekranu lub języka?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Osobne katalogi kwalifikowane (layout-land, values-pl itd.) z tą samą nazwą pliku.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko jeden plik XML na całą aplikację bez kwalifikatorów.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zmiana języka wyłącznie przez Toast.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłącznie MainActivity.kt bez zasobów.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "question": "Które ścieżki katalogów są poprawnymi kwalifikatorami layoutu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "res/layout-large/.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "res/layout-land/.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "res/layout-port/.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "res/java-src/layout/ (standardowy kwalifikator SDK).",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "question": "Które ścieżki są typowe dla lokalizacji pliku strings.xml?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "res/values/strings.xml.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "res/values-pl/strings.xml.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "res/values-en-rUS/strings.xml.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "res/raw/strings.bin jako jedyny sposób tłumaczeń.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "question": "Czym są SharedPreferences?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Prosty magazyn klucz–wartość w pliku, często na ustawienia.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Relacyjna baza jak Room zawsze.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Kolejka wiadomości FCM.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Mechanizm szyfrowania dysku.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "question": "Które stwierdzenie o języku Swift jest prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Apple, od 2014, iOS/macOS/watchOS/tvOS; Xcode; kompilowany z nowoczesną składnią.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Interpretowany wyłącznie w przeglądarce Edge.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zastąpił wyłącznie Objective-C bez współistnienia.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Nie ma typów statycznych.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "question": "Który zapis poprawnie deklaruje zmienną w Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "var str = \"Hello, playground\"",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "dim str as string",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "String str := Hello",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "let var x bez wartości.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "question": "Który zapis poprawnie podaje jawny typ zmiennej w Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "var numOfPoints: Int = 77",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "var Int = 77",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "int numOfPoints = 77 jak w C wyłącznie.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "typ numOfPoints = Int",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "question": "Jak w Swift wstawia się wartość zmiennej do łańcucha (interpolacja)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "\\(zmienna) w stringu w cudzysłowie.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "%s jak w printf — jedyna metoda.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "{{mustache}} domyślnie.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Operator ++ w stringu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "question": "Które konstrukcje sterujące występują w Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "if / else.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "switch.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "while / for.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "gosub jak w BASIC.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "question": "Który zapis deklaruje tablicę napisów w Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "var students: [String] = [...]",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "array students = string[]",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "String[] students = new",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "List<String> students — jedyna składnia.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "question": "Co oznacza zapis typu [String: Float] w Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Mapowanie klucz → wartość (unikalne klucze).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tablicę o stałej długości 2.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Krotke dwuelementową tylko.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Błąd składni w Swift.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "question": "Czym jest funkcja w Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Nazwany blok kodu; func; parametry i wartość zwracana opcjonalne.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko wyrażenie lambda bez func.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Słowo function jak w JS.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Nie może być przeciążana.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "question": "Czym jest metoda inicjalizująca (initializer) w Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "init(...) { } wywoływany przy tworzeniu instancji.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "constructor słowo kluczowe.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "new() zawsze bez ciała.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "def __init__ jak w Pythonie wyłącznie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "question": "Czym jest protokół w Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Kontrakt właściwości/metod implementowany przez typy.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Plik .storyboard.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie mechanizm KVO.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Typ wyłącznie dla enum.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "question": "Jak w Swift definiuje się przeciążenie operatora (np. +) dla własnego typu?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Funkcja func + (lhs: Typ, rhs: Typ) -> Typ.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Nie można przeciążać operatorów.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko przez #define preprocessora.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłącznie w pliku .plist.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "question": "Które poziomy widoczności (access control) występują w Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "open, public, internal (domyślny), fileprivate, private.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko public i package.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "protected jak w Kotlinie identycznie.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "global i local.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "question": "Które metody są typowe dla obiektu zgodnego z UIApplicationDelegate?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "application(_:didFinishLaunchingWithOptions:).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "applicationWillResignActive.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "applicationDidEnterBackground.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "viewDidLoad cyklu kontrolera.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "question": "Do czego służy plik LaunchScreen.storyboard?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Ekran startowy / splash przy uruchomieniu aplikacji.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Główna nawigacja tab bar.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Plik tłumaczeń Localizable.strings.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Konfiguracja ATS wyłącznie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "question": "Kto tworzy HarmonyOS i w jakim kontekście jest ten system?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Huawei; ekosystem wielourządzeniowy / IoT.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Google; następca Androida 15.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Apple; system HomePoda wyłącznie.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Microsoft; fork Windows 11 Mobile.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "question": "Które stwierdzenie o Windows Phone lub Windows 10 Mobile jest prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Microsoft, m.in. wersja 7 od 2010; ekosystem wygaszany.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Google, konkurent Chrome OS wyłącznie.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Nokia, system open-source Linux.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Obecnie dominujący OS mobilny >80% rynku.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "question": "Które stwierdzenie o systemach BlackBerry jest prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "OS firmy BlackBerry; pager 850 / 1999; później BlackBerry 10.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "System Google dla Pixel Watch.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Ten sam co Symbian w 100%.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wersja „11” w 1999 jako oficjalna nazwa marketingowa.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "question": "Które warstwy są wymieniane jako część stosu iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Core OS (Darwin).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Core Services.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Media.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Cocoa Touch.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "question": "Kiedy pojawiło się pierwsze publiczne wydanie Androida i na czym opierało się jądro?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2008, Android 1.0 (Apple Pie), Linux, licencja GPL jądra.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2007 jako kopia iOS 1.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "2014 razem z Swift.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1999 z Nokia 7110.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "question": "Które systemy operacyjne są wymieniane jako istotne na rynku mobilnym?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Android.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "iOS.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "BlackBerry / Windows Phone / HarmonyOS (także w ujęciu historycznym i niszowym).",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "DOS 6.22 mobilny.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "question": "Kiedy zadebiutowało 5G i jakiego rzędu są podawane prędkości?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2019; prędkości rzędu dziesiątek–setek Mb/s.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2008 razem z LTE.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1992 z pierwszym SMS.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1980 z analogową NMT wyłącznie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "question": "Które stwierdzenie o LTE (4G) jest prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "4G, ok. 2008, deklarowane ok. do ~300 Mb/s.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2G zastępująca SMS.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Technologia wyłącznie Wi-Fi 6.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Synonim Bluetooth 5.0.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "question": "Kiedy pojawił się pierwszy Samsung Galaxy S i z jakim systemem był powiązany?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2010, Android.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2007, iOS.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1996, klapka Motorola.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "2019, pierwszy 5G telefon na świecie wyłącznie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "question": "Kiedy wprowadzono pierwszego iPhone’a i jaki był pierwszy model?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2007, iPhone 2G, iOS.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2010, Galaxy S.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "1999, WAP Nokia 7110.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1973, DynaTAC.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "question": "Jak charakteryzuje się telefon Sony Ericsson P800?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2002, ekran dotykowy, Symbian.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "1992, IBM Simon w jednym zdaniu bez Symbiana.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "2008, Android 1.0.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "2014, Apple Watch.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "question": "Co charakteryzuje model Nokia 7650?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2002, Symbian, wbudowany aparat fotograficzny.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "1973, pierwszy aparat cyfrowy DSLR.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "2019, 5G modem.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1999, tylko WAP bez aparatu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "question": "Który model był wskazywany jako przykład wczesnej obsługi MP3 w telefonie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Samsung SPH-M100.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "iPhone 2G.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Nokia 3310.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Motorola DynaTAC.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "question": "Co wyróżniało Nokię 7110 z 1999 roku w porównaniu z wcześniejszymi telefonami komórkowymi pod kątem dostępu do treści z sieci?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Fabryczna przeglądarka i obsługa Wireless Application Protocol — uproszczone strony HTML w sieci GSM/GPRS przy ograniczonej przepustowości, zamiast pełnego Internetu „biurkowego”.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "2007, pierwszy iPhone.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "2010, LTE.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "1992, SMS.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "question": "Do czego w projekcie iOS służy plik Main.storyboard?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Wizualna struktura scen i powiązań kontrolerów widoku.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Plik Gradle modułu.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Tylko Info.plist zastępczy.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Skrypt Python uruchamiany przy starcie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "question": "Do czego w Xcode służy katalog Assets.xcassets?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Zbiór assetów (obrazy, kolory) dla Xcode.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Folder res/raw Androida.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Baza Core Data.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Manifest aplikacji Flutter.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "question": "Czym charakteryzuje się Jetpack Compose w porównaniu do klasycznego UI Android (XML + View)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "UI w Kotlinie bez XML, funkcje @Composable, podejście deklaratywne.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie edytor WYSIWYG zastępujący AndroidManifest.xml.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zamiennik Gradle do kompilacji do .dex.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Warstwa jądra Linux zamiast Activity.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "question": "Które układy w Jetpack Compose odpowiadają idei kolumny, wiersza i nakładania elementów?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Column, Row, Box.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "LinearLayout, TableLayout, WebView.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "ConstraintLayout, FrameLayout, Service.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "VStack, HStack, ZStack — to API Androida, nie iOS.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "question": "Czym w SwiftUI jest @State?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Przechowuje lokalny stan widoku; zmiana wartości wywołuje odświeżenie UI.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Globalny singleton całej aplikacji zastępujący UserDefaults.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Adnotacja kompilatora LLVM wyłącznie do testów.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Synonim IBOutlet w storyboardzie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "question": "Jak zestawia się UIKit (imperatywne) ze SwiftUI (deklaratywne)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "UIKit: krok po kroku, ręczne sterowanie widokami; SwiftUI: opis efektu, UI zależny od stanu, auto-odświeżanie.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Oba wymagają wyłącznie Main.storyboard bez kodu.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "SwiftUI jest wyłącznie silnikiem baz danych SQLite.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "UIKit jest deklaratywny, SwiftUI imperatywny — to stwierdzenie jest fałszywe.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "question": "Które elementy służą zwykle do nawigacji w SwiftUI?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "NavigationStack, NavigationLink, sheet, fullScreenCover.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "segue, UINavigationController wyłącznie w pliku .plist.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "startActivity z jawnego Intent.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "FragmentTransaction i FragmentManager.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "question": "Do czego w SwiftUI służy makro / atrybut #Preview?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Do podglądu UI w Xcode bez pełnego uruchamiania aplikacji na urządzeniu/symulatorze.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Do podpisywania paczki dystrybucyjnej IPA.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Do konfiguracji ATS i domen HTTP.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Do rejestracji BroadcastReceiver.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "question": "Jaką strukturę punktu startowego ma typowy projekt SwiftUI?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "MyApp.swift (wejście), ContentView.swift (główny widok); UI w kodzie, bez klasycznego AppDelegate / ViewController jak w starszym szablonie storyboard.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tylko AndroidManifest.xml i strings.xml.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "index.js z AppRegistry.registerComponent.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "LaunchScreen.storyboard jako jedyny plik projektu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "question": "Jak definiuje się skrót PWA w strategii mobile web?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Zaawansowane aplikacje webowe zbliżone doświadczeniem do natywnych (m.in. instalacja, tryb offline, wydajność).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie skrót od „Private Web Access” w iOS.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Format binarny .apk generowany z Safari.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Warstwa HAL w stosie Androida.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "question": "Jaką rolę pełni Gradle w projekcie Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "System budowania projektu (zależności, konfiguracja modułów, zadania kompilacji) — osobno od roli AndroidManifest.xml.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zastępuje całkowicie AndroidManifest.xml i deklarację aktywności.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Jest wyłącznie edytorem grafiki drawable.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Runtime wykonujący bytecode zamiast ART.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "question": "Co oznacza izolacja aplikacji (sandbox) na Androidzie?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Aplikacja działa w odseparowanym środowisku z ograniczonym dostępem do danych innych aplikacji (model bezpieczeństwa).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Aplikacja nie może używać sieci ani pamięci.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Synonim trybu deweloperskiego adb root dla każdego użytkownika.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłącznie chmurka Toast bez uprawnień.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "question": "Czym w architekturze Androida jest warstwa HAL (Hardware Abstraction Layer)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Warstwa abstrakcji sprzętu między jądrem Linux a wyższymi warstwami — ujednolicony dostęp do sterowników urządzeń.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Sklep z aplikacjami Google Play.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Plik strings.xml z tłumaczeniami.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Maszyna wirtualna JavaScript w React Native.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "question": "Jak rozróżnia się AOSP i Google Play Services w ekosystemie Android?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "AOSP — otwarty projekt źródeł Androida; Google Play Services — zamknięty pakiet usług Google (mapy, push itd.) nakładany na wiele urządzeń z licencją GMS.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "To identyczne nazwy tego samego składnika jądra.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "AOSP to wyłącznie sklep App Store na Androidzie.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Google Play Services zastępuje jądro Linux w telefonie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "question": "Gdzie domyślnie wykonuje się kod usługi (Service) w Androidzie i jak postępować przy długich operacjach?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "W głównym wątku aplikacji; długie zadania — osobny wątek lub m.in. Coroutine / Executor / WorkManager.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zawsze w osobnym procesie z własnym UI pełnoekranowym.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie w wątku GPU renderera Vulkan.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "W wątku BroadcastReceiver bez możliwości zmiany.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "question": "Jakiego znaczenia nabiera znacznik <meta name=\"viewport\" …> przy responsywnych stronach WWW?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Informuje przeglądarkę, jak skalować i dopasować szerokość strony do urządzenia (np. width=device-width, initial-scale=1).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Deklaruje wyłącznie kolor motywu dark mode w CSS.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zastępuje AndroidManifest.xml w aplikacji PWA.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłącza HTTPS w przeglądarce.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "question": "Czym był IBM Simon w historii telefonii komórkowej?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Wczesny „smartfon” (1992 / sprzedaż od 1994) z ekranem dotykowym i integracją funkcji telefonu i PDA.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Pierwszy telefon z systemem Android 1.0.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Nazwa protokołu WAP zastępującego SMS.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Framework cross-platformowy Microsoftu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "question": "Do czego służył w telefonii komórkowej (lata 90.) protokół oznaczany skrótem WAP?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Wireless Application Protocol — dostęp do uproszczonych stron internetowych przy ograniczonej przepustowości sieci komórkowej 2G.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Warstwa Core OS w iOS.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Format wideo 8K w Huawei AppGallery.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Skrót od „Wide Area Process” — menedżer pamięci ART.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "question": "Dlaczego Windows Phone i BlackBerry przegrały rywalizację z Androidem / iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "M.in. słabszy ekosystem aplikacji, spóźniona adaptacja do UI dotykowego, słabsze wsparcie deweloperów, efekt sieciowy rynku platformowego.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Bo nie miały żadnego sklepu z aplikacjami.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Bo wyłącznie brakowało im logo Bluetooth.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Bo były całkowicie open-source bez HAL.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "question": "Co w SwiftUI robi Spacer()?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Elastycznie zajmuje dostępne miejsce w układzie, „rozpycha” elementy (np. w VStack).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wymusza stałą szerokość 320 px bez responsywności.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zastępuje ContentProvider w Androidzie.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Uruchamia usługę startService w tle.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "question": "Jak w SwiftUI typowo łączy się kilka modyfikatorów wyglądu (np. czcionka, kolor, padding)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Łańcuchowo (modifier chain) na widoku, np. .font(...).foregroundColor(...).padding().",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie przez osobny plik AndroidManifest.xml.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Jednym słowem style= wewnątrz strings.xml.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Nie można — SwiftUI nie obsługuje modyfikatorów.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "question": "Która warstwa architektury iOS obejmuje m.in. grafikę, dźwięk i wideo?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Media.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Core OS wyłącznie (bez multimediów).",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Cocoa Touch jako warstwa wyłącznie jądra Linux.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "build.gradle modułu aplikacji.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "question": "Czego domyślnie wymaga iOS w komunikacji sieciowej (HTTPS, ATS)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Bezpieczne połączenia HTTPS, poprawne certyfikaty SSL, szyfrowaną komunikację; ATS chroni przed niebezpiecznym HTTP bez konfiguracji wyjątków.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie nieszyfrowane HTTP dla wszystkich domen.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Połączenia tylko przez Bluetooth, nie przez Wi‑Fi.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Obowiązkowy brak URLSession.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "question": "Jak określa się główny cel współczesnego mobile web?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Jedno spójne doświadczenie użytkownika na telefonie, tablecie i desktopie (wspólna strategia layoutu i UX).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Pisanie trzech osobnych kodów źródłowych bez wspólnego HTML.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłączenie responsywności na rzecz aplikacji .exe.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Zastąpienie DNS warstwą HAL.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "question": "Framework Ionic w ekosystemie hybryd (Cordova) to przede wszystkim:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Popularnym szkieletem UI (często z Angular) na bazie podejścia webowego + pluginów natywnych (w orbitie Cordovy / WebView).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zamiennikiem jądra Darwin w iPhone.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Oficjalnym językiem zapytań do Room zamiast SQL.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Skrótem od „Integrated Optical Network Interface Card”.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "question": "Które technologie stanowią filar Responsive Web Design (RWD) obok podejścia mobilefirst?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Media Queries, Flexbox, CSS Grid.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie strings.xml i proguard-rules.pro.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Dalvik, ART, JNI jako technologie layoutu strony WWW.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "BroadcastReceiver i ContentProvider w CSS.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "question": "Do czego w SwiftUI służy ZStack?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Do układu warstwowego — elementy ułożone „na sobie”, np. tło pod treścią.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Do kolejki zadań w tle zamiast WorkManager.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Do deklaracji uprawnień w Info.plist.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Do wyłącznie poziomego przewijania listy bez LazyVStack.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "question": "Jak w SwiftUI typowo pobiera się dane HTTP i mapuje odpowiedź JSON na typ Swift?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "URLSession (np. shared.data(from:)) oraz typ zgodny z Codable do dekodowania.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie SharedPreferences z Androida przeniesione do iOS.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "SQLiteOpenHelper w Swift bez sieci.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "android:configChanges w AndroidManifest.xml.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "question": "Co podkreśla się przy projektowaniu UI mobilnego w porównaniu mysz/klawiatura vs dotyk?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Na mobile stosuje się większe cele dotykowe (touch targets), multitouch; precyzja palca jest niższa niż przy myszy.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Elementy dotykowe powinny być zawsze mniejsze niż na desktopie.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Multitouch nie występuje na smartfonach.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Hover jest podstawową interakcją na telefonie.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "question": "Czym jest warstwa Core Services w architekturze iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Podstawowe usługi systemowe ponad Core OS (np. fundamenty dla aplikacji i frameworków).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Synonim sklepu Google Play na iPhone.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Warstwa wyłącznie renderowania wideo bez API systemowego.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Plik build.gradle modułu app.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "question": "Jak określa się charakter strategiczny / projektowy HarmonyOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "System rozproszony (distributed OS), integracja wielu urządzeń IoT, skalowalność smartfon–IoT; dążenie do niezależności od Androida i własnego ekosystemu.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Fork Windows Phone 8 wyłącznie dla tabletów.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zamknięty emulator Dalvik bez sieci.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Wyłącznie nakładka graficzna na MS-DOS.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "question": "Przy prognozie 6G — jakie kierunki rozwoju podaje się obok ultra-niskiego opóźnienia?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Integracja AI i komunikacji, komunikacja satelitarna, pasmo terahercowe (prognoza ok. 2030).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Powrót wyłącznie do sieci analogowej NMT.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Całkowite wyłączenie Internetu mobilnego na rzecz WAP.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Standard wyłącznie dla stacjonarnych drukarek USB.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "question": "Jak w Kotlinie określa się null safety (bezpieczeństwo wartości null)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Jako mechanizm zmniejszający ryzyko NullPointerException dzięki rozróżnieniu typów nullable i nienullowalnych (m.in. ?, bezpieczne wywołania).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Jako wyłączenie typów z języka na rzecz samego Any.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Jako wymóg używania wyłącznie void* jak w C.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Jako zamiennik Gradle w budowaniu APK.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "question": "Do czego w Androidzie służy komponent ContentProvider?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Do udostępniania strukturalnych danych aplikacji innym aplikacjom przez spójny interfejs (np. URI, uprawnienia), bez własnego okna UI.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie do wyświetlania powiadomień push zamiast NotificationManager.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Do zastąpienia Activity jako jedynego ekranu aplikacji.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Do kompilacji kodu Kotlin do bytecode ART.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "question": "Jaką rolę pełni WebView w aplikacjach hybrydowych (Cordova / Ionic)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Interfejs i logika w HTML/CSS/JS działają wewnątrz WebView; dostęp do funkcji urządzenia często przez pluginy natywne (most).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "WebView zastępuje całkowicie AndroidManifest.xml i nie renderuje HTML.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Hybrydy nie używają WebView — tylko czysty OpenGL bez JS.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "WebView to synonim maszyny wirtualnej Dalvik.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "question": "Które stwierdzenie o Flutterze w porównaniu do typowej hybrydy WebView jest prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Flutter nie opiera UI na WebView — renderuje własny silnik/widgety (Dart), mapując na warstwę natywną platformy.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Flutter wymaga, by cały interfejs był wyłącznie dokumentem HTML5 w WebView.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Flutter i Ionic są identycznie zdefiniowane jako ten sam silnik przeglądarki.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Flutter nie kompiluje się do kodu uruchamialnego na urządzeniu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "question": "Które wyzwania i trendy współczesnego mobile web wymienia się obok RWD i PWA?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Dostępność (accessibility), tryb ciemny (dark mode), urządzenia składane (foldables), wearables, słabsze łącza.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie powrót do WAP bez HTTPS.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Całkowite porzucenie HTML na rzecz samego AndroidManifest.xml.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Standardowe wyłączenie dotyku na rzecz wyłącznie komend głosowych systemowych.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "question": "Czym są container queries w nowoczesnym CSS i responsywnym layoutcie stron mobilnych?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Zapytania o rozmiar kontenera (nie tylko viewport), ułatwiające responsywne komponenty — często obok urządzeń składanych i układów wieloekranowych.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zapytania SQL do lokalnej bazy Room w przeglądarce.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Mechanizm BroadcastReceiver w Chrome.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Synonim android:configChanges w iOS.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "question": "Jak nazywa się jądro systemowe leżące u podstaw iOS (Darwin)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Jądro typu Unix (Darwin) — fundament Core OS; nie jest to jądro Linux z Androida.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Identyczne jądro MS-DOS 6.22.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Wyłącznie interpreter JavaScript V8 bez sterowników.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Skrót od „Distributed Android Resource Virtualization Object”.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "question": "Co wykonuje warstwa ART (Android Runtime) względem aplikacji?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Uruchamia kod aplikacji; optymalizuje aplikację podczas instalacji i działania (obecne środowisko uruchomieniowe zamiast historycznego Dalvik).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zastępuje wyłącznie plik strings.xml tłumaczeniami.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Jest warstwą wyłącznie sklepu Google Play bez wpływu na wykonanie .dex.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Renderuje wyłącznie HTML w WebView zamiast bytecode aplikacji.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "question": "Co w ekosystemie Apple często podkreśla się przy aktualizacjach systemu iOS?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Szybkie, szerokie wdrażanie aktualizacji dzięki zamkniętemu modelowi sprzęt– system (w kontraście do fragmentacji wielu producentów Androida).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "iOS nie otrzymuje aktualizacji po pierwszym roku.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Aktualizacje dystrybuuje wyłącznie Gradle.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "iOS aktualizuje tylko WebView, nie system.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "question": "Co wyróżnia się w React Native w połączeniu z JavaScript / TypeScript i warstwą UI?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Interfejs oparty o natywne komponenty systemowe; framework Meta; typowe użycie z React / Expo — wspólna baza kodu na Android i iOS.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "UI renderowany wyłącznie jako statyczny PDF bez komponentów OS.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Obowiązkowy brak natywnych widoków — tylko czysty HTML w mailto:.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "React Native nie wspiera TypeScript ani JavaScript.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "question": "Jak zestawia się start projektu Expo i React Native CLI?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Expo: szybki start, prostsza konfiguracja, łatwe testy na telefonie, dobre do nauki i MVP; CLI: większa kontrola, pełny dostęp do kodu natywnego, częściej w zaawansowanych aplikacjach.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "CLI zawsze usuwa package.json; Expo nie używa Node.js.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Oba wymagają wyłącznie programowania w Objective-C bez JS.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Expo i CLI to identyczne narzędzia bez różnic w zakresie natywnego kodu.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "question": "Które polecenie służy do utworzenia projektu Expo?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "npx create-expo-app NazwaAplikacji.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "npx react-native@latest init — typowe dla ścieżki React Native CLI, nie Expo.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "flutter create w katalogu ios/.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "adb install z repozytorium GitHub bez Node.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "question": "Do czego w strukturze projektu Expo / React Native służy plik app.json?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Do konfiguracji Expo (m.in. metadane / ustawienia specyficzne dla workflow Expo).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zastępuje całkowicie AndroidManifest.xml w czystym natywnym Androidzie bez RN.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Jest jedynym plikiem z kodem UI aplikacji zamiast App.tsx.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Kompiluje bytecode Kotlin do ART.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "question": "Jaką rolę pełni App.tsx w opisanej strukturze projektu React Native?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Główny komponent (root) aplikacji — punkt zaczepienia UI i logiki startowej.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie log systemowy Gradle bez komponentów React.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Zamiennik Info.plist na iOS.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Plik binarny .dex generowany przez Xcode.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "question": "Co zwykle stosuje się przy uruchamianiu i developmentcie aplikacji React Native / Expo?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "npm start lub npx expo start; Fast Refresh / Hot Reload; emulator Android / symulator iOS; Expo Go na telefonie; opcjonalnie przeglądarka (Web).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie kompilacja w Visual Studio dla Windows CE.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Obowiązkowe flashowanie ROM bez USB.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Jedynie adb shell pm uninstall bez serwera Metro.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "question": "Według typowej tabeli porównawczej Flutter vs React Native — które zestawienie jest prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Flutter: język Dart, własny rendering UI; React Native: JavaScript/TypeScript, natywne komponenty platformy; Flutter — Google, RN — Meta.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Oba używają wyłącznie języka Swift bez Dart i JS.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "React Native renderuje UI wyłącznie silnikiem Skia identycznie jak Flutter w każdym szczególe.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Flutter rozwija Meta, a React Native — Google.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "question": "Jak dobiera się stos technologiczny do potrzeby projektu (np. wydajność, MVP, UI, integracja z React)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Szybkie MVP — React Native / Flutter; integracja z frontendem React — React Native; maks. wydajność — Native; rozbudowane UI i animacje — Flutter; prosta aplikacja biznesowa — Ionic / PWA; gry / 3D — Unity / Native.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Każdy projekt musi użyć wyłącznie Windows Phone 8.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "PWA zabronione dla MVP; tylko asembler ARM.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Ionic wyłącznie do gier 3D zamiast Unity.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "question": "Jakie zastosowania AI w mobile development się wymienia?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "M.in. generowanie kodu, tworzenie UI, automatyczne testy, analiza błędów, refaktoryzacja, dokumentacja; narzędzia typu ChatGPT, Copilot, Cursor, Claude, Gemini.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie zastąpienie jądra Linux przez model LLM w telefonie.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "AI służy tylko do kasowania node_modules bez odtworzenia.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Twierdzenie, że sztuczna inteligencja wyklucza współpracę z IDE.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "question": "Które stwierdzenia o wadach i ograniczeniach React Native są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Niektóre funkcje wymagają kodu natywnego.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Zależność od bibliotek społeczności; problemy po aktualizacjach frameworka.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Różnice między Androidem a iOS; większa złożoność konfiguracji dużych projektów.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Potencjalne problemy wydajnościowe w bardzo wymagających aplikacjach; potrzeba podstaw natywnego mobile dev.",
+        "is_correct": true
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "question": "Które stwierdzenia o wadach Apache Cordova są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Niższa wydajność niż natywne; gorsze UX; zależność od WebView.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Ograniczony dostęp do nowych funkcji systemowych; trudniejsze utrzymanie dużych projektów.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Problemy z kompatybilnością pluginów; problemy z płynnością interfejsu.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Brak możliwości publikacji w sklepach mobilnych.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "question": "Którą cechę Kotlin podaje się obok interoperacyjności z Javą oraz obsługi JVM, JavaScript i Native?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Wsparcie dla Kotlin Multiplatform (współdzielenie kodu między platformami w nurcie KMP).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Kotlin nie jest używany na Androidzie od 2019 roku.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Kotlin działa wyłącznie w przeglądarce bez JVM i Native.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Kotlin Multiplatform to nazwa sklepu Google Play.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "question": "Jak w Ionic realizuje się integrację z funkcjami urządzenia?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Przez Capacitor (most do natywnych API).",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie przez bezpośredni zapis do partycji systemowej bez API.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Ionic wymaga programowania wyłącznie w Dart bez JS/TS.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Capacitor zastępuje AndroidManifest.xml jako jedyne źródło UI.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "question": "Które stwierdzenia o wadach aplikacji cross-platformowych (ogólnie) są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Zależność od frameworka i jego rozwoju; czasem kod natywny i problemy po aktualizacjach Androida/iOS.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Większa złożoność architektury; potencjalnie większy rozmiar aplikacji.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Komponenty mogą zachowywać się inaczej na platformach; w najbardziej wymagających aplikacjach wydajność może być niższa niż natywnie.",
+        "is_correct": true
+      },
+      {
+        "letter": "D",
+        "text": "Cross-platform z definicji nie pozwala na Hot Reload.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "question": "Które stwierdzenia o ograniczeniach BroadcastReceiver od Android 8 (API 26) są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Wiele broadcastów systemowych nie może być odbieranych przez odbiorniki zarejestrowane wyłącznie w manifeście; zalecana rejestracja dynamiczna w kodzie.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Aplikacje w tle mają ograniczony dostęp do broadcastów; Google rekomenduje m.in. WorkManager, JobScheduler, Foreground Service jako alternatywy.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "BroadcastReceiver został całkowicie usunięty z Androida od API 26.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Manifestowe rejestracje są jedyną dozwoloną formą bez wyjątków.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "question": "Jak opisuje się architekturę UI Fluttera?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Architektura oparta o widgety; własny system renderowania; bardzo wysoka wydajność UI; bez WebView jako podstawy UI.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "UI budowane wyłącznie w WebView jak w klasycznej Cordovie.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Flutter wymaga Objective-C jako jedynego języka UI.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Widget to w Flutterze wyłącznie plik AndroidManifest.xml.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "question": "Które stwierdzenia o zaletach Fluttera są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Google jako autor; Dart; aplikacje m.in. na Android, iOS, Web, Windows, macOS, Linux.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Własny rendering; wysoka wydajność UI; spójny model komponentów (widgetbased).",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Flutter nie pozwala na aplikacje webowe ani desktopowe.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Flutter używa JavaScript zamiast Dart jako język aplikacji.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "question": "Które przykłady low-code / no-code i prototypowania wiąże się z przyszłością mobile dev?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "FlutterFlow — szybsze prototypowanie; Expo + AI — większa automatyzacja; Firebase Studio — nur low-code / no-code.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie pisanie całego systemu operacyjnego w Assemblerze x86.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Dalvik jako narzędzie no-code dla designerów UI.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "strings.xml jako jedyny low-code na rynku.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "question": "Jakie korzyści AI-assisted development (wsparcie programisty) wymienia się najczęściej?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Szybszy development, generowanie komponentów, mniej powtarzalnej pracy z UI, łatwiejsza nauka technologii, szybsze prototypowanie MVP.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Tworzenie struktur projektu, debugowanie, generowanie testów, praca z dokumentacją, refaktoryzacja.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Pełne zastąpienie programisty bez weryfikacji kodu w każdym przypadku.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "AI wyłącza możliwość korzystania z repozytorium Git.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "question": "Które stwierdzenia o zaletach Ionic są prawdziwe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Jedna baza kodu na wiele platform; szybki development; popularne technologie webowe; integracja z Angular, React, Vue.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Gotowe komponenty mobilnego UI; łatwiejsze testowanie i debugowanie; aplikacje mobilne, webowe i desktopowe.",
+        "is_correct": true
+      },
+      {
+        "letter": "C",
+        "text": "Ionic zabrania TypeScript i JavaScript.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "Ionic nie nadaje się do aplikacji webowych.",
+        "is_correct": false
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "question": "Które firmy podaje się jako przykłady użytkowników React Native?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Meta, Shopify, Discord, Microsoft.",
+        "is_correct": true
+      },
+      {
+        "letter": "B",
+        "text": "Wyłącznie Ericsson i Nokia z 1956 roku.",
+        "is_correct": false
+      },
+      {
+        "letter": "C",
+        "text": "Google jako jedyny klient RN.",
+        "is_correct": false
+      },
+      {
+        "letter": "D",
+        "text": "IBM Simon jako producent frameworka RN.",
+        "is_correct": false
+      }
+    ]
+  }
+]
