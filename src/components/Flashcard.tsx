@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { Question } from '../types';
 import { Button } from './Button';
 import { cn } from '../lib/utils';
@@ -30,6 +30,10 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
     setSelectedOptions(newSelected);
   };
 
+  const shuffledOptions = useMemo(() => {
+    return [...question.options].sort(() => Math.random() - 0.5);
+  }, [question.id, question.options]);
+
   return (
     <div className="w-full max-w-2xl mx-auto bg-surfaceContainer-light dark:bg-surfaceContainer-dark rounded-3xl p-6 shadow-sm">
       <div className="mb-6">
@@ -40,7 +44,8 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
       </div>
 
       <div className="space-y-3 mb-8">
-        {question.options.map((opt) => {
+        {shuffledOptions.map((opt, index) => {
+          const displayLetter = String.fromCharCode(65 + index);
           const isSelected = selectedOptions.has(opt.letter);
           const isCorrect = opt.is_correct;
           
@@ -73,7 +78,7 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
                  {!showAnswer && isSelected && <Check className="w-4 h-4 text-primary-600 dark:text-primary-400" />}
               </div>
               <div>
-                <span className="font-semibold mr-2">{opt.letter}.</span>
+                <span className="font-semibold mr-2">{displayLetter}.</span>
                 <span>{opt.text}</span>
               </div>
             </div>
