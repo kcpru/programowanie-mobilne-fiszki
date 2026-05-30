@@ -16,7 +16,7 @@ const THEMES: { id: ColorTheme; label: string; color: string }[] = [
   { id: "theme-shrek", label: "Siergiej Fialko", color: "bg-[#ef4444]" },
   { id: "theme-panther", label: "Menadżer inpostu", color: "bg-[#f59e0b]" },
   { id: "theme-smurf", label: "Czolasty", color: "bg-[#737373]" },
-  { id: "theme-ziomo", label: "ziomo w bandanie (ask)", color: "bg-[#10b981]" }, // zielony
+  { id: "theme-ziomo", label: "Niezdzeiedzki….", color: "bg-[#10b981]" }, // zielony
 ];
 
 export function ThemeModal({
