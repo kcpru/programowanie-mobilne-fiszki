@@ -120,7 +120,7 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
         />
       </div>
 
-      <Flashcard question={currentQ} onGrade={handleGrade} />
+      <Flashcard key={currentIndex} question={currentQ} onGrade={handleGrade} />
     </div>
   );
 }
