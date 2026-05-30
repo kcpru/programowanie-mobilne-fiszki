@@ -68,7 +68,7 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
               key={opt.letter}
               onClick={() => toggleOption(opt.letter)}
               className={cn(
-                "flex items-start p-4 border-2 rounded-xl transition-all duration-200",
+                "flex items-start p-4 border-2 rounded-xl",
                 optionClass
               )}
             >
@@ -94,7 +94,7 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
           Zobacz odpowiedź
         </Button>
       ) : (
-        <div className="space-y-4 animate-in fade-in duration-300">
+        <div className="space-y-4">
           <p className="text-center font-medium text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark mb-2">
             Jak dobrze pamiętasz to pytanie?
           </p>
