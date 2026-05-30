@@ -1,5 +1,5 @@
 import { Button } from "./Button";
-import { BookOpen, RefreshCw, Layers, CalendarDays, Bug } from "lucide-react";
+import { BookOpen, RefreshCw, Layers, Bug } from "lucide-react";
 import { useState } from "react";
 
 type MainMenuProps = {

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Flashcard } from './Flashcard';
 import type { Question, FlashcardState } from '../types';
-import { calculateSM2, initialSM2Data } from '../lib/sm2';
+import { calculateSM2, initialSM2Data, type SM2Data } from '../lib/sm2';
 import { Button } from './Button';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Undo2 } from 'lucide-react';
 
 type SessionViewProps = {
   questions: Question[];
@@ -15,11 +15,19 @@ type SessionViewProps = {
   onNextSession?: () => void;
 };
 
+type HistoryEntry = {
+  queue: Question[];
+  currentIndex: number;
+  cardsPassed: number;
+  flashcardStateEntry: { id: number; data: SM2Data | undefined };
+};
+
 export function SessionView({ questions, mode, limit, flashcardState, setFlashcardState, onExit, onNextSession }: SessionViewProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [queue, setQueue] = useState<Question[]>([]);
   const [isInitialized, setIsInitialized] = useState(false);
   const [cardsPassed, setCardsPassed] = useState(0); // Unique cards passed
+  const [history, setHistory] = useState<HistoryEntry[]>([]);
 
   useEffect(() => {
     let selected: Question[] = [];
@@ -49,6 +57,17 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
   const handleGrade = (grade: number) => {
     const currentQ = queue[currentIndex];
     
+    // Save to history
+    setHistory(prev => [...prev, {
+      queue: [...queue],
+      currentIndex,
+      cardsPassed,
+      flashcardStateEntry: {
+        id: currentQ.id,
+        data: flashcardState[currentQ.id]
+      }
+    }]);
+
     // Update state
     setFlashcardState(prev => {
       const currentData = prev[currentQ.id] || initialSM2Data;
@@ -67,6 +86,27 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
     }
 
     setCurrentIndex(prev => prev + 1);
+  };
+
+  const handleUndo = () => {
+    if (history.length === 0) return;
+
+    const last = history[history.length - 1];
+    setHistory(prev => prev.slice(0, -1));
+
+    setQueue(last.queue);
+    setCurrentIndex(last.currentIndex);
+    setCardsPassed(last.cardsPassed);
+    
+    setFlashcardState(prev => {
+      const newState = { ...prev };
+      if (last.flashcardStateEntry.data === undefined) {
+        delete newState[last.flashcardStateEntry.id];
+      } else {
+        newState[last.flashcardStateEntry.id] = last.flashcardStateEntry.data;
+      }
+      return newState;
+    });
   };
 
   if (!isInitialized) return null;
@@ -92,6 +132,12 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
               Przerób kolejne {limit ? limit : 'pytania'}
             </Button>
           )}
+          {history.length > 0 && (
+            <Button variant="outlined" onClick={handleUndo}>
+              <Undo2 className="w-5 h-5 mr-2" />
+              Cofnij ostatnią odpowiedź
+            </Button>
+          )}
           <Button variant="outlined" onClick={onExit}>Wróć do menu</Button>
         </div>
       </div>
@@ -107,8 +153,16 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
           <ArrowLeft className="w-5 h-5 mr-2" />
           Zakończ
         </Button>
-        <div className="text-sm font-medium">
-          {currentIndex + 1} / {queue.length}
+        <div className="flex items-center gap-2">
+          {history.length > 0 && (
+            <Button variant="text" onClick={handleUndo} className="p-2">
+              <Undo2 className="w-5 h-5 mr-1" />
+              Cofnij
+            </Button>
+          )}
+          <div className="text-sm font-medium ml-2">
+            {currentIndex + 1} / {queue.length}
+          </div>
         </div>
       </div>
       
