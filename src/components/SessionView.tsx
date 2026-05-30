@@ -102,7 +102,7 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between mb-4">
+      <div className="sticky top-0 z-30 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md py-4 flex items-center justify-between mb-4 border-b border-outlineVariant-light/30 dark:border-outlineVariant-dark/30 -mx-4 px-4">
         <Button variant="text" onClick={onExit} className="p-2 -ml-2">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Zakończ
@@ -113,14 +113,18 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
       </div>
       
       {/* Progress bar */}
-      <div className="w-full bg-surfaceContainerHighest-light dark:bg-surfaceContainerHighest-dark h-2 rounded-full overflow-hidden">
-        <div 
-          className="bg-primary-500 h-full transition-all duration-300"
-          style={{ width: `${((currentIndex) / queue.length) * 100}%` }}
-        />
+      <div className="px-2">
+        <div className="w-full bg-surfaceContainerHighest-light dark:bg-surfaceContainerHighest-dark h-2 rounded-full overflow-hidden">
+          <div 
+            className="bg-primary-500 h-full transition-all duration-300"
+            style={{ width: `${((currentIndex) / queue.length) * 100}%` }}
+          />
+        </div>
       </div>
 
-      <Flashcard key={currentIndex} question={currentQ} onGrade={handleGrade} />
+      <div className="pt-2">
+        <Flashcard key={currentIndex} question={currentQ} onGrade={handleGrade} />
+      </div>
     </div>
   );
 }

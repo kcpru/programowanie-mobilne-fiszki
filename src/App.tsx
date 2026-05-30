@@ -63,9 +63,11 @@ function App() {
         setColorTheme={setColorTheme}
       />
 
-      <main className="container mx-auto px-4 pt-8 pb-24">
+      <main className="container mx-auto px-4 pb-24">
         {view === 'menu' && (
-          <MainMenu onSelectMode={handleSelectMode} />
+          <div className="pt-8">
+            <MainMenu onSelectMode={handleSelectMode} />
+          </div>
         )}
         
         {view === 'browse' && (

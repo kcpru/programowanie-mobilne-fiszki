@@ -18,8 +18,8 @@ export function BrowseAll({ questions, flashcardState, onExit }: BrowseAllProps)
   );
 
   return (
-    <div className="flex flex-col h-[90vh]">
-      <div className="flex items-center gap-4 mb-6">
+    <div className="flex flex-col">
+      <div className="sticky top-0 z-30 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md py-4 flex items-center gap-4 mb-6 border-b border-outlineVariant-light/30 dark:border-outlineVariant-dark/30 -mx-4 px-4">
         <Button variant="text" onClick={onExit} className="p-2 -ml-2 shrink-0">
           <ArrowLeft className="w-5 h-5" />
         </Button>
@@ -30,12 +30,12 @@ export function BrowseAll({ questions, flashcardState, onExit }: BrowseAllProps)
             placeholder="Szukaj pytań lub odpowiedzi..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 bg-surfaceContainer-light dark:bg-surfaceContainer-dark border-none rounded-full focus:ring-2 focus:ring-primary-500 outline-none"
+            className="w-full pl-10 pr-4 py-3 bg-surfaceContainer-light dark:bg-surfaceContainer-dark border-none rounded-full focus:ring-2 focus:ring-primary-500 outline-none shadow-sm"
           />
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto space-y-4 pb-12 pr-2">
+      <div className="space-y-4 pb-12">
         {filtered.map(q => {
           const stats = flashcardState[q.id];
           const isNew = !stats;
