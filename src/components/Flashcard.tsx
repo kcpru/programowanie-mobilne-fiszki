@@ -53,14 +53,14 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
           
           if (showAnswer) {
             if (isCorrect) {
-              optionClass = "border-green-500 bg-green-50 dark:bg-green-900/20";
+              optionClass = "border-green-600 bg-green-200 dark:border-green-500 dark:bg-green-900/30";
             } else if (isSelected && !isCorrect) {
-              optionClass = "border-red-500 bg-red-50 dark:bg-red-900/20";
+              optionClass = "border-red-600 bg-red-200 dark:border-red-500 dark:bg-red-900/30";
             } else {
               optionClass = "opacity-60 border-outlineVariant-light dark:border-outlineVariant-dark bg-surface-light dark:bg-surface-dark";
             }
           } else if (isSelected) {
-            optionClass = "border-primary-500 bg-primary-50 dark:bg-primary-900/20";
+            optionClass = "border-primary-600 bg-primary-200 dark:border-primary-500 dark:bg-primary-900/30";
           }
 
           return (
@@ -68,17 +68,17 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
               key={opt.letter}
               onClick={() => toggleOption(opt.letter)}
               className={cn(
-                "flex items-start p-4 border rounded-xl transition-all duration-200",
+                "flex items-start p-4 border-2 rounded-xl transition-all duration-200",
                 optionClass
               )}
             >
-              <div className="flex-shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded border border-outline-light dark:border-outline-dark mr-3">
-                 {showAnswer && isCorrect && <Check className="w-4 h-4 text-green-600 dark:text-green-400" />}
-                 {showAnswer && isSelected && !isCorrect && <X className="w-4 h-4 text-red-600 dark:text-red-400" />}
-                 {!showAnswer && isSelected && <Check className="w-4 h-4 text-primary-600 dark:text-primary-400" />}
+              <div className={cn("flex-shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded border mr-3", showAnswer || isSelected ? "border-transparent" : "border-outline-light dark:border-outline-dark")}>
+                 {showAnswer && isCorrect && <Check className="w-5 h-5 text-green-700 dark:text-green-400" />}
+                 {showAnswer && isSelected && !isCorrect && <X className="w-5 h-5 text-red-700 dark:text-red-400" />}
+                 {!showAnswer && isSelected && <Check className="w-5 h-5 text-primary-700 dark:text-primary-400" />}
               </div>
-              <div>
-                <span className="font-semibold mr-2">{displayLetter}.</span>
+              <div className={cn("text-base", (showAnswer && isCorrect) || (showAnswer && isSelected && !isCorrect) || (!showAnswer && isSelected) ? "font-medium" : "")}>
+                <span className="font-bold mr-2">{displayLetter}.</span>
                 <span>{opt.text}</span>
               </div>
             </div>
@@ -94,15 +94,21 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
           Zobacz odpowiedź
         </Button>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-4 animate-in fade-in duration-300">
           <p className="text-center font-medium text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark mb-2">
             Jak dobrze pamiętasz to pytanie?
           </p>
           <div className="grid grid-cols-2 gap-4">
-             <Button variant="outlined" className="text-red-600 dark:text-red-400 border-red-200 hover:bg-red-50 dark:hover:bg-red-900/20" onClick={() => onGrade(1)}>
+             <Button 
+               className="bg-[#ba1a1a] text-white hover:bg-[#93000a] dark:bg-[#ffb4ab] dark:text-[#690005] dark:hover:bg-[#ffdad6] py-4 font-bold text-lg shadow-md border-none" 
+               onClick={() => onGrade(1)}
+             >
                Ponownie
              </Button>
-             <Button variant="outlined" className="text-green-600 dark:text-green-400 border-green-200 hover:bg-green-50 dark:hover:bg-green-900/20" onClick={() => onGrade(4)}>
+             <Button 
+               className="bg-[#386a20] text-white hover:bg-[#2b5318] dark:bg-[#9cd67d] dark:text-[#0c3900] dark:hover:bg-[#b8f397] py-4 font-bold text-lg shadow-md border-none" 
+               onClick={() => onGrade(4)}
+             >
                Dobrze
              </Button>
           </div>
