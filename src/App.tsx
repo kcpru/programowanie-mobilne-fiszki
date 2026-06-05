@@ -1,30 +1,40 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { useTheme } from './hooks/useTheme';
 import { MainMenu } from './components/MainMenu';
 import { BrowseAll } from './components/BrowseAll';
 import { SessionView } from './components/SessionView';
-import { TimelineView } from './components/TimelineView';
 import { ThemeModal } from './components/ThemeModal';
+import { DataSetSelector } from './components/DataSetSelector';
 import type { FlashcardState, Question } from './types';
-import pytaniaData from './data/pytania.json';
+import mobileQuestionsData from './data/pytania.json';
+import cloudQuestionsData from './data/przetwarzanie-w-chmurze.json';
 import { Palette } from 'lucide-react';
 import { Button } from './components/Button';
 
-// Ensure data is typed correctly
-const questions: Question[] = pytaniaData as Question[];
-
-type ViewState = 'menu' | 'browse' | 'random' | 'smart' | 'timeline';
+type ViewState = 'menu' | 'browse' | 'random' | 'smart';
+type DataSet = "mobile" | "cloud";
 
 function App() {
   const [view, setView] = useState<ViewState>('menu');
+  const [dataSet, setDataSet] = useState<DataSet | null>(null);
   const [sessionLimit, setSessionLimit] = useState<number | undefined>(undefined);
   const [sessionKey, setSessionKey] = useState<number>(0);
   const [isThemeModalOpen, setIsThemeModalOpen] = useState(false);
+  
   const [flashcardState, setFlashcardState] = useLocalStorage<FlashcardState>('flashcard-sm2-state', {});
   const { themeMode, setThemeMode, colorTheme, setColorTheme } = useTheme();
 
-  const handleSelectMode = (mode: 'browse' | 'random' | 'smart' | 'timeline', limit?: number) => {
+  const questions = useMemo(() => {
+    if (dataSet === 'mobile') {
+      return mobileQuestionsData as Question[];
+    } else if (dataSet === 'cloud') {
+      return cloudQuestionsData as Question[];
+    }
+    return [];
+  }, [dataSet]);
+
+  const handleSelectMode = (mode: 'browse' | 'random' | 'smart', limit?: number) => {
     setView(mode);
     setSessionLimit(limit);
     if (mode === 'random' || mode === 'smart') {
@@ -40,6 +50,11 @@ function App() {
   const handleNextSession = () => {
     setSessionKey(prev => prev + 1);
   };
+
+  const handleBackToDataSetSelect = () => {
+    setDataSet(null);
+    setView('menu');
+  }
 
   return (
     <div className="min-h-screen">
@@ -64,31 +79,33 @@ function App() {
       />
 
       <main className="container mx-auto px-4 pb-24">
-        {view === 'menu' && (
-          <div className="pt-8">
-            <MainMenu onSelectMode={handleSelectMode} />
-          </div>
-        )}
-        
-        {view === 'browse' && (
-          <BrowseAll questions={questions} flashcardState={flashcardState} onExit={handleExit} />
-        )}
+        {!dataSet ? (
+          <DataSetSelector onSelectDataSet={setDataSet} />
+        ) : (
+          <>
+            {view === 'menu' && (
+              <div className="pt-8">
+                <MainMenu onSelectMode={handleSelectMode} onBack={handleBackToDataSetSelect} />
+              </div>
+            )}
+            
+            {view === 'browse' && (
+              <BrowseAll questions={questions} flashcardState={flashcardState} onExit={handleExit} />
+            )}
 
-        {view === 'timeline' && (
-          <TimelineView questions={questions} onExit={handleExit} />
-        )}
-
-        {(view === 'random' || view === 'smart') && (
-          <SessionView 
-            key={sessionKey}
-            questions={questions} 
-            mode={view} 
-            limit={sessionLimit}
-            flashcardState={flashcardState}
-            setFlashcardState={setFlashcardState}
-            onExit={handleExit}
-            onNextSession={handleNextSession}
-          />
+            {(view === 'random' || view === 'smart') && (
+              <SessionView 
+                key={sessionKey}
+                questions={questions} 
+                mode={view} 
+                limit={sessionLimit}
+                flashcardState={flashcardState}
+                setFlashcardState={setFlashcardState}
+                onExit={handleExit}
+                onNextSession={handleNextSession}
+              />
+            )}
+          </>
         )}
       </main>
     </div>

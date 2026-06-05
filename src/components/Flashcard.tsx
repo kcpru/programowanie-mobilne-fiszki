@@ -1,8 +1,8 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import type { Question } from '../types';
 import { Button } from './Button';
-import { cn } from '../lib/utils';
-import { Check, X } from 'lucide-react';
+import { cn, shuffleArray } from '../lib/utils';
+import { Check, X, Lightbulb } from 'lucide-react';
 
 type FlashcardProps = {
   question: Question;
@@ -12,12 +12,7 @@ type FlashcardProps = {
 export function Flashcard({ question, onGrade }: FlashcardProps) {
   const [selectedOptions, setSelectedOptions] = useState<Set<string>>(new Set());
   const [showAnswer, setShowAnswer] = useState(false);
-
-  // Reset state when question changes
-  useEffect(() => {
-    setSelectedOptions(new Set());
-    setShowAnswer(false);
-  }, [question]);
+  const [showHint, setShowHint] = useState(false);
 
   const toggleOption = (letter: string) => {
     if (showAnswer) return; // Prevent changing after showing answer
@@ -31,8 +26,8 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
   };
 
   const shuffledOptions = useMemo(() => {
-    return [...question.options].sort(() => Math.random() - 0.5);
-  }, [question.id, question.options]);
+    return shuffleArray(question.options);
+  }, [question.options]);
 
   return (
     <div className="w-full max-w-2xl mx-auto bg-surfaceContainer-light dark:bg-surfaceContainer-dark rounded-3xl p-6 shadow-sm">
@@ -41,6 +36,17 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
           Pytanie {question.id}
         </span>
         <h2 className="text-xl font-medium mt-2">{question.question}</h2>
+        {question.hint && !showHint && (
+          <Button variant="text" size="sm" onClick={() => setShowHint(true)} className="mt-2 text-sm">
+            <Lightbulb className="w-4 h-4 mr-2" />
+            Pokaż wskazówkę
+          </Button>
+        )}
+        {question.hint && showHint && (
+          <div className="mt-4 p-3 bg-surfaceContainerHighest-light dark:bg-surfaceContainerHighest-dark rounded-lg text-sm text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark">
+            <strong>Wskazówka:</strong> {question.hint}
+          </div>
+        )}
       </div>
 
       <div className="space-y-3 mb-8">
@@ -80,6 +86,11 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
               <div className={cn("text-base", (showAnswer && isCorrect) || (showAnswer && isSelected && !isCorrect) || (!showAnswer && isSelected) ? "font-medium" : "")}>
                 <span className="font-bold mr-2">{displayLetter}.</span>
                 <span>{opt.text}</span>
+                {showAnswer && opt.rationale && (
+                  <p className="text-xs mt-2 text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark opacity-90">
+                    {opt.rationale}
+                  </p>
+                )}
               </div>
             </div>
           );

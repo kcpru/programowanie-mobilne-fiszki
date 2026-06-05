@@ -1,27 +1,33 @@
 import { Button } from "./Button";
-import { BookOpen, RefreshCw, Layers, Bug } from "lucide-react";
+import { BookOpen, RefreshCw, Layers, ArrowLeft } from "lucide-react";
 import { useState } from "react";
 
 type MainMenuProps = {
-  onSelectMode: (
-    mode: "browse" | "random" | "smart" | "timeline",
-    limit?: number,
-  ) => void;
+  onSelectMode: (mode: "browse" | "random" | "smart", limit?: number) => void;
+  onBack: () => void;
 };
 
-export function MainMenu({ onSelectMode }: MainMenuProps) {
+export function MainMenu({ onSelectMode, onBack }: MainMenuProps) {
   const [limit, setLimit] = useState<number>(10);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[80vh] space-y-8 max-w-md mx-auto p-6">
       <div className="text-center space-y-2">
-        <h1 className="text-4xl font-semibold tracking-tight">Fiszki</h1>
+        <h1 className="text-4xl font-semibold tracking-tight">Quiz</h1>
         <p className="text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark">
           Wybierz tryb nauki, aby rozpocząć
         </p>
       </div>
 
       <div className="flex flex-col w-full space-y-4">
+        <Button
+          variant="text"
+          className="justify-start px-6 py-4 h-auto text-base"
+          onClick={onBack}
+        >
+          <ArrowLeft className="mr-3 h-5 w-5" />
+          Zmień zestaw
+        </Button>
         <Button
           variant="tonal"
           className="justify-start px-6 py-4 h-auto text-base"
@@ -51,10 +57,10 @@ export function MainMenu({ onSelectMode }: MainMenuProps) {
           </Button>
 
           <p className="text-xs text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark px-4 py-2 leading-relaxed">
-            Tryb sesji wykorzystuje algorytm <strong>SuperMemo-2 (SM-2)</strong>
-            . System priorytetyzuje fiszki, których termin powtórki już minął
-            lub które są dla Ciebie nowe. Twoje oceny wpływają na to, jak szybko
-            dane pytanie powróci w przyszłości.
+            Ten tryb umożliwia naukę mniejszymi porcjami. System priorytetyzuje
+            fiszki, których termin powtórki już minął lub które są dla Ciebie
+            nowe. Po zakończeniu sesji zostaniesz zapytany o rozpoczęcie
+            kolejnej z nowym zestawem pytań.
           </p>
 
           <div className="flex items-center justify-between px-4 pt-2">
@@ -72,21 +78,6 @@ export function MainMenu({ onSelectMode }: MainMenuProps) {
             />
           </div>
         </div>
-
-        <a
-          href="https://github.com/kcpru/programowanie-mobilne-fiszki/issues/new"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full mt-4 block"
-        >
-          <Button
-            variant="outlined"
-            className="justify-center px-6 py-4 h-auto text-base w-full"
-          >
-            <Bug className="mr-3 h-5 w-5" />
-            Zgłoś błąd na GitHub
-          </Button>
-        </a>
       </div>
     </div>
   );

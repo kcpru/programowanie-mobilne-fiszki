@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Flashcard } from './Flashcard';
 import type { Question, FlashcardState } from '../types';
 import { calculateSM2, initialSM2Data, type SM2Data } from '../lib/sm2';
 import { Button } from './Button';
 import { ArrowLeft, Undo2 } from 'lucide-react';
+import { shuffleArray } from '../lib/utils';
 
 type SessionViewProps = {
   questions: Question[];
@@ -24,40 +25,43 @@ type HistoryEntry = {
 
 export function SessionView({ questions, mode, limit, flashcardState, setFlashcardState, onExit, onNextSession }: SessionViewProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [queue, setQueue] = useState<Question[]>([]);
-  const [isInitialized, setIsInitialized] = useState(false);
-  const [cardsPassed, setCardsPassed] = useState(0); // Unique cards passed
+  const [cardsPassed, setCardsPassed] = useState(0);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
 
-  useEffect(() => {
-    let selected: Question[] = [];
+  const initialQueue = useMemo(() => {
+    let selected: Question[];
     if (mode === 'random') {
-      selected = [...questions].sort(() => Math.random() - 0.5);
-      if (limit) selected = selected.slice(0, limit);
+      selected = shuffleArray(questions);
+      if (limit) {
+        selected = selected.slice(0, limit);
+      }
     } else {
-      // Smart mode (SuperMemo 2)
+      // eslint-disable-next-line react-hooks/purity
       const now = Date.now();
-      
       const newCards = questions.filter(q => !flashcardState[q.id]);
       const reviewCards = questions.filter(q => flashcardState[q.id] && flashcardState[q.id].nextReviewDate <= now);
-      
       reviewCards.sort((a, b) => flashcardState[a.id].nextReviewDate - flashcardState[b.id].nextReviewDate);
-      
       selected = [...reviewCards, ...newCards];
-      
       if (limit) {
         selected = selected.slice(0, limit);
       }
     }
-    setQueue(selected);
-    setIsInitialized(true);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Only run once on mount per session key
+    return selected;
+  }, [questions, mode, limit, flashcardState]);
+
+  const [queue, setQueue] = useState<Question[]>(initialQueue);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setQueue(initialQueue);
+    setCurrentIndex(0);
+    setCardsPassed(0);
+    setHistory([]);
+  }, [initialQueue]);
 
   const handleGrade = (grade: number) => {
     const currentQ = queue[currentIndex];
     
-    // Save to history
     setHistory(prev => [...prev, {
       queue: [...queue],
       currentIndex,
@@ -68,7 +72,6 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
       }
     }]);
 
-    // Update state
     setFlashcardState(prev => {
       const currentData = prev[currentQ.id] || initialSM2Data;
       return {
@@ -77,11 +80,9 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
       };
     });
 
-    // If grade is 1 ("Ponownie"), push the question to the end of the queue
     if (grade === 1) {
       setQueue(prev => [...prev, currentQ]);
     } else {
-      // Card successfully passed
       setCardsPassed(prev => prev + 1);
     }
 
@@ -108,8 +109,6 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
       return newState;
     });
   };
-
-  if (!isInitialized) return null;
 
   if (queue.length === 0) {
     return (
