@@ -4,27 +4,20 @@ import { Button } from "./Button";
 import { cn, shuffleArray } from "../lib/utils";
 import { Check, X, Lightbulb } from "lucide-react";
 
-type FlashcardProps = {
+type RadioQuizProps = {
   question: Question;
   onGrade: (grade: number) => void;
 };
 
-export function Flashcard({ question, onGrade }: FlashcardProps) {
-  const [selectedOptions, setSelectedOptions] = useState<Set<string>>(
-    new Set(),
-  );
+export function RadioQuiz({ question, onGrade }: RadioQuizProps) {
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [showAnswer, setShowAnswer] = useState(false);
   const [showHint, setShowHint] = useState(false);
 
-  const toggleOption = (letter: string) => {
-    if (showAnswer) return; // Prevent changing after showing answer
-    const newSelected = new Set(selectedOptions);
-    if (newSelected.has(letter)) {
-      newSelected.delete(letter);
-    } else {
-      newSelected.add(letter);
-    }
-    setSelectedOptions(newSelected);
+  const handleOptionClick = (letter: string) => {
+    if (showAnswer) return;
+    setSelectedOption(letter);
+    setShowAnswer(true);
   };
 
   const shuffledOptions = useMemo(() => {
@@ -56,7 +49,7 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
       <div className="space-y-3 mb-8">
         {shuffledOptions.map((opt, index) => {
           const displayLetter = String.fromCharCode(65 + index);
-          const isSelected = selectedOptions.has(opt.letter);
+          const isSelected = selectedOption === opt.letter;
           const isCorrect = opt.is_correct;
 
           let optionClass =
@@ -73,24 +66,22 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
               optionClass =
                 "opacity-60 border-outlineVariant-light dark:border-outlineVariant-dark bg-surface-light dark:bg-surface-dark";
             }
-          } else if (isSelected) {
-            optionClass =
-              "border-primary-600 bg-primary-200 dark:border-primary-500 dark:bg-primary-900/30";
           }
 
           return (
             <div
               key={opt.letter}
-              onClick={() => toggleOption(opt.letter)}
+              onClick={() => handleOptionClick(opt.letter)}
               className={cn(
                 "flex items-start p-4 border-2 rounded-xl",
                 optionClass,
+                showAnswer ? "cursor-default" : "cursor-pointer",
               )}
             >
               <div
                 className={cn(
-                  "flex-shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded border mr-3",
-                  showAnswer || isSelected
+                  "flex-shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded-full border mr-3",
+                  showAnswer && (isCorrect || isSelected)
                     ? "border-transparent"
                     : "border-outline-light dark:border-outline-dark",
                 )}
@@ -101,18 +92,11 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
                 {showAnswer && isSelected && !isCorrect && (
                   <X className="w-5 h-5 text-red-700 dark:text-red-400" />
                 )}
-                {!showAnswer && isSelected && (
-                  <Check className="w-5 h-5 text-primary-700 dark:text-primary-400" />
-                )}
               </div>
               <div
                 className={cn(
                   "text-base",
-                  (showAnswer && isCorrect) ||
-                    (showAnswer && isSelected && !isCorrect) ||
-                    (!showAnswer && isSelected)
-                    ? "font-medium"
-                    : "",
+                  showAnswer && (isCorrect || isSelected) ? "font-medium" : "",
                 )}
               >
                 <span className="font-bold mr-2">{displayLetter}.</span>
@@ -128,14 +112,7 @@ export function Flashcard({ question, onGrade }: FlashcardProps) {
         })}
       </div>
 
-      {!showAnswer ? (
-        <Button
-          className="w-full py-3 text-lg"
-          onClick={() => setShowAnswer(true)}
-        >
-          Zobacz odpowiedź
-        </Button>
-      ) : (
+      {showAnswer && (
         <div className="space-y-4">
           <p className="text-center font-medium text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark mb-2">
             Jak dobrze pamiętasz to pytanie?

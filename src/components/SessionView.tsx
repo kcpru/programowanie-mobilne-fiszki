@@ -1,18 +1,21 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Flashcard } from './Flashcard';
+import { RadioQuiz } from './RadioQuiz';
 import type { Question, FlashcardState } from '../types';
 import { calculateSM2, initialSM2Data, type SM2Data } from '../lib/sm2';
 import { Button } from './Button';
 import { ArrowLeft, Undo2 } from 'lucide-react';
 import { shuffleArray } from '../lib/utils';
+import { ConfirmModal } from './ConfirmModal';
+import { useNavigate } from '@tanstack/react-router';
 
 type SessionViewProps = {
   questions: Question[];
   mode: 'random' | 'smart';
+  dataSet: 'mobile' | 'cloud';
   limit?: number;
   flashcardState: FlashcardState;
   setFlashcardState: React.Dispatch<React.SetStateAction<FlashcardState>>;
-  onExit: () => void;
   onNextSession?: () => void;
 };
 
@@ -23,10 +26,12 @@ type HistoryEntry = {
   flashcardStateEntry: { id: number; data: SM2Data | undefined };
 };
 
-export function SessionView({ questions, mode, limit, flashcardState, setFlashcardState, onExit, onNextSession }: SessionViewProps) {
+export function SessionView({ questions, mode, dataSet, limit, flashcardState, setFlashcardState, onNextSession }: SessionViewProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPassed, setCardsPassed] = useState(0);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
+  const [isConfirmExitModalOpen, setIsConfirmExitModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const initialQueue = useMemo(() => {
     let selected: Question[];
@@ -51,13 +56,9 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
 
   const [queue, setQueue] = useState<Question[]>(initialQueue);
 
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setQueue(initialQueue);
-    setCurrentIndex(0);
-    setCardsPassed(0);
-    setHistory([]);
-  }, [initialQueue]);
+  // The session state should not reset every time initialQueue changes during an active session.
+  // The 'key' prop on SessionView in the parent route already handles resetting the component's state
+  // when a new session is explicitly started.
 
   const handleGrade = (grade: number) => {
     const currentQ = queue[currentIndex];
@@ -110,12 +111,24 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
     });
   };
 
+  const handleConfirmExit = () => {
+    setIsConfirmExitModalOpen(false);
+    navigate({ to: '/$dataSet', params: { dataSet } });
+  };
+
+  const ExitButton = (
+    <Button variant="text" onClick={() => setIsConfirmExitModalOpen(true)} className="p-2 -ml-2">
+      <ArrowLeft className="w-5 h-5 mr-2" />
+      Zakończ
+    </Button>
+  );
+
   if (queue.length === 0) {
     return (
       <div className="text-center p-8">
         <h2 className="text-2xl mb-4">Brak fiszek do powtórki!</h2>
         <p className="text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark mb-8">Wróć później lub rozpocznij nową sesję.</p>
-        <Button onClick={onExit}>Wróć do menu</Button>
+        {ExitButton}
       </div>
     );
   }
@@ -137,7 +150,7 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
               Cofnij ostatnią odpowiedź
             </Button>
           )}
-          <Button variant="outlined" onClick={onExit}>Wróć do menu</Button>
+          {ExitButton}
         </div>
       </div>
     );
@@ -148,10 +161,7 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
   return (
     <div className="space-y-6">
       <div className="sticky top-0 z-30 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md py-4 flex items-center justify-between mb-4 border-b border-outlineVariant-light/30 dark:border-outlineVariant-dark/30 -mx-4 px-4">
-        <Button variant="text" onClick={onExit} className="p-2 -ml-2">
-          <ArrowLeft className="w-5 h-5 mr-2" />
-          Zakończ
-        </Button>
+        {ExitButton}
         <div className="flex items-center gap-2">
           {history.length > 0 && (
             <Button variant="text" onClick={handleUndo} className="p-2">
@@ -176,8 +186,20 @@ export function SessionView({ questions, mode, limit, flashcardState, setFlashca
       </div>
 
       <div className="pt-2">
-        <Flashcard key={currentIndex} question={currentQ} onGrade={handleGrade} />
+        {dataSet === 'cloud' ? (
+          <RadioQuiz key={currentIndex} question={currentQ} onGrade={handleGrade} />
+        ) : (
+          <Flashcard key={currentIndex} question={currentQ} onGrade={handleGrade} />
+        )}
       </div>
+
+      <ConfirmModal
+        isOpen={isConfirmExitModalOpen}
+        onClose={() => setIsConfirmExitModalOpen(false)}
+        onConfirm={handleConfirmExit}
+        title="Zakończ sesję?"
+        description="Masz niezapisany postęp w obecnej sesji. Czy na pewno chcesz zakończyć i stracić postęp?"
+      />
     </div>
   );
 }

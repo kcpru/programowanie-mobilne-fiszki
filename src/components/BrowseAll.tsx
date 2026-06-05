@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import type { Question, FlashcardState } from '../types';
 import { Button } from './Button';
-import { ArrowLeft, Search, Check, X, Calendar, TrendingUp, Filter, List } from 'lucide-react';
+import { Search, Check, X, Calendar, TrendingUp, Filter, List } from 'lucide-react';
 
 type BrowseAllProps = {
   questions: Question[];
   flashcardState: FlashcardState;
-  onExit: () => void;
+  ExitButton: React.ReactNode;
 };
 
-export function BrowseAll({ questions, flashcardState, onExit }: BrowseAllProps) {
+export function BrowseAll({ questions, flashcardState, ExitButton }: BrowseAllProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showOnlyCorrect, setShowOnlyCorrect] = useState(false);
 
@@ -21,9 +21,7 @@ export function BrowseAll({ questions, flashcardState, onExit }: BrowseAllProps)
   return (
     <div className="flex flex-col">
       <div className="sticky top-0 z-30 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md py-4 flex items-center gap-4 mb-6 border-b border-outlineVariant-light/30 dark:border-outlineVariant-dark/30 -mx-4 px-4">
-        <Button variant="text" onClick={onExit} className="p-2 -ml-2 shrink-0">
-          <ArrowLeft className="w-5 h-5" />
-        </Button>
+        {ExitButton}
         <div className="relative flex-1 flex items-center gap-2">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark" />

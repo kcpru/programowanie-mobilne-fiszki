@@ -1,13 +1,10 @@
 import { Button } from "./Button";
 import { BookOpen, RefreshCw, Layers, ArrowLeft } from "lucide-react";
+import { Link, useParams } from '@tanstack/react-router';
 import { useState } from "react";
 
-type MainMenuProps = {
-  onSelectMode: (mode: "browse" | "random" | "smart", limit?: number) => void;
-  onBack: () => void;
-};
-
-export function MainMenu({ onSelectMode, onBack }: MainMenuProps) {
+export function MainMenu() {
+  const { dataSet } = useParams({ from: '/$dataSet/' });
   const [limit, setLimit] = useState<number>(10);
 
   return (
@@ -20,41 +17,45 @@ export function MainMenu({ onSelectMode, onBack }: MainMenuProps) {
       </div>
 
       <div className="flex flex-col w-full space-y-4">
-        <Button
-          variant="text"
-          className="justify-start px-6 py-4 h-auto text-base"
-          onClick={onBack}
-        >
-          <ArrowLeft className="mr-3 h-5 w-5" />
-          Zmień zestaw
-        </Button>
-        <Button
-          variant="tonal"
-          className="justify-start px-6 py-4 h-auto text-base"
-          onClick={() => onSelectMode("browse")}
-        >
-          <BookOpen className="mr-3 h-5 w-5" />
-          Przegląd wszystkich fiszek
-        </Button>
+        <Link to="/">
+          <Button
+            variant="text"
+            className="justify-start px-6 py-4 h-auto text-base"
+          >
+            <ArrowLeft className="mr-3 h-5 w-5" />
+            Zmień zestaw
+          </Button>
+        </Link>
+        <Link to="/$dataSet/browse" params={{ dataSet }}>
+          <Button
+            variant="tonal"
+            className="justify-start px-6 py-4 h-auto text-base w-full"
+          >
+            <BookOpen className="mr-3 h-5 w-5" />
+            Przegląd wszystkich fiszek
+          </Button>
+        </Link>
 
-        <Button
-          variant="tonal"
-          className="justify-start px-6 py-4 h-auto text-base"
-          onClick={() => onSelectMode("random")}
-        >
-          <RefreshCw className="mr-3 h-5 w-5" />
-          Masowo losowo
-        </Button>
+        <Link to="/$dataSet/session" params={{ dataSet }} search={{ mode: 'random' }}>
+          <Button
+            variant="tonal"
+            className="justify-start px-6 py-4 h-auto text-base w-full"
+          >
+            <RefreshCw className="mr-3 h-5 w-5" />
+            Masowo losowo
+          </Button>
+        </Link>
 
         <div className="flex flex-col space-y-2 bg-surfaceContainer-light dark:bg-surfaceContainer-dark p-4 rounded-3xl">
-          <Button
-            variant="filled"
-            className="justify-start px-6 py-4 h-auto text-base w-full"
-            onClick={() => onSelectMode("smart", limit)}
-          >
-            <Layers className="mr-3 h-5 w-5" />
-            Rozpocznij sesję
-          </Button>
+          <Link to="/$dataSet/session" params={{ dataSet }} search={{ mode: 'smart', limit }}>
+            <Button
+              variant="filled"
+              className="justify-start px-6 py-4 h-auto text-base w-full"
+            >
+              <Layers className="mr-3 h-5 w-5" />
+              Rozpocznij sesję
+            </Button>
+          </Link>
 
           <p className="text-xs text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark px-4 py-2 leading-relaxed">
             Ten tryb umożliwia naukę mniejszymi porcjami. System priorytetyzuje
