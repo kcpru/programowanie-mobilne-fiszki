@@ -1,0 +1,768 @@
+{
+  "title": "Chmura Quiz",
+  "questions": [
+    {
+      "question": "Który z pionierów informatyki zaproponował w 1961 roku, aby moc obliczeniowa była sprzedawana jako usługa użyteczności publicznej, podobnie jak prąd czy woda?",
+      "answerOptions": [
+        {
+          "text": "John McCarthy",
+          "isCorrect": true,
+          "rationale": "Jego koncepcja 'Computing as a Utility' położyła fundamenty pod dzisiejszy model biznesowy przetwarzania w chmurze."
+        },
+        {
+          "text": "J.C.R. Licklider",
+          "isCorrect": false,
+          "rationale": "Był on pionierem globalnej sieci obliczeniowej ARPANet, ale to nie on sformułował idei sprzedaży mocy jako mediów."
+        },
+        {
+          "text": "Daniel Grzonka",
+          "isCorrect": false,
+          "rationale": "Jest to autor prezentacji, a nie historyczny twórca koncepcji chmury z lat 60."
+        },
+        {
+          "text": "Vinton Cerf",
+          "isCorrect": false,
+          "rationale": "Jest on uznawany za jednego z ojców Internetu, jednak propozycja 'Computing as a Utility' przypisywana jest McCarthy'emu."
+        }
+      ],
+      "hint": "Poszukaj nazwiska naukowca z MIT kojarzonego z początkami sztucznej inteligencji i koncepcją mediów użytkowych."
+    },
+    {
+      "question": "Zgodnie z modelem warstwowym architektury chmury, która warstwa odpowiada za inicjowanie połączenia i interakcję z użytkownikiem końcowym?",
+      "answerOptions": [
+        {
+          "text": "Warstwa użytkownika (User Layer)",
+          "isCorrect": true,
+          "rationale": "Obejmuje ona urządzenia i aplikacje końcowe, które stanowią punkt wejścia do ekosystemu chmurowego."
+        },
+        {
+          "text": "Warstwa sieciowa (Network Layer)",
+          "isCorrect": false,
+          "rationale": "Ta warstwa zapewnia łączność i przepustowość, ale sama nie inicjuje interakcji użytkownika z usługą."
+        },
+        {
+          "text": "Warstwa zarządzania (Cloud Management Layer)",
+          "isCorrect": false,
+          "rationale": "Zajmuje się ona orkiestracją i monitorowaniem zasobów, działając wewnątrz infrastruktury dostawcy."
+        },
+        {
+          "text": "Warstwa sprzętowa (Hardware Resource Layer)",
+          "isCorrect": false,
+          "rationale": "Stanowi ona fizyczny fundament chmury, składający się z serwerów i pamięci, do których użytkownik nie ma bezpośredniego dostępu."
+        }
+      ],
+      "hint": "Zastanów się, która część systemu znajduje się najbliżej urządzenia, na którym właśnie pracujesz."
+    },
+    {
+      "question": "Co oznacza cecha 'Task-centric' (zadaniocentryczność) w charakterystyce chmury według Google?",
+      "answerOptions": [
+        {
+          "text": "Skupienie na celu użytkownika, a nie na konkretnej aplikacji",
+          "isCorrect": true,
+          "rationale": "Użytkownika interesuje efekt końcowy, np. napisanie dokumentu, a nie to, jakiego oprogramowania musi do tego użyć."
+        },
+        {
+          "text": "Możliwość wykonywania wielu zadań jednocześnie przez serwer",
+          "isCorrect": false,
+          "rationale": "Jest to definicja wielozadaniowości (multitasking), a nie zadaniocentryczności w ujęciu Google."
+        },
+        {
+          "text": "Zautomatyzowane przydzielanie zadań do konkretnych centrów danych",
+          "isCorrect": false,
+          "rationale": "Opisuje to mechanizmy orkiestracji i load balancingu, a nie perspektywę użytkownika końcowego."
+        },
+        {
+          "text": "Dostęp do danych z dowolnego urządzenia",
+          "isCorrect": false,
+          "rationale": "Ten opis pasuje bardziej do cechy 'User-centric', gdzie dane podążają za użytkownikiem."
+        }
+      ],
+      "hint": "Przypomnij sobie przykład z edycją dokumentu, gdzie nazwa programu jest drugorzędna wobec samej treści."
+    },
+    {
+      "question": "W modelu NIST, która z cech chmury pozwala na szybkie zwiększanie lub zmniejszanie zasobów w zależności od zapotrzebowania?",
+      "answerOptions": [
+        {
+          "text": "Elastyczność i skalowalność (On-demand availability)",
+          "isCorrect": true,
+          "rationale": "Pozwala to na dynamiczne dopasowanie mocy obliczeniowej bez konieczności fizycznej rozbudowy serwerowni."
+        },
+        {
+          "text": "Współdzielenie zasobów (Resource pooling)",
+          "isCorrect": false,
+          "rationale": "Odnosi się to do grupowania zasobów dla wielu klientów, co jest fundamentem, ale nie definiuje samej szybkości zmian."
+        },
+        {
+          "text": "Mierzalność usług (Measured service)",
+          "isCorrect": false,
+          "rationale": "Dotyczy to monitorowania zużycia zasobów w celu rozliczeń, a nie technicznej zdolności do ich zmiany."
+        },
+        {
+          "text": "Szeroki dostęp sieciowy (Broad network access)",
+          "isCorrect": false,
+          "rationale": "Oznacza to dostępność usług przez standardowe mechanizmy sieciowe i różnorodne urządzenia."
+        }
+      ],
+      "hint": "Chodzi o mechanizm 'up \\& down', który pozwala uniknąć przestojów lub nadmiarowych kosztów."
+    },
+    {
+      "question": "Która technologia wspierająca architekturę chmury polega na podziale fizycznych zasobów serwera na wiele niezależnych instancji logicznych?",
+      "answerOptions": [
+        {
+          "text": "Wirtualizacja",
+          "isCorrect": true,
+          "rationale": "Dzięki niej możliwe jest uruchomienie wielu systemów operacyjnych na jednym fizycznym sprzęcie, co zwiększa jego wykorzystanie."
+        },
+        {
+          "text": "Grid computing",
+          "isCorrect": false,
+          "rationale": "Polega na łączeniu rozproszonych zasobów wielu komputerów w jeden system, a nie na dzieleniu jednego serwera."
+        },
+        {
+          "text": "SOA (Service-Oriented Architecture)",
+          "isCorrect": false,
+          "rationale": "Jest to model projektowania oprogramowania opartego na usługach komunikujących się przez API."
+        },
+        {
+          "text": "Utility computing",
+          "isCorrect": false,
+          "rationale": "To model biznesowy rozliczania usług, a nie technologia separacji zasobów sprzętowych."
+        }
+      ],
+      "hint": "To słowo kluczowe opisuje tworzenie warstwy abstrakcji nad fizycznym sprzętem."
+    },
+    {
+      "question": "Prawda czy fałsz: Warstwa sieciowa (Network Layer) w architekturze chmury jest zazwyczaj w pełni objęta gwarancją SLA (Service Level Agreement) przez dostawcę chmury.",
+      "answerOptions": [
+        {
+          "text": "Fałsz",
+          "isCorrect": true,
+          "rationale": "Dostawca chmury zazwyczaj nie ma kontroli nad publicznym Internetem, przez który łączy się użytkownik, więc nie może go objąć swoim SLA."
+        },
+        {
+          "text": "Prawda",
+          "isCorrect": false,
+          "rationale": "Materiały źródłowe wyraźnie wskazują, że warstwa sieciowa nie jest objęta SLA, w przeciwieństwie do zasobów wewnętrznych."
+        }
+      ],
+      "hint": "Zastanów się, czy Microsoft lub Google mogą zagwarantować stabilność Twojego domowego łącza internetowego."
+    },
+    {
+      "question": "Który model wdrożenia chmury jest definiowany jako infrastruktura współdzielona przez grupę organizacji o wspólnych wymaganiach (np. prawnych lub misji)?",
+      "answerOptions": [
+        {
+          "text": "Chmura społecznościowa (Community Cloud)",
+          "isCorrect": true,
+          "rationale": "Jest to rozwiązanie pośrednie, dedykowane specyficznym branżom, takim jak sektor medyczny czy administracja publiczna."
+        },
+        {
+          "text": "Chmura hybrydowa (Hybrid Cloud)",
+          "isCorrect": false,
+          "rationale": "Łączy ona różne modele wdrożeniowe (np. prywatną i publiczną), ale nie opiera się na idei jednej wspólnoty interesów."
+        },
+        {
+          "text": "Chmura prywatna (Private Cloud)",
+          "isCorrect": false,
+          "rationale": "Jest ona zarezerwowana wyłącznie dla jednej, konkretnej organizacji."
+        },
+        {
+          "text": "Chmura publiczna (Public Cloud)",
+          "isCorrect": false,
+          "rationale": "Jest ona ogólnodostępna dla każdego użytkownika lub firmy przez Internet."
+        }
+      ],
+      "hint": "Szukaj modelu, który gromadzi podmioty o podobnych celach, np. naukowych lub medycznych."
+    },
+    {
+      "question": "Co jest kluczową różnicą między modelem IaaS a PaaS w kontekście kontroli użytkownika?",
+      "answerOptions": [
+        {
+          "text": "W IaaS użytkownik kontroluje system operacyjny, w PaaS zazwyczaj tylko aplikacje",
+          "isCorrect": true,
+          "rationale": "IaaS dostarcza 'surowe' zasoby jak maszyny wirtualne, natomiast PaaS oferuje gotowe środowisko uruchomieniowe."
+        },
+        {
+          "text": "W PaaS użytkownik musi zarządzać fizycznymi serwerami, w IaaS nie",
+          "isCorrect": false,
+          "rationale": "W żadnym z tych modeli użytkownik chmury nie zarządza fizycznym sprzętem; to rola dostawcy."
+        },
+        {
+          "text": "IaaS służy tylko do przechowywania danych, a PaaS tylko do obliczeń",
+          "isCorrect": false,
+          "rationale": "Oba modele są wszechstronne, różnią się jedynie poziomem abstrakcji udostępnianych narzędzi."
+        },
+        {
+          "text": "Model PaaS jest droższy, ponieważ oferuje mniejszą kontrolę",
+          "isCorrect": false,
+          "rationale": "Koszty zależą od skali użycia, a mniejsza kontrola w PaaS jest cechą ułatwiającą pracę programistom, a nie wadą podnoszącą cenę."
+        }
+      ],
+      "hint": "Zastanów się, w którym modelu musisz sam zainstalować i skonfigurować Windowsa lub Linuxa."
+    },
+    {
+      "question": "Która z wymienionych usług jest typowym przykładem modelu SaaS (Software as a Service)?",
+      "answerOptions": [
+        {
+          "text": "Salesforce",
+          "isCorrect": true,
+          "rationale": "Jest to gotowa aplikacja CRM dostępna przez przeglądarkę, co jest definicją oprogramowania jako usługi."
+        },
+        {
+          "text": "Amazon EC2",
+          "isCorrect": false,
+          "rationale": "EC2 to usługa typu IaaS, dostarczająca instancje maszyn wirtualnych."
+        },
+        {
+          "text": "Google BigTable",
+          "isCorrect": false,
+          "rationale": "Jest to usługa bazy danych (Storage/PaaS), a nie gotowa aplikacja końcowa dla użytkownika biznesowego."
+        },
+        {
+          "text": "AWS Outposts",
+          "isCorrect": false,
+          "rationale": "Jest to rozwiązanie dla chmury hybrydowej, pozwalające uruchamiać usługi AWS lokalnie."
+        }
+      ],
+      "hint": "Szukaj gotowej aplikacji biznesowej, którą po prostu subskrybujesz i używasz bez programowania."
+    },
+    {
+      "question": "W kontekście Cloud Storage, co zapewnia mechanizm replikacji danych w wielu lokalizacjach?",
+      "answerOptions": [
+        {
+          "text": "Wysoką dostępność i odporność na awarie (redundancję)",
+          "isCorrect": true,
+          "rationale": "Kopiowanie danych do różnych centrów danych gwarantuje, że awaria jednego z nich nie spowoduje utraty plików."
+        },
+        {
+          "text": "Zmniejszenie kosztów przechowywania pojedynczego bajta danych",
+          "isCorrect": false,
+          "rationale": "Replikacja wręcz zwiększa fizyczne zużycie miejsca, choć podnosi bezpieczeństwo i wartość usługi."
+        },
+        {
+          "text": "Wyłącznie przyspieszenie czasu dostępu dla użytkowników lokalnych",
+          "isCorrect": false,
+          "rationale": "Przyspieszenie dostępu jest skutkiem ubocznym (CDN), ale głównym celem replikacji w storage jest bezpieczeństwo danych."
+        },
+        {
+          "text": "Konieczność ręcznego synchronizowania plików przez użytkownika",
+          "isCorrect": false,
+          "rationale": "W chmurze proces ten jest całkowicie zautomatyzowany i niewidoczny dla klienta."
+        }
+      ],
+      "hint": "Pomyśl, co się stanie z Twoim zdjęciem w chmurze, jeśli w jednym centrum danych nastąpi pożar."
+    },
+    {
+      "question": "Czym jest 'Vendor lock-in' w kontekście rozwiązań Multi-cloud?",
+      "answerOptions": [
+        {
+          "text": "Uzależnieniem od jednego dostawcy technologii",
+          "isCorrect": true,
+          "rationale": "Trudność w przeniesieniu danych i usług do innego dostawcy z powodu specyficznych formatów lub API jest dużym wyzwaniem."
+        },
+        {
+          "text": "Mechanizmem zabezpieczającym serwerownię przed własmaniem",
+          "isCorrect": false,
+          "rationale": "Termin ten dotyczy strategii biznesowej i technicznej, a nie fizycznego bezpieczeństwa budynków."
+        },
+        {
+          "text": "Gwarancją najniższej ceny u wybranego dostawcy",
+          "isCorrect": false,
+          "rationale": "Uzależnienie od dostawcy często prowadzi do braku negocjacji cenowych, co jest przeciwieństwem korzyści finansowej."
+        },
+        {
+          "text": "Automatycznym blokowaniem nieautoryzowanych użytkowników",
+          "isCorrect": false,
+          "rationale": "Opisuje to systemy IAM (Identity and Access Management), a nie problem interoperacyjności między chmurami."
+        }
+      ],
+      "hint": "Słowo 'lock-in' sugeruje sytuację, w której trudno jest 'wyjść' lub zmienić obecnego partnera technologicznego."
+    },
+    {
+      "question": "Która cecha chmury według Google odnosi się do automatycznej reakcji systemu na awarie i obciążenie?",
+      "answerOptions": [
+        {
+          "text": "Programmable (programowalna)",
+          "isCorrect": true,
+          "rationale": "Automatyzacja pozwala na przeniesienie danych na inne maszyny w razie awarii bez wiedzy użytkownika."
+        },
+        {
+          "text": "Powerful (wydajna)",
+          "isCorrect": false,
+          "rationale": "Odnosi się to do ogromnej mocy obliczeniowej setek połączonych komputerów."
+        },
+        {
+          "text": "Accessible (dostępna)",
+          "isCorrect": false,
+          "rationale": "Oznacza to możliwość pracy z dowolnego miejsca na świecie."
+        },
+        {
+          "text": "Intelligent (inteligentna)",
+          "isCorrect": false,
+          "rationale": "Dotyczy to analityki danych, sztucznej inteligencji i systemów rekomendacyjnych."
+        }
+      ],
+      "hint": "Chodzi o zdolność infrastruktury do 'samonaprawiania się' i elastycznego reagowania przez kod."
+    },
+    {
+      "question": "W modelu NIST, chmura hybrydowa powstaje poprzez połączenie dwóch lub więcej modeli wdrożeniowych, które:",
+      "answerOptions": [
+        {
+          "text": "Pozostają unikalnymi podmiotami, ale są powiązane technologią",
+          "isCorrect": true,
+          "rationale": "Umożliwia to przenoszenie danych i aplikacji między różnymi środowiskami (np. prywatnym i publicznym)."
+        },
+        {
+          "text": "Muszą należeć do tego samego właściciela (dostawcy)",
+          "isCorrect": false,
+          "rationale": "Hybryda może łączyć zasoby lokalne (on-premise) z zasobami wielu różnych dostawców zewnętrznych."
+        },
+        {
+          "text": "Są całkowicie odizolowane od siebie ze względów bezpieczeństwa",
+          "isCorrect": false,
+          "rationale": "Istotą hybrydy jest integracja i współpraca, a nie izolacja."
+        },
+        {
+          "text": "Działają tylko w obrębie jednej sieci lokalnej LAN",
+          "isCorrect": false,
+          "rationale": "Hybryda z definicji wykracza poza sieć lokalną, łącząc się z zasobami internetowymi."
+        }
+      ],
+      "hint": "Kluczem jest zachowanie odrębności przy jednoczesnym zapewnieniu 'mostu' dla danych."
+    },
+    {
+      "question": "Jakie główne korzyści finansowe odnosi firma przechodząc z modelu tradycyjnego IT do chmury?",
+      "answerOptions": [
+        {
+          "text": "Przejście z wydatków kapitałowych (CapEx) na operacyjne (OpEx)",
+          "isCorrect": true,
+          "rationale": "Firma płaci za faktyczne użycie zamiast inwestować ogromne kwoty w zakup własnych serwerów na start."
+        },
+        {
+          "text": "Całkowita rezygnacja z opłacania działów IT",
+          "isCorrect": false,
+          "rationale": "Chmura zmienia rolę działów IT, ale nie eliminuje potrzeby zarządzania usługami i bezpieczeństwem."
+        },
+        {
+          "text": "Możliwość darmowego korzystania z zasobów przez nielimitowany czas",
+          "isCorrect": false,
+          "rationale": "Chmura opiera się na modelu płatności za użycie; darmowe limity są zazwyczaj mocno ograniczone."
+        },
+        {
+          "text": "Stały, niezmienny koszt abonamentowy niezależny od zużycia",
+          "isCorrect": false,
+          "rationale": "Model 'Pay-as-you-go' sprawia, że koszty są zmienne i zależą bezpośrednio od aktualnego obciążenia."
+        }
+      ],
+      "hint": "Pomyśl o różnicy między kupnem samochodu na własność a płaceniem za minuty w car-sharingu."
+    },
+    {
+      "question": "Który element architektury chmury jest kluczowy dla zapewnienia zgodności z umowami SLA i wydajności całego systemu?",
+      "answerOptions": [
+        {
+          "text": "Warstwa sprzętowa (Hardware Resource Layer)",
+          "isCorrect": true,
+          "rationale": "Fizyczna infrastruktura w centrach danych bezpośrednio determinuje dostępność i szybkość działania usług."
+        },
+        {
+          "text": "Urządzenia końcowe użytkownika",
+          "isCorrect": false,
+          "rationale": "Wydajność laptopa użytkownika nie wpływa na SLA samej usługi chmurowej."
+        },
+        {
+          "text": "Aplikacje typu Open Source",
+          "isCorrect": false,
+          "rationale": "Choć są popularne, to nie one stanowią warstwę krytyczną dla gwarancji infrastrukturalnych SLA."
+        },
+        {
+          "text": "Standardy kodowania API",
+          "isCorrect": false,
+          "rationale": "API ułatwia komunikację, ale fundamentem wydajności pozostaje fizyczna moc obliczeniowa serwerów."
+        }
+      ],
+      "hint": "Wybierz warstwę, która fizycznie 'wypracowuje' wyniki obliczeń."
+    },
+    {
+      "question": "Model referencyjny NIST wymienia 3 główne modele usługowe. Który z nich oferuje najwyższy poziom abstrakcji dla użytkownika końcowego?",
+      "answerOptions": [
+        {
+          "text": "SaaS",
+          "isCorrect": true,
+          "rationale": "Użytkownik otrzymuje gotowy produkt i nie musi martwić się o infrastrukturę ani platformę programistyczną."
+        },
+        {
+          "text": "IaaS",
+          "isCorrect": false,
+          "rationale": "Jest to najniższy poziom usług chmurowych, wymagający od użytkownika najwięcej samodzielnej konfiguracji."
+        },
+        {
+          "text": "PaaS",
+          "isCorrect": false,
+          "rationale": "Jest modelem pośrednim, przeznaczonym głównie dla programistów, a nie dla przeciętnego użytkownika końcowego."
+        },
+        {
+          "text": "DaaS (Database as a Service)",
+          "isCorrect": false,
+          "rationale": "Choć istotny, nie jest wymieniany jako jeden z trzech podstawowych filarów w klasycznym modelu NIST."
+        }
+      ],
+      "hint": "Najwyższa abstrakcja oznacza, że użytkownik po prostu klika i korzysta z gotowej funkcji."
+    },
+    {
+      "question": "W ewolucji modeli przetwarzania, co było bezpośrednią podstawą dla powstania idei chmury pod koniec lat 90.?",
+      "answerOptions": [
+        {
+          "text": "Distributed Computing (Przetwarzanie rozproszone)",
+          "isCorrect": true,
+          "rationale": "Wiele komputerów połączonych w sieć współdzielących zasoby stało się fundamentem technologicznym dla Cloud Computing."
+        },
+        {
+          "text": "Mainframe Computing",
+          "isCorrect": false,
+          "rationale": "Był to model bardzo scentralizowany i sztywny, stanowiący odległą przeszłość wobec elastyczności chmury."
+        },
+        {
+          "text": "Sztuczna Inteligencja",
+          "isCorrect": false,
+          "rationale": "AI jest beneficjentem chmury, ale nie było bezpośrednią przyczyną jej powstania jako modelu architektonicznego."
+        },
+        {
+          "text": "Pojawienie się pierwszych smartfonów",
+          "isCorrect": false,
+          "rationale": "Smartfony napędziły popularność chmury, ale sama technologia chmurowa zaczęła ewoluować znacznie wcześniej."
+        }
+      ],
+      "hint": "Szukaj modelu, w którym sieć komputerów współpracuje ze sobą, dzieląc się mocą."
+    },
+    {
+      "question": "Która z wymienionych zalet chmury jest szczególnie istotna w sytuacjach kryzysowych, takich jak pandemia?",
+      "answerOptions": [
+        {
+          "text": "Umożliwienie pracy zdalnej i współdzielonej",
+          "isCorrect": true,
+          "rationale": "Chmura pozwala na dostęp do narzędzi biurowych i danych z dowolnego miejsca, co umożliwiło ciągłość pracy podczas lockdownu."
+        },
+        {
+          "text": "Możliwość zakupu tańszych fizycznych dysków twardych",
+          "isCorrect": false,
+          "rationale": "Przejście do chmury zazwyczaj wiąże się z rezygnacją z fizycznych nośników lokalnych, a nie ich zakupem."
+        },
+        {
+          "text": "Wyeliminowanie potrzeby korzystania z Internetu",
+          "isCorrect": false,
+          "rationale": "Chmura jest całkowicie zależna od Internetu; bez niego dostęp do usług jest niemożliwy."
+        },
+        {
+          "text": "Zwiększenie bezpieczeństwa fizycznego komputerów w biurze",
+          "isCorrect": false,
+          "rationale": "Chmura chroni dane w centrach danych, ale nie ma wpływu na to, czy ktoś ukradnie laptopa z opuszczonego biura."
+        }
+      ],
+      "hint": "Pomyśl o tym, co pozwoliło milionom ludzi pracować z domu bez konieczności zabierania serwerów z firmy."
+    },
+    {
+      "question": "Przykłady takie jak OpenStack lub VMware vCloud odnoszą się zazwyczaj do jakiego modelu wdrożenia?",
+      "answerOptions": [
+        {
+          "text": "Chmura prywatna (Private Cloud)",
+          "isCorrect": true,
+          "rationale": "Są to technologie pozwalające organizacjom na budowę własnej infrastruktury chmurowej wewnątrz swojej serwerowni."
+        },
+        {
+          "text": "Chmura publiczna",
+          "isCorrect": false,
+          "rationale": "Chmury publiczne to gotowe usługi gigantów jak AWS czy Azure, a nie oprogramowanie do samodzielnej instalacji."
+        },
+        {
+          "text": "Social Cloud",
+          "isCorrect": false,
+          "rationale": "Nie jest to standardowy model wdrożeniowy wymieniany w literaturze przedmiotu."
+        },
+        {
+          "text": "Legacy IT",
+          "isCorrect": false,
+          "rationale": "Termin ten oznacza stare, nieaktualne systemy, podczas gdy OpenStack to nowoczesne rozwiązanie chmurowe."
+        }
+      ],
+      "hint": "Zastanów się, czy te narzędzia służą do budowania chmury 'u siebie', czy do kupowania jej u gigantów."
+    },
+    {
+      "question": "Co jest celem warstwy zarządzania (Cloud Management Layer) w architekturze chmury?",
+      "answerOptions": [
+        {
+          "text": "Orkiestracja, automatyzacja i kontrola SLA",
+          "isCorrect": true,
+          "rationale": "To 'mózg' chmury, który decyduje gdzie uruchomić zasoby i pilnuje ich poprawnego działania."
+        },
+        {
+          "text": "Fizyczne połączenie kablowe między serwerami",
+          "isCorrect": false,
+          "rationale": "Zajmuje się tym warstwa sieciowa i infrastruktura sprzętowa, a nie systemy zarządzania."
+        },
+        {
+          "text": "Projektowanie interfejsu graficznego dla użytkownika",
+          "isCorrect": false,
+          "rationale": "Interfejs jest częścią warstwy użytkownika lub front-endu aplikacji, a nie rdzeniem zarządzania zasobami."
+        },
+        {
+          "text": "Sprzedaż licencji na oprogramowanie biurowe",
+          "isCorrect": false,
+          "rationale": "Jest to element modelu biznesowego SaaS, a nie technicznej warstwy zarządzania infrastrukturą."
+        }
+      ],
+      "hint": "Pomyśl o systemie operacyjnym całej chmury, który dba o przydzielanie maszyn (provisioning)."
+    },
+    {
+      "question": "Zgodnie z definicją NIST, chmura obliczeniowa to model umożliwiający dostęp do wspólnej puli zasobów z 'minimalnym wysiłkiem'. Co to oznacza w praktyce?",
+      "answerOptions": [
+        {
+          "text": "Zasoby można szybko przydzielać i zwalniać bez interakcji z dostawcą",
+          "isCorrect": true,
+          "rationale": "Użytkownik sam klika w panelu zarządzania i w minuty otrzymuje serwer, bez pisania pism i czekania na kuriera."
+        },
+        {
+          "text": "Korzystanie z chmury nie wymaga posiadania żadnej wiedzy technicznej",
+          "isCorrect": false,
+          "rationale": "Zarządzanie chmurą (zwłaszcza IaaS/PaaS) wymaga znacznych kompetencji IT."
+        },
+        {
+          "text": "Chmura sama domyśla się, jakich zasobów potrzebuje użytkownik",
+          "isCorrect": false,
+          "rationale": "Choć istnieją mechanizmy auto-scalingu, początkowa konfiguracja zawsze leży po stronie człowieka."
+        },
+        {
+          "text": "Wszystkie usługi w chmurze są całkowicie bezpłatne",
+          "isCorrect": false,
+          "rationale": "Minimalny wysiłek dotyczy procesów technicznych i logistycznych, a nie braku kosztów finansowych."
+        }
+      ],
+      "hint": "Skup się na aspekcie 'samoobsługi' (self-service) i szybkości uruchamiania."
+    },
+    {
+      "question": "Dlaczego model Multi-cloud zyskuje na popularności wśród dużych organizacji?",
+      "answerOptions": [
+        {
+          "text": "Zwiększa odporność na awarie u jednego dostawcy",
+          "isCorrect": true,
+          "rationale": "Korzystanie z usług kilku dostawców naraz (np. AWS i Azure) sprawia, że globalny problem u jednego z nich nie paraliżuje firmy."
+        },
+        {
+          "text": "Jest to najtańszy możliwy sposób korzystania z chmury",
+          "isCorrect": false,
+          "rationale": "Zarządzanie wieloma chmurami jest skomplikowane i często droższe niż trzymanie wszystkiego u jednego dostawcy."
+        },
+        {
+          "text": "Pozwala na całkowite zrezygnowanie z systemów bezpieczeństwa",
+          "isCorrect": false,
+          "rationale": "Model ten wręcz komplikuje kwestie bezpieczeństwa i wymaga spójnej polityki dla różnych środowisk."
+        },
+        {
+          "text": "Każda chmura publiczna oferuje dokładnie te same funkcje",
+          "isCorrect": false,
+          "rationale": "Główną trudnością multi-cloud jest właśnie różnorodność unikalnych usług oferowanych przez poszczególnych gigantów."
+        }
+      ],
+      "hint": "Pomyśl o strategii 'nie wkładania wszystkich jajek do jednego koszyka'."
+    },
+    {
+      "question": "Koncepcja 'Cloud Storage' jako globalnej macierzy dyskowej charakteryzuje się:",
+      "answerOptions": [
+        {
+          "text": "Automatyczną replikacją i dostępem przez API",
+          "isCorrect": true,
+          "rationale": "Dane są dostępne z każdego miejsca, a system dba o ich kopiowanie między serwerami bez udziału użytkownika."
+        },
+        {
+          "text": "Koniecznością posiadania własnego serwera plików w biurze",
+          "isCorrect": false,
+          "rationale": "Jest to opis tradycyjnego magazynu danych, a nie przechowywania w chmurze."
+        },
+        {
+          "text": "Ograniczeniem wielkości plików do $1$ GB",
+          "isCorrect": false,
+          "rationale": "Nowoczesne systemy chmurowe (np. Amazon S3) pozwalają na przechowywanie obiektów o ogromnych rozmiarach."
+        },
+        {
+          "text": "Brakiem możliwości edycji plików online",
+          "isCorrect": false,
+          "rationale": "Wsparcie dla edycji online i współdzielenia plików jest jedną z kluczowych cech Cloud Storage."
+        }
+      ],
+      "hint": "Zastanów się, co sprawia, że pliki w chmurze są bezpieczniejsze i łatwiej dostępne niż na pendrive."
+    },
+    {
+      "question": "W jaki sposób chmura wspiera transformację cyfrową i innowacje w firmach?",
+      "answerOptions": [
+        {
+          "text": "Daje dostęp do najnowszych technologii (AI, Big Data) bez wielkich inwestycji",
+          "isCorrect": true,
+          "rationale": "Startupy mogą korzystać z mocy obliczeniowej równej korporacjom, płacąc tylko za to, co faktycznie zużyją."
+        },
+        {
+          "text": "Wymusza na pracownikach naukę programowania w każdym dziale",
+          "isCorrect": false,
+          "rationale": "Chmura ma ułatwiać pracę, a nie zmuszać każdego pracownika do bycia koderem (szczególnie w modelu SaaS)."
+        },
+        {
+          "text": "Zastępuje potrzebę posiadania wizji i strategii biznesowej",
+          "isCorrect": false,
+          "rationale": "Chmura to tylko narzędzie; bez odpowiedniej strategii jej wdrożenie może być nieskuteczne."
+        },
+        {
+          "text": "Gwarantuje, że każda nowa aplikacja odniesie sukces rynkowy",
+          "isCorrect": false,
+          "rationale": "Chmura ułatwia wdrażanie i testowanie, ale nie gwarantuje rynkowego sukcesu samego pomysłu na produkt."
+        }
+      ],
+      "hint": "Skup się na 'demokratyzacji' dostępu do drogich i skomplikowanych technologii."
+    },
+    {
+      "question": "Czym jest 'Utility computing' (przetwarzanie użytkowe) wymieniane jako technologia wspierająca chmurę?",
+      "answerOptions": [
+        {
+          "text": "Modelem biznesowym 'płać za rzeczywiste użycie'",
+          "isCorrect": true,
+          "rationale": "Zasoby IT są traktowane jak media, gdzie opłata zależy od liczby operacji lub zużytego transferu."
+        },
+        {
+          "text": "Programem narzędziowym do naprawy systemu operacyjnego",
+          "isCorrect": false,
+          "rationale": "Słowo 'utility' w informatyce oznacza narzędzie, ale w kontekście chmury odnosi się do mediów (użyteczności publicznej)."
+        },
+        {
+          "text": "Sposobem na zwiększenie zużycia prądu przez serwery",
+          "isCorrect": false,
+          "rationale": "Wręcz przeciwnie – chmura dąży do optymalizacji zużycia energii poprzez lepsze wykorzystanie sprzętu."
+        },
+        {
+          "text": "Systemem operacyjnym dedykowanym wyłącznie dla chmury",
+          "isCorrect": false,
+          "rationale": "To model rozliczeniowy, a nie konkretny produkt techniczny czy system."
+        }
+      ],
+      "hint": "Porównaj to do rachunku za wodę – płacisz za litry, a nie za posiadanie wodociągu."
+    },
+    {
+      "question": "Który termin opisuje model, w którym centralne serwery przechowują aplikacje i dane, a użytkownicy łączą się z nimi, by wykonać zadanie (popularny w latach 80-90)?",
+      "answerOptions": [
+        {
+          "text": "Client-Server Computing",
+          "isCorrect": true,
+          "rationale": "Był to model oparty na silnej zależności od centralnego serwera, poprzedzający dzisiejsze rozwiązania chmurowe."
+        },
+        {
+          "text": "Cloud Computing",
+          "isCorrect": false,
+          "rationale": "Chmura to krok dalej, oferujący pełną skalowalność i elastyczność, a nie tylko stałe połączenie z serwerem."
+        },
+        {
+          "text": "Edge Computing",
+          "isCorrect": false,
+          "rationale": "To nowoczesne podejście polegające na przetwarzaniu danych blisko źródła, a nie na centralnym serwerze."
+        },
+        {
+          "text": "Peer-to-Peer",
+          "isCorrect": false,
+          "rationale": "W tym modelu każdy komputer jest jednocześnie klientem i serwerem, co różni się od hierarchicznego modelu lat 80."
+        }
+      ],
+      "hint": "Nazwa składa się z dwóch członów określających rolę komputera osobistego i jednostki centralnej."
+    },
+    {
+      "question": "Cecha chmury 'User-centric' (użytkownikocentryczność) oznacza, że:",
+      "answerOptions": [
+        {
+          "text": "Twoje dane są wszędzie tam, gdzie Ty",
+          "isCorrect": true,
+          "rationale": "Zasoby są przypisane do tożsamości użytkownika i dostępne z dowolnego urządzenia po zalogowaniu."
+        },
+        {
+          "text": "Użytkownik sam musi budować serwery",
+          "isCorrect": false,
+          "rationale": "Jest to zaprzeczenie idei chmury, która ma zdejmować ten ciężar z użytkownika."
+        },
+        {
+          "text": "Interfejs chmury jest zawsze niebieski jak niebo",
+          "isCorrect": false,
+          "rationale": "Kolorystyka nie ma nic wspólnego z architektoniczną cechą 'User-centric'."
+        },
+        {
+          "text": "Tylko jeden użytkownik może korzystać z serwera w danym momencie",
+          "isCorrect": false,
+          "rationale": "Chmura opiera się na wielodostępie (multi-tenancy), a nie na wyłączności fizycznej maszyny."
+        }
+      ],
+      "hint": "Skup się na dostępności Twoich plików niezależnie od tego, czy używasz smartfona, czy laptopa."
+    },
+    {
+      "question": "Początki wizji globalnej sieci obliczeniowej (prekursora Internetu) przypisuje się kierownikowi IPTO w ARPA, którym był:",
+      "answerOptions": [
+        {
+          "text": "J.C.R. Licklider",
+          "isCorrect": true,
+          "rationale": "Jego wizja połączenia ludzi i danych na całym świecie z 1962 roku stała się fundamentem ARPANetu."
+        },
+        {
+          "text": "Bill Gates",
+          "isCorrect": false,
+          "rationale": "Choć wpłynął na historię PC, nie był zaangażowany w tworzenie ARPANetu w latach 60."
+        },
+        {
+          "text": "Steve Jobs",
+          "isCorrect": false,
+          "rationale": "Jego praca skupiała się na urządzeniach konsumenckich znacznie później niż powstały fundamenty sieci ARPA."
+        },
+        {
+          "text": "Daniel Grzonka",
+          "isCorrect": false,
+          "rationale": "To współczesny wykładowca akademicki prowadzący zajęcia z przetwarzania w chmurze."
+        }
+      ],
+      "hint": "To nazwisko często kojarzone z 'Intergalactic Computer Network' – terminem, którego użył w swoich notatkach."
+    },
+    {
+      "question": "Przykładem technologii pozwalającej na tworzenie 'hybrydowych' środowisk chmurowych, łączących lokalne zasoby z publicznymi, jest:",
+      "answerOptions": [
+        {
+          "text": "Azure Arc / Google Anthos",
+          "isCorrect": true,
+          "rationale": "Są to nowoczesne platformy pozwalające zarządzać usługami chmurowymi w różnych lokalizacjach z jednego panelu."
+        },
+        {
+          "text": "Microsoft Word 97",
+          "isCorrect": false,
+          "rationale": "Jest to stare oprogramowanie biurowe bez żadnych funkcji hybrydowych chmury."
+        },
+        {
+          "text": "Physical Disk Drive",
+          "isCorrect": false,
+          "rationale": "Fizyczny dysk jest elementem sprzętowym, a nie platformą do zarządzania chmurą hybrydową."
+        },
+        {
+          "text": "Local Area Network (LAN)",
+          "isCorrect": false,
+          "rationale": "LAN to tylko rodzaj sieci lokalnej, a nie kompleksowe rozwiązanie dla modelu Hybrid Cloud."
+        }
+      ],
+      "hint": "Szukaj nazw nowoczesnych usług gigantów chmurowych, które służą jako 'pomost' między światami IT."
+    },
+    {
+      "question": "Prawda czy fałsz: Zgodnie z zasadami oceniania na Politechnice Krakowskiej dla tego przedmiotu, ocena z pierwszego terminu egzaminu nie ma wpływu na ocenę końcową po poprawce.",
+      "answerOptions": [
+        {
+          "text": "Fałsz",
+          "isCorrect": true,
+          "rationale": "Regulamin podaje, że ocena z pierwszego terminu brana jest pod uwagę z wagą $1/3$ przy liczeniu oceny końcowej."
+        },
+        {
+          "text": "Prawda",
+          "isCorrect": false,
+          "rationale": "Waga pierwszego terminu ($1/3$) jest istotnym elementem regulaminu zajęć przedstawionego w prezentacji."
+        }
+      ],
+      "hint": "Sprawdź dokładnie slajd z 'Regulaminem zajęć', sekcję dotyczącą oceny końcowej."
+    }
+  ],
+  "questionCount": 30,
+  "exportedAt": "2026-06-05T16:29:09.525Z",
+  "source": "Web Clipper for NotebookLM"
+}

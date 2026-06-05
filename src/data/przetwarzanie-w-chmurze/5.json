@@ -1,0 +1,788 @@
+{
+  "title": "Chmura Quiz",
+  "questions": [
+    {
+      "question": "Jaka jest główna idea zasady „Move the code to the data” w systemach Big Data?",
+      "answerOptions": [
+        {
+          "text": "Przesłanie logiki programu do węzła, na którym fizycznie znajdują się dane.",
+          "isCorrect": true,
+          "rationale": "Takie podejście minimalizuje ruch w sieci, co jest kluczowe przy zbiorach danych rzędu $PB$, poprawiając ogólną przepustowość systemu."
+        },
+        {
+          "text": "Kopiowanie wszystkich danych do centralnego serwera obliczeniowego.",
+          "isCorrect": false,
+          "rationale": "Przesyłanie ogromnych ilości danych przez sieć do centralnego punktu tworzy wąskie gardło i jest nieefektywne w skali Big Data."
+        },
+        {
+          "text": "Wykorzystanie wyłącznie procesorów graficznych do analizy danych lokalnych.",
+          "isCorrect": false,
+          "rationale": "Zasada ta dotyczy lokalizacji obliczeń względem danych, a nie specyficznego rodzaju architektury procesora."
+        },
+        {
+          "text": "Przechowywanie kodu źródłowego w tej samej bazie danych co rekordy użytkowników.",
+          "isCorrect": false,
+          "rationale": "Chodzi o dystrybucję skompilowanych zadań do węzłów klastra, a nie o fizyczne umieszczanie kodu wewnątrz tabel bazodanowych."
+        }
+      ],
+      "hint": "Zastanów się, co jest tańsze i szybsze w przesłaniu przez sieć: mały plik z kodem czy gigabajty danych?"
+    },
+    {
+      "question": "W modelu 3V (Big Data), co określa termin „Variety”?",
+      "answerOptions": [
+        {
+          "text": "Różnorodność formatów danych, od ustrukturyzowanych po wideo i audio.",
+          "isCorrect": true,
+          "rationale": "Variety odnosi się do faktu, że dane pochodzą z różnych źródeł i mają różną formę, taką jak tekst, obrazy czy logi systemowe."
+        },
+        {
+          "text": "Zmienność prędkości napływu danych w czasie.",
+          "isCorrect": false,
+          "rationale": "Prędkość napływu danych jest opisywana przez parametr Velocity, a nie Variety."
+        },
+        {
+          "text": "Wiarygodność i czystość zbieranych informacji.",
+          "isCorrect": false,
+          "rationale": "Za wiarygodność odpowiada wymiar Veracity, który często jest dodawany jako czwarte V."
+        },
+        {
+          "text": "Liczba unikalnych użytkowników generujących dane.",
+          "isCorrect": false,
+          "rationale": "Liczba użytkowników może wpływać na wolumen danych, ale Variety skupia się na strukturze i typie tych danych."
+        }
+      ],
+      "hint": "Pomyśl o różnicy między tabelą w bazie danych a wiadomością e-mail lub filmem na YouTube."
+    },
+    {
+      "question": "Na czym polega zjawisko „Noisy Neighbor” w środowiskach chmurowych?",
+      "answerOptions": [
+        {
+          "text": "Jedna maszyna wirtualna nadmiernie zużywa wspólne zasoby, pogarszając wydajność innych.",
+          "isCorrect": true,
+          "rationale": "W modelu multi-tenancy zasoby są współdzielone, więc intensywne operacje I/O lub CPU jednej instancji mogą negatywnie wpływać na sąsiadów."
+        },
+        {
+          "text": "Błąd w oprogramowaniu powodujący generowanie nadmiernej liczby logów systemowych.",
+          "isCorrect": false,
+          "rationale": "Nadmiar logów to problem aplikacji, podczas gdy Noisy Neighbor to problem izolacji zasobów w infrastrukturze."
+        },
+        {
+          "text": "Atak typu Denial of Service przeprowadzany z wnętrza sieci lokalnej.",
+          "isCorrect": false,
+          "rationale": "Chociaż skutki mogą być podobne, termin ten odnosi się do normalnego, ale intensywnego użytkowania zasobów, a nie do celowego ataku."
+        },
+        {
+          "text": "Fizyczny hałas generowany przez serwery w centrum danych.",
+          "isCorrect": false,
+          "rationale": "Jest to termin techniczny dotyczący logiki przydziału zasobów obliczeniowych, a nie zjawisk akustycznych."
+        }
+      ],
+      "hint": "Pomyśl o sytuacji, w której jeden lokator w bloku zużywa całą wodę, przez co inni mają słabe ciśnienie."
+    },
+    {
+      "question": "Która cecha chmury według Google (6 Cs) mówi o tym, że liczy się cel działania, a nie konkretna aplikacja?",
+      "answerOptions": [
+        {
+          "text": "Task-centric",
+          "isCorrect": true,
+          "rationale": "Podejście to zakłada, że użytkownika interesuje wykonanie zadania (np. edycja dokumentu), a nie to, jakiej konkretnie aplikacji do tego użyje."
+        },
+        {
+          "text": "User-centric",
+          "isCorrect": false,
+          "rationale": "User-centric skupia się na dostępności danych użytkownika z dowolnego miejsca i urządzenia."
+        },
+        {
+          "text": "Programmable",
+          "isCorrect": false,
+          "rationale": "Właściwość ta dotyczy automatyzacji i zdolności infrastruktury do samodzielnej reakcji na zdarzenia, np. awarie."
+        },
+        {
+          "text": "Accessible",
+          "isCorrect": false,
+          "rationale": "Dostępność (Accessible) odnosi się do technicznej możliwości połączenia się z zasobami przez Internet."
+        }
+      ],
+      "hint": "Skoncentruj się na różnicy między nazwą programu (np. Word) a czynnością (pisanie)."
+    },
+    {
+      "question": "Czym charakteryzuje się „skalowanie poziome” (scale-out) w systemach rozproszonych?",
+      "answerOptions": [
+        {
+          "text": "Dodawaniem kolejnych autonomicznych węzłów (serwerów) do klastra.",
+          "isCorrect": true,
+          "rationale": "Scale-out polega na zwiększaniu liczby maszyn pracujących równolegle, co jest fundamentem nowoczesnych systemów chmurowych."
+        },
+        {
+          "text": "Zwiększaniem mocy obliczeniowej pojedynczego serwera poprzez wymianę procesora.",
+          "isCorrect": false,
+          "rationale": "Zwiększanie zasobów wewnątrz jednej maszyny to skalowanie pionowe (scale-up)."
+        },
+        {
+          "text": "Optymalizacją kodu aplikacji w celu zmniejszenia zużycia pamięci RAM.",
+          "isCorrect": false,
+          "rationale": "Optymalizacja kodu poprawia wydajność, ale nie jest mechanizmem skalowania infrastrukturalnego."
+        },
+        {
+          "text": "Przenoszeniem danych z dysków HDD na szybkie nośniki NVMe.",
+          "isCorrect": false,
+          "rationale": "Zmiana nośników to modernizacja sprzętowa, która może być częścią skalowania pionowego, ale nie definiuje skalowania poziomego."
+        }
+      ],
+      "hint": "Wyobraź sobie, że zamiast kupować większą ciężarówkę, zatrudniasz drugiego kierowcę z drugim pojazdem."
+    },
+    {
+      "question": "Zgodnie z definicją NIST, przetwarzanie w chmurze umożliwia dostęp do wspólnej puli zasobów. Które z poniższych najlepiej opisuje sposób przydzielania tych zasobów?",
+      "answerOptions": [
+        {
+          "text": "Na żądanie, z minimalnym wysiłkiem zarządczym.",
+          "isCorrect": true,
+          "rationale": "Kluczem do chmury jest automatyzacja i szybkość przydzielania oraz zwalniania zasobów przez samego użytkownika."
+        },
+        {
+          "text": "Ręcznie przez administratora po złożeniu pisemnego wniosku.",
+          "isCorrect": false,
+          "rationale": "Tradycyjne procesy administracyjne są przeciwieństwem elastyczności, którą oferuje model Cloud Computing."
+        },
+        {
+          "text": "Wyłącznie w godzinach pracy dostawcy usług (SLA).",
+          "isCorrect": false,
+          "rationale": "Zasoby chmurowe muszą być dostępne $24/7$ poprzez interfejsy programistyczne lub portale samoobsługowe."
+        },
+        {
+          "text": "Na stałe, bez możliwości zwrotu niewykorzystanej mocy.",
+          "isCorrect": false,
+          "rationale": "Model chmurowy opiera się na elastyczności i płatności za faktyczne użycie, co obejmuje też zwalnianie zasobów."
+        }
+      ],
+      "hint": "Słowa klucze to „wygoda” i „szybkość”."
+    },
+    {
+      "question": "Kto w 1961 roku zaproponował koncepcję sprzedaży mocy obliczeniowej jako usługi użyteczności publicznej (np. jak prąd czy woda)?",
+      "answerOptions": [
+        {
+          "text": "John McCarthy",
+          "isCorrect": true,
+          "rationale": "McCarthy przewidział, że w przyszłości obliczenia staną się dobrem powszechnym, sprzedawanym w modelu subskrypcyjnym lub ilościowym."
+        },
+        {
+          "text": "J.C.R. Licklider",
+          "isCorrect": false,
+          "rationale": "Licklider jest kojarzony z wizją globalnej sieci łączącej ludzi i dane (prekursor Internetu)."
+        },
+        {
+          "text": "Daniel Grzonka",
+          "isCorrect": false,
+          "rationale": "Jest to nazwisko wykładowcy prowadzącego przedmiot, a nie historycznego pioniera informatyki z lat 60."
+        },
+        {
+          "text": "Alan Turing",
+          "isCorrect": false,
+          "rationale": "Turing jest ojcem informatyki teoretycznej, ale model biznesowy chmury nie był głównym przedmiotem jego prac."
+        }
+      ],
+      "hint": "Był to naukowiec z MIT, znany również z prac nad sztuczną inteligencją."
+    },
+    {
+      "question": "Jaki jest typowy poziom utylizacji zasobów sprzętowych w tradycyjnych centrach danych przed wprowadzeniem wirtualizacji i chmury?",
+      "answerOptions": [
+        {
+          "text": "$10-15\\%$",
+          "isCorrect": true,
+          "rationale": "Większość tradycyjnych serwerów pracuje z bardzo niskim obciążeniem, co prowadziło do ogromnego marnotrawstwa energii i miejsca."
+        },
+        {
+          "text": "$40-50\\%$",
+          "isCorrect": false,
+          "rationale": "Taki poziom utylizacji jest rzadko osiągany bez zaawansowanej konsolidacji i wirtualizacji."
+        },
+        {
+          "text": "$80-90\\%$",
+          "isCorrect": false,
+          "rationale": "Działanie przy tak wysokim obciążeniu w tradycyjnym IT groziłoby brakiem marginesu na nagłe skoki ruchu (peaks)."
+        },
+        {
+          "text": "$100\\%$",
+          "isCorrect": false,
+          "rationale": "Pełna utylizacja jest celem systemów HPC, ale w biznesowym IT oznaczałaby całkowite zawieszenie responsywności systemów."
+        }
+      ],
+      "hint": "Wartość ta jest zaskakująco niska i wskazuje na duży potencjał do optymalizacji."
+    },
+    {
+      "question": "Co definiuje pojęcie „Virtual Data Center” (VDC)?",
+      "answerOptions": [
+        {
+          "text": "Logiczna pula zasobów (obliczenia, sieć, pamięć) zarządzana jako spójna całość.",
+          "isCorrect": true,
+          "rationale": "VDC to abstrakcja fizycznej infrastruktury, pozwalająca najemcom zarządzać swoimi zasobami niezależnie od warstwy sprzętowej."
+        },
+        {
+          "text": "Symulacja komputerowa służąca do projektowania klimatyzacji w serwerowniach.",
+          "isCorrect": false,
+          "rationale": "To opis narzędzia typu CAD, a nie modelu chmurowego zarządzania zasobami IT."
+        },
+        {
+          "text": "Zbiór serwerów połączonych wyłącznie za pomocą publicznej sieci Wi-Fi.",
+          "isCorrect": false,
+          "rationale": "VDC opiera się na zaawansowanych technologiach sieciowych jak VLAN czy VPN, a nie na dostępie bezprzewodowym."
+        },
+        {
+          "text": "Miejsce w centrach danych, gdzie pracownicy używają gogli VR do naprawy serwerów.",
+          "isCorrect": false,
+          "rationale": "Jest to błędna interpretacja słowa „wirtualny”, która nie ma związku z architekturą chmury."
+        }
+      ],
+      "hint": "Skoncentruj się na słowie „pula” i „abstrakcja”."
+    },
+    {
+      "question": "W kontekście systemów rozproszonych, co oznacza termin „przezroczystość” (transparency)?",
+      "answerOptions": [
+        {
+          "text": "Użytkownik widzi system jako jedną całość, nie wiedząc o istnieniu wielu węzłów.",
+          "isCorrect": true,
+          "rationale": "Dobra architektura rozproszona ukrywa przed użytkownikiem złożoność fizycznej lokalizacji danych i obliczeń."
+        },
+        {
+          "text": "Kod źródłowy systemu jest dostępny publicznie (Open Source).",
+          "isCorrect": false,
+          "rationale": "Dostępność kodu to „otwartość”, a przezroczystość w tym kontekście dotyczy interakcji z systemem."
+        },
+        {
+          "text": "Dane przesyłane przez sieć nie są szyfrowane, co ułatwia ich analizę.",
+          "isCorrect": false,
+          "rationale": "Brak szyfrowania to luka bezpieczeństwa, a nie pożądana cecha systemu rozproszonego."
+        },
+        {
+          "text": "Możliwość monitorowania zużycia energii przez każdy pojedynczy tranzystor.",
+          "isCorrect": false,
+          "rationale": "Zbyt szczegółowe monitorowanie jest przeciwieństwem przezroczystości, która dąży do ukrycia detali niskopoziomowych."
+        }
+      ],
+      "hint": "Chodzi o to, aby użytkownik nie musiał wiedzieć, czy jego dane są na serwerze w Krakowie, czy w Londynie."
+    },
+    {
+      "question": "Dlaczego systemy Big Data zakładają, że „awarie są normą”?",
+      "answerOptions": [
+        {
+          "text": "Przy tysiącach tanich węzłów statystycznie zawsze któryś z nich ulega awarii.",
+          "isCorrect": true,
+          "rationale": "Wielka skala (commodity hardware) sprawia, że prawdopodobieństwo awarii przynajmniej jednego komponentu w dowolnym momencie wynosi niemal $100\\%$."
+        },
+        {
+          "text": "Ponieważ oprogramowanie Open Source jest z natury mniej stabilne.",
+          "isCorrect": false,
+          "rationale": "Oprogramowanie takie jak Hadoop jest bardzo dojrzałe; problemem jest fizyczne zmęczenie materiału w ogromnych klastrach sprzętowych."
+        },
+        {
+          "text": "Z powodu braku klimatyzacji w nowoczesnych centrach danych Google.",
+          "isCorrect": false,
+          "rationale": "Centra danych mają zaawansowane systemy chłodzenia, ale nie chronią one przed awariami dysków czy pamięci RAM."
+        },
+        {
+          "text": "Awarie są celowo wywoływane przez algorytmy w celu oszczędzania energii.",
+          "isCorrect": false,
+          "rationale": "Algorytmy oszczędzania energii usypiają węzły, co nie jest traktowane jako awaria, lecz planowe działanie."
+        }
+      ],
+      "hint": "Zastanów się nad statystyką w klastrze liczącym $10\\ 000$ komputerów."
+    },
+    {
+      "question": "Który z wymienionych formatów danych jest przykładem danych ustrukturyzowanych (Structured Data)?",
+      "answerOptions": [
+        {
+          "text": "Tabela w relacyjnej bazie danych (RDBMS).",
+          "isCorrect": true,
+          "rationale": "Dane ustrukturyzowane mają sztywno zdefiniowany schemat, typy kolumn i relacje."
+        },
+        {
+          "text": "Plik tekstowy z luźnymi notatkami ze spotkania.",
+          "isCorrect": false,
+          "rationale": "Notatki to dane nieustrukturyzowane (Unstructured), ponieważ nie posiadają powtarzalnego schematu."
+        },
+        {
+          "text": "Nagranie rozmowy z klientem w formacie MP3.",
+          "isCorrect": false,
+          "rationale": "Pliki binarne jak audio i wideo są typowymi przykładami danych nieustrukturyzowanych."
+        },
+        {
+          "text": "Strumień surowych danych z sensora bez żadnych etykiet.",
+          "isCorrect": false,
+          "rationale": "Bez etykiet i definicji pól dane te są trudne do sklasyfikowania jako ustrukturyzowane; mogą być semi-strukturalne jeśli mają znaczniki czasu."
+        }
+      ],
+      "hint": "Szukaj czegoś, co naturalnie pasuje do arkusza Excel lub SQL."
+    },
+    {
+      "question": "Czym różni się Grid Computing od Cluster Computing?",
+      "answerOptions": [
+        {
+          "text": "Grid łączy zasoby heterogeniczne i rozproszone geograficznie, a klastry są zazwyczaj homogeniczne i lokalne.",
+          "isCorrect": true,
+          "rationale": "Klastry to zazwyczaj identyczne maszyny w jednej sieci LAN, podczas gdy Grid może łączyć superkomputery z różnych uczelni."
+        },
+        {
+          "text": "Grid służy tylko do przechowywania danych, a klastry tylko do obliczeń.",
+          "isCorrect": false,
+          "rationale": "Oba modele służą zarówno do przetwarzania, jak i przechowywania, różnią się jednak architekturą i zarządzaniem."
+        },
+        {
+          "text": "Klastry są zawsze darmowe, a za dostęp do Gridu trzeba płacić.",
+          "isCorrect": false,
+          "rationale": "Model płatności nie jest cechą definicyjną architektury systemów masowych."
+        },
+        {
+          "text": "Grid jest technologią nowszą od chmury obliczeniowej.",
+          "isCorrect": false,
+          "rationale": "Grid computing rozwinął się głównie w latach 90. i 2000., stanowiąc jeden z fundamentów, na których powstała chmura."
+        }
+      ],
+      "hint": "Pomyśl o różnicy między grupą takich samych serwerów w jednej szafie a siecią różnych komputerów na całym świecie."
+    },
+    {
+      "question": "W wymiarach Big Data, co oznacza pojęcie „Veracity”?",
+      "answerOptions": [
+        {
+          "text": "Wątpliwa jakość i rzetelność napływających danych.",
+          "isCorrect": true,
+          "rationale": "Veracity dotyczy niepewności danych, np. szumu w danych z sensorów czy nieprawdziwych informacji w mediach społecznościowych."
+        },
+        {
+          "text": "Szybkość, z jaką dane muszą być analizowane.",
+          "isCorrect": false,
+          "rationale": "Szybkość to Velocity, jeden z trzech podstawowych wymiarów modelu 3V."
+        },
+        {
+          "text": "Łączna objętość danych mierzona w terabajtach.",
+          "isCorrect": false,
+          "rationale": "Objętość to Volume."
+        },
+        {
+          "text": "Zdolność systemu do automatycznego naprawiania błędów w bazie.",
+          "isCorrect": false,
+          "rationale": "Automatyczna naprawa to funkcja systemu (Self-healing), a nie wymiar charakterystyki samych danych."
+        }
+      ],
+      "hint": "Słowo to pochodzi od łacińskiego 'veritas' oznaczającego prawdę."
+    },
+    {
+      "question": "Zasada „Separation of Compute and Storage” w nowoczesnej chmurze pozwala na:",
+      "answerOptions": [
+        {
+          "text": "Niezależne skalowanie ilości danych i mocy procesorów oraz płacenie za nie osobno.",
+          "isCorrect": true,
+          "rationale": "Dzięki temu można przechowywać $PB$ danych tanio (np. na S3), a klastry obliczeniowe uruchamiać tylko wtedy, gdy są potrzebne."
+        },
+        {
+          "text": "Zwiększenie bezpieczeństwa poprzez trzymanie danych na dyskach odłączonych od sieci.",
+          "isCorrect": false,
+          "rationale": "Dane muszą być dostępne online dla warstwy obliczeniowej; separacja jest logiczna i architektoniczna, a nie fizyczna (offline)."
+        },
+        {
+          "text": "Przyspieszenie obliczeń dzięki fizycznemu zbliżeniu procesora do dysku.",
+          "isCorrect": false,
+          "rationale": "Jest to opis zasady Data Locality, która jest przeciwieństwem pełnej separacji stosowanej w modelach cloud-native."
+        },
+        {
+          "text": "Wymuszenie korzystania z różnych dostawców chmury dla danych i dla kodu.",
+          "isCorrect": false,
+          "rationale": "Można to robić w modelu Multi-Cloud, ale separacja Compute/Storage zazwyczaj odbywa się wewnątrz usług jednego dostawcy."
+        }
+      ],
+      "hint": "Zastanów się, co się dzieje, gdy masz bardzo dużo danych, ale analizujesz je rzadko."
+    },
+    {
+      "question": "Które z poniższych jest kryterium wyboru dostawcy chmury (CSP) dotyczącym zgodności z prawem (np. RODO)?",
+      "answerOptions": [
+        {
+          "text": "Datacenter Locations",
+          "isCorrect": true,
+          "rationale": "Lokalizacja centrów danych determinuje jurysdykcję prawną, pod którą podlegają przechowywane dane użytkowników."
+        },
+        {
+          "text": "Financial Stability",
+          "isCorrect": false,
+          "rationale": "Stabilność finansowa minimalizuje ryzyko upadku dostawcy, ale nie gwarantuje zgodności z przepisami o ochronie danych."
+        },
+        {
+          "text": "Industry Adoption",
+          "isCorrect": false,
+          "rationale": "Popularność w branży sugeruje, że rozwiązanie działa, ale każdy klient musi sam sprawdzić zgodność z regulacjami."
+        },
+        {
+          "text": "Programmability",
+          "isCorrect": false,
+          "rationale": "Programowalność to cecha techniczna ułatwiająca automatyzację, niebędąca kryterium regulacyjnym."
+        }
+      ],
+      "hint": "Zastanów się, czy fizyczne miejsce przechowywania serwera ma znaczenie dla prawa."
+    },
+    {
+      "question": "W systemach Big Data wyzwanie „Data Gap” odnosi się do faktu, że:",
+      "answerOptions": [
+        {
+          "text": "Zbieramy dane znacznie szybciej, niż potrafimy je efektywnie analizować.",
+          "isCorrect": true,
+          "rationale": "Przyrost danych jest lawinowy (dziesiątki procent rocznie), co wyprzedza nasze zdolności do wyciągania z nich wartości biznesowej."
+        },
+        {
+          "text": "Istnieje duża przerwa czasowa w dostawach nowych dysków twardych z Azji.",
+          "isCorrect": false,
+          "rationale": "To problem łańcucha dostaw sprzętu, a nie koncepcja analityczna „luki danych”."
+        },
+        {
+          "text": "Dane w bazach SQL nie mogą być łączone z danymi w systemach NoSQL.",
+          "isCorrect": false,
+          "rationale": "Łączenie różnych typów danych jest możliwe i jest jednym z zadań systemów Big Data."
+        },
+        {
+          "text": "Użytkownicy zapominają o wpisywaniu haseł, co tworzy luki w bazach.",
+          "isCorrect": false,
+          "rationale": "To problem błędów ludzkich lub braku danych, nieopisujący skali zjawiska Data Gap."
+        }
+      ],
+      "hint": "Chodzi o dysproporcję między „posiadaniem” a „rozumieniem”."
+    },
+    {
+      "question": "Jaka jest główna różnica między hurtownią danych (Cloud DW) a tradycyjną bazą transakcyjną (OLTP)?",
+      "answerOptions": [
+        {
+          "text": "Hurtownie danych stosują orientację kolumnową dla szybkich analiz, a OLTP orientację wierszową dla szybkich zapisów.",
+          "isCorrect": true,
+          "rationale": "Orientacja kolumnowa pozwala na błyskawiczne agregacje (np. suma sprzedaży) na miliardach rekordów."
+        },
+        {
+          "text": "Hurtownie danych nie pozwalają na wykonywanie zapytań SQL.",
+          "isCorrect": false,
+          "rationale": "Większość nowoczesnych hurtowni (BigQuery, Redshift) opiera się właśnie na dialektach SQL."
+        },
+        {
+          "text": "Tradycyjne bazy są darmowe, a hurtownie zawsze płatne.",
+          "isCorrect": false,
+          "rationale": "Istnieją darmowe silniki hurtowni i bardzo drogie licencje na bazy transakcyjne; cena nie jest różnicą technologiczną."
+        },
+        {
+          "text": "Hurtownie danych przechowują tylko zdjęcia, a OLTP tylko tekst.",
+          "isCorrect": false,
+          "rationale": "Oba systemy mogą przechowywać różne typy danych, choć hurtownie optymalizowane są pod dane ustrukturyzowane i semi-strukturalne."
+        }
+      ],
+      "hint": "Zastanów się, czy do obliczenia średniej ceny z miliona produktów lepiej czytać całe wiersze, czy tylko jedną kolumnę 'cena'."
+    },
+    {
+      "question": "Co oznacza termin „Elasticity” (Elastyczność) w kontekście chmury?",
+      "answerOptions": [
+        {
+          "text": "Zdolność systemu do dynamicznego dopasowania zasobów do aktualnego obciążenia.",
+          "isCorrect": true,
+          "rationale": "Chmura powinna automatycznie zwiększać moc przy dużym ruchu i zmniejszać ją (oszczędzając koszty), gdy ruch maleje."
+        },
+        {
+          "text": "Możliwość zginania kabli światłowodowych bez ich łamania.",
+          "isCorrect": false,
+          "rationale": "To fizyczna cecha materiałów, nie mająca związku z modelem przetwarzania danych."
+        },
+        {
+          "text": "Szybka zmiana dostawcy chmury bez konieczności modyfikacji kodu.",
+          "isCorrect": false,
+          "rationale": "Unikanie uwiązania u dostawcy to „Cloud Portability”, a nie elastyczność zasobowa."
+        },
+        {
+          "text": "Dostępność interfejsu graficznego w wielu wersjach kolorystycznych.",
+          "isCorrect": false,
+          "rationale": "Personalizacja interfejsu (UI) nie jest kluczową cechą infrastruktury Cloud Computing."
+        }
+      ],
+      "hint": "Pomyśl o gumce recepturce, która rozciąga się i kurczy zależnie od potrzeb."
+    },
+    {
+      "question": "Który paradygmat obliczeniowy zakłada ścisłe sprzężenie (tightly coupled) zasobów wewnątrz jednego systemu operacyjnego?",
+      "answerOptions": [
+        {
+          "text": "Centralized Computing",
+          "isCorrect": true,
+          "rationale": "W modelu scentralizowanym wszystkie komponenty (CPU, RAM) podlegają jednej instancji systemu operacyjnego i są fizycznie blisko siebie."
+        },
+        {
+          "text": "Distributed Computing",
+          "isCorrect": false,
+          "rationale": "Systemy rozproszone są z natury luźno sprzężone (loosely coupled) i komunikują się przez sieć."
+        },
+        {
+          "text": "P2P (Peer-to-Peer)",
+          "isCorrect": false,
+          "rationale": "P2P to ekstremalny przykład systemu rozproszonego, gdzie każdy węzeł jest całkowicie autonomiczny."
+        },
+        {
+          "text": "Cloud Computing",
+          "isCorrect": false,
+          "rationale": "Chmura to ewoluująca forma systemów rozproszonych, więc nie może być uznana za system ściśle scentralizowany."
+        }
+      ],
+      "hint": "Jest to model tradycyjny, stosowany w komputerach osobistych lub mainframe'ach."
+    },
+    {
+      "question": "W kontekście Big Data, co określa wymiar „Variability”?",
+      "answerOptions": [
+        {
+          "text": "Nieregularne skoki w przepływie danych, np. sezonowa popularność tematu.",
+          "isCorrect": true,
+          "rationale": "Zmienność (Variability) dotyczy tego, jak bardzo natężenie napływu danych różni się w zależności od czasu lub kontekstu."
+        },
+        {
+          "text": "Liczba różnych języków programowania obsługiwanych przez system.",
+          "isCorrect": false,
+          "rationale": "Obsługa języków to cecha platformy, a nie wymiar charakterystyki danych Big Data."
+        },
+        {
+          "text": "Możliwość zmiany typu danych z liczbowego na tekstowy w trakcie analizy.",
+          "isCorrect": false,
+          "rationale": "To cecha dynamicznego typowania w programowaniu, nie wymiar Variability."
+        },
+        {
+          "text": "Suma wszystkich błędów wykrytych w zbiorze danych.",
+          "isCorrect": false,
+          "rationale": "Błędy i ich wiarygodność to domena Veracity."
+        }
+      ],
+      "hint": "Pomyśl o tym, jak bardzo rośnie ruch na Twitterze podczas finału Mistrzostw Świata w piłce nożnej."
+    },
+    {
+      "question": "Czym jest „Middleware” w systemach rozproszonych?",
+      "answerOptions": [
+        {
+          "text": "Warstwa oprogramowania zapewniająca spójny interfejs między aplikacjami a węzłami klastra.",
+          "isCorrect": true,
+          "rationale": "Middleware ukrywa heterogeniczność sprzętu i systemów operacyjnych, umożliwiając łatwą komunikację w systemie rozproszonym."
+        },
+        {
+          "text": "Urządzenie fizyczne montowane w połowie wysokości szafy rackowej.",
+          "isCorrect": false,
+          "rationale": "Nazwa sugeruje „środek”, ale odnosi się do warstwy logicznej oprogramowania, a nie fizycznego położenia sprzętu."
+        },
+        {
+          "text": "Specjalny rodzaj kabla łączącego serwer z pamięcią masową.",
+          "isCorrect": false,
+          "rationale": "Połączenia fizyczne to warstwa sprzętowa, a Middleware to czysty software."
+        },
+        {
+          "text": "Osoba pośrednicząca w negocjacjach cenowych z dostawcą chmury.",
+          "isCorrect": false,
+          "rationale": "W informatyce termin ten ma znaczenie techniczne, nie biznesowo-personalne."
+        }
+      ],
+      "hint": "To „klej” łączący różne części systemu rozproszonego."
+    },
+    {
+      "question": "Który z poniższych systemów plików jest historycznym fundamentem platformy Hadoop?",
+      "answerOptions": [
+        {
+          "text": "HDFS (Hadoop Distributed File System)",
+          "isCorrect": true,
+          "rationale": "HDFS został zaprojektowany do przechowywania bardzo dużych plików na klastrach zbudowanych z taniego sprzętu."
+        },
+        {
+          "text": "NTFS",
+          "isCorrect": false,
+          "rationale": "NTFS to standardowy system plików dla systemów Windows, nieprzeznaczony do pracy rozproszonej w skali Big Data."
+        },
+        {
+          "text": "FAT32",
+          "isCorrect": false,
+          "rationale": "Jest to stary system plików o bardzo dużych ograniczeniach (np. wielkość pliku do $4\\ GB$), co wyklucza go z zastosowań Big Data."
+        },
+        {
+          "text": "Ext4",
+          "isCorrect": false,
+          "rationale": "Jest to popularny system plików Linux, ale działa lokalnie na jednym dysku/wolumenie, a nie w klastrze."
+        }
+      ],
+      "hint": "Nazwa tego systemu zawiera w sobie skrót nazwy całego ekosystemu."
+    },
+    {
+      "question": "W modelu chmurowym, usługa taka jak Google BigQuery czy AWS Redshift jest przykładem:",
+      "answerOptions": [
+        {
+          "text": "Cloud Data Warehouse (Analityka)",
+          "isCorrect": true,
+          "rationale": "Te usługi są optymalizowane pod kątem przetwarzania ogromnych zbiorów danych w celu analizy biznesowej i raportowania."
+        },
+        {
+          "text": "Systemu operacyjnego czasu rzeczywistego (RTOS).",
+          "isCorrect": false,
+          "rationale": "Są to usługi bazodanowe/analityczne, a nie systemy operacyjne zarządzające bezpośrednio sprzętem."
+        },
+        {
+          "text": "Prostego serwera FTP do przesyłania plików.",
+          "isCorrect": false,
+          "rationale": "Możliwości tych narzędzi znacznie wykraczają poza zwykły transfer plików; służą one do złożonego przetwarzania danych."
+        },
+        {
+          "text": "Lokalnej bazy danych typu SQLite.",
+          "isCorrect": false,
+          "rationale": "Są to systemy masowo równoległe (MPP) działające w chmurze, a nie lekkie bazy lokalne."
+        }
+      ],
+      "hint": "Pomyśl o miejscu, gdzie przechowuje się i analizuje dane z wielu lat działalności firmy."
+    },
+    {
+      "question": "Co charakteryzuje dane typu „Semi-structured”?",
+      "answerOptions": [
+        {
+          "text": "Nie mają sztywnej tabelarycznej struktury, ale posiadają tagi lub znaczniki (np. JSON, XML).",
+          "isCorrect": true,
+          "rationale": "Dane te są łatwiejsze do analizy niż surowy tekst dzięki obecności etykiet opisujących zawartość pól."
+        },
+        {
+          "text": "Są to dane, które w połowie są liczbami, a w połowie zdjęciami.",
+          "isCorrect": false,
+          "rationale": "Typ danych (liczba/obraz) nie definiuje ich strukturalności; liczy się sposób ich organizacji i opisania."
+        },
+        {
+          "text": "Dane, które są czytelne tylko dla połowy pracowników firmy.",
+          "isCorrect": false,
+          "rationale": "Strukturalność to cecha techniczna formatu pliku, a nie uprawnień dostępu."
+        },
+        {
+          "text": "Dane przechowywane wyłącznie na dyskietkach $3,5$ cala.",
+          "isCorrect": false,
+          "rationale": "Nośnik fizyczny nie ma wpływu na to, czy dane są ustrukturyzowane, czy nie."
+        }
+      ],
+      "hint": "Wyobraź sobie plik tekstowy, w którym każde nazwisko jest poprzedzone napisem '<nazwisko>'."
+    },
+    {
+      "question": "Dlaczego wydajność I/O (wejścia/wyjścia) jest często wąskim gardłem w systemach Big Data?",
+      "answerOptions": [
+        {
+          "text": "Pojedyncza maszyna nie jest w stanie dostarczyć danych z dysku do procesora wystarczająco szybko.",
+          "isCorrect": true,
+          "rationale": "Przy zbiorach $TB-PB$ czas odczytu z dysków mechanicznych lub nawet SSD staje się głównym ograniczeniem, dlatego stosuje się równoległość."
+        },
+        {
+          "text": "Ponieważ procesory są obecnie wolniejsze niż dyski twarde.",
+          "isCorrect": false,
+          "rationale": "W rzeczywistości procesory są rzędy wielkości szybsze od pamięci masowych, co pogłębia problem oczekiwania na dane."
+        },
+        {
+          "text": "Kable SATA mają tendencję do przegrzewania się przy dużym obciążeniu.",
+          "isCorrect": false,
+          "rationale": "To problem czysto mechaniczny/elektryczny, który nie jest teoretyczną podstawą ograniczeń I/O w informatyce."
+        },
+        {
+          "text": "Systemy Big Data zabraniają używania pamięci RAM do buforowania.",
+          "isCorrect": false,
+          "rationale": "Pamięć RAM (np. w systemie Spark) jest kluczowa dla wydajności; wąskim gardłem jest moment, gdy dane muszą zostać pobrane z dysku."
+        }
+      ],
+      "hint": "Zastanów się, ile czasu zajęłoby przeczytanie całej Biblioteki Narodowej przez jedną osobę."
+    },
+    {
+      "question": "W jakiej formie realizowane są głównie modele zadaniowe (workflow) w chmurze Big Data?",
+      "answerOptions": [
+        {
+          "text": "Jako usługi w modelach IaaS lub PaaS.",
+          "isCorrect": true,
+          "rationale": "Użytkownicy wykorzystują gotowe platformy (np. AWS Glue, GCP Dataflow) lub własną infrastrukturę VM do orkiestracji zadań."
+        },
+        {
+          "text": "Jako fizyczne wydruki instrukcji dla administratorów.",
+          "isCorrect": false,
+          "rationale": "Systemy te muszą być w pełni zautomatyzowane; interwencja ludzka w każdy krok workflow wykluczałaby skalowalność."
+        },
+        {
+          "text": "Tylko i wyłącznie jako kod w języku Assembler.",
+          "isCorrect": false,
+          "rationale": "Większość narzędzi workflow obsługuje wysokopoziomowe języki jak Python, Java czy Scala."
+        },
+        {
+          "text": "Wyłącznie za pomocą komend głosowych wysyłanych do serwera.",
+          "isCorrect": false,
+          "rationale": "Orkiestracja odbywa się poprzez pliki konfiguracyjne (np. YAML), API lub graficzne interfejsy webowe."
+        }
+      ],
+      "hint": "Zastanów się, czy użytkownik woli zarządzać całym systemem operacyjnym, czy tylko logiką przetwarzania."
+    },
+    {
+      "question": "Co jest głównym celem orkiestracji strumieni zdarzeń (np. Pub/Sub, Kinesis)?",
+      "answerOptions": [
+        {
+          "text": "Przyjmowanie i buforowanie ogromnych ilości danych napływających w czasie rzeczywistym.",
+          "isCorrect": true,
+          "rationale": "Narzędzia typu Ingestion działają jak bufor, chroniąc systemy analityczne przed przeciążeniem podczas nagłych skoków ruchu."
+        },
+        {
+          "text": "Trwałe archiwizowanie danych na okres powyżej $10$ lat.",
+          "isCorrect": false,
+          "rationale": "Systemy te służą do przetwarzania bieżącego; do długoterminowej archiwizacji służą systemy typu Cold Storage."
+        },
+        {
+          "text": "Automatyczne usuwanie danych, które zawierają błędy ortograficzne.",
+          "isCorrect": false,
+          "rationale": "Czyszczenie danych to etap przetwarzania (ETL), a nie podstawowa rola warstwy Ingestion."
+        },
+        {
+          "text": "Szyfrowanie danych w celu ukrycia ich przed rządem.",
+          "isCorrect": false,
+          "rationale": "Szyfrowanie jest funkcją bezpieczeństwa, ale głównym celem warstwy Ingestion jest zarządzanie przepływem i przepustowością."
+        }
+      ],
+      "hint": "Pomyśl o zbiorniku retencyjnym, który przyjmuje wodę podczas ulewy i powoli ją wypuszcza."
+    },
+    {
+      "question": "Termin „Commodity Hardware” w kontekście klastrów obliczeniowych oznacza:",
+      "answerOptions": [
+        {
+          "text": "Tani, powszechnie dostępny sprzęt klasy PC, a nie drogie superkomputery.",
+          "isCorrect": true,
+          "rationale": "Skalowanie poziome opiera się na łączeniu setek lub tysięcy tanich jednostek, co jest bardziej opłacalne niż budowa jednego giganta."
+        },
+        {
+          "text": "Sprzęt, który można kupić wyłącznie za kryptowaluty.",
+          "isCorrect": false,
+          "rationale": "Płatność kryptowalutami nie ma związku z techniczną definicją sprzętu masowego."
+        },
+        {
+          "text": "Specjalistyczne procesory projektowane tylko do wydobycia złota.",
+          "isCorrect": false,
+          "rationale": "To błędne skojarzenie słowa 'commodity' (towar/surowiec) z rynkiem metali szlachetnych."
+        },
+        {
+          "text": "Zabytkowe komputery z lat 80. używane do nauki historii informatyki.",
+          "isCorrect": false,
+          "rationale": "Chodzi o nowoczesny, ale standardowy sprzęt, który można łatwo i tanio wymienić w razie awarii."
+        }
+      ],
+      "hint": "To przeciwieństwo unikalnych, budowanych na zamówienie maszyn mainframe."
+    },
+    {
+      "question": "Jaki jest warunek zaliczenia przedmiotu „Podstawy przetwarzania w chmurze” zgodnie z regulatorem zajęć?",
+      "answerOptions": [
+        {
+          "text": "Zaliczenie laboratorium oraz egzaminu końcowego z wykładów.",
+          "isCorrect": true,
+          "rationale": "Obie formy zajęć muszą zostać ukończone pozytywnie, aby otrzymać ocenę końcową z przedmiotu."
+        },
+        {
+          "text": "Obowiązkowa obecność na wszystkich wykładach.",
+          "isCorrect": false,
+          "rationale": "Regulamin wyraźnie stwierdza, że uczestnictwo w wykładach jest nieobowiązkowe."
+        },
+        {
+          "text": "Napisanie artykułu naukowego o Big Data.",
+          "isCorrect": false,
+          "rationale": "Zaliczenie opiera się na testach i pracy laboratoryjnej, a nie na publikacjach naukowych."
+        },
+        {
+          "text": "Uzyskanie minimum $90\\%$ punktów z ankiety oceny nauczyciela.",
+          "isCorrect": false,
+          "rationale": "Ankieta jest obowiązkiem studenta, ale jej wynik nie wpływa na zaliczenie przedmiotu przez studenta."
+        }
+      ],
+      "hint": "Skup się na dwóch głównych elementach kursu: praktycznym i teoretycznym."
+    }
+  ],
+  "questionCount": 30,
+  "exportedAt": "2026-06-05T16:25:28.241Z",
+  "source": "Web Clipper for NotebookLM"
+}

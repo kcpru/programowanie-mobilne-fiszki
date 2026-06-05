@@ -1,0 +1,788 @@
+{
+  "title": "Wirtualizacja Quiz",
+  "questions": [
+    {
+      "question": "Na czym polega koncepcja 'Decoupling' w kontekście wirtualizacji?",
+      "answerOptions": [
+        {
+          "text": "Na całkowitym oddzieleniu oprogramowania (systemu operacyjnego i aplikacji) od fizycznego sprzętu.",
+          "isCorrect": true,
+          "rationale": "Decoupling pozwala na niezależność warstwy programowej od specyficznych parametrów fizycznych maszyny, co jest fundamentem wirtualizacji."
+        },
+        {
+          "text": "Na połączeniu wielu fizycznych serwerów w jeden logiczny superkomputer.",
+          "isCorrect": false,
+          "rationale": "To opisuje raczej ideę klastrowania lub przetwarzania rozproszonego, a nie rozdzielenie warstw."
+        },
+        {
+          "text": "Na fizycznym usunięciu niepotrzebnych sterowników z jądra systemu operacyjnego.",
+          "isCorrect": false,
+          "rationale": "Decoupling to koncepcja architektoniczna, a nie proces optymalizacji sterowników."
+        },
+        {
+          "text": "Na ograniczeniu komunikacji między maszynami wirtualnymi w celu zwiększenia bezpieczeństwa.",
+          "isCorrect": false,
+          "rationale": "Ograniczenie komunikacji to element izolacji sieciowej, a nie definicja rozprzężenia warstw."
+        }
+      ],
+      "hint": "Pomyśl o relacji między systemem operacyjnym a fizycznymi komponentami serwera."
+    },
+    {
+      "question": "Która cecha z triady Popeka i Goldberga mówi o tym, że maszyna wirtualna powinna zachowywać się identycznie jak fizyczny sprzęt?",
+      "answerOptions": [
+        {
+          "text": "Efektywność (Efficiency)",
+          "isCorrect": false,
+          "rationale": "Efektywność odnosi się do wykonywania instrukcji bez dużego narzutu, a nie do identyczności zachowania."
+        },
+        {
+          "text": "Kontrola zasobów (Resource Control)",
+          "isCorrect": false,
+          "rationale": "Ta cecha dotyczy pełnego władztwa hypervisora nad zasobami sprzętowymi."
+        },
+        {
+          "text": "Ekwiwalencja (Equivalence)",
+          "isCorrect": true,
+          "rationale": "Ekwiwalencja gwarantuje, że program uruchomiony w VM nie 'zauważy' różnicy w porównaniu do działania na fizycznym sprzęcie."
+        },
+        {
+          "text": "Abstrakcja (Abstraction)",
+          "isCorrect": false,
+          "rationale": "Abstrakcja nie jest częścią technicznej triady wymogów Popeka i Goldberga dla VMM."
+        }
+      ],
+      "hint": "Szukaj terminu oznaczającego równoważność działania."
+    },
+    {
+      "question": "Hypervisor typu I (Bare-metal) charakteryzuje się tym, że:",
+      "answerOptions": [
+        {
+          "text": "Jest instalowany jako aplikacja w systemie Windows lub Linux.",
+          "isCorrect": false,
+          "rationale": "To opisuje hypervisor typu II (Hosted), a nie model Bare-metal."
+        },
+        {
+          "text": "Działa bezpośrednio na sprzęcie, pełniąc rolę mikro-jądra zarządzającego VM.",
+          "isCorrect": true,
+          "rationale": "Typ I nie wymaga systemu operacyjnego hosta, co zapewnia mu wyższą wydajność i stabilność."
+        },
+        {
+          "text": "Wymaga obecności sterowników systemowych hosta do komunikacji z I/O.",
+          "isCorrect": false,
+          "rationale": "Hypervisor typu I posiada własne mechanizmy obsługi sprzętu, nie polegając na OS hosta."
+        },
+        {
+          "text": "Jest przeznaczony głównie do testów i nauki na komputerach osobistych.",
+          "isCorrect": false,
+          "rationale": "Zastosowanie to jest typowe dla hypervisorów typu II, takich jak VirtualBox."
+        }
+      ],
+      "hint": "Zwróć uwagę na nazwę 'bare-metal', która sugeruje brak warstwy pośredniej systemu operacyjnego."
+    },
+    {
+      "question": "Czym jest 'Enkapsulacja' w kontekście maszyn wirtualnych?",
+      "answerOptions": [
+        {
+          "text": "Zaszyfrowaniem danych wewnątrz dysku wirtualnego.",
+          "isCorrect": false,
+          "rationale": "Szyfrowanie to metoda ochrony danych, nie zaś pojęcie enkapsulacji wirtualnej maszyny."
+        },
+        {
+          "text": "Zapisaniem całej maszyny (OS, dane, stan) w postaci zestawu plików.",
+          "isCorrect": true,
+          "rationale": "Dzięki enkapsulacji VM staje się obiektem cyfrowym, który można łatwo kopiować i przenosić."
+        },
+        {
+          "text": "Mechanizmem izolacji procesów wewnątrz systemu Guest OS.",
+          "isCorrect": false,
+          "rationale": "Izolacja procesów to funkcja jądra systemu operacyjnego, a nie cecha przenoszalności VM."
+        },
+        {
+          "text": "Ograniczeniem dostępu hypervisora do pamięci RAM maszyny wirtualnej.",
+          "isCorrect": false,
+          "rationale": "VMM musi mieć dostęp do pamięci, aby nią zarządzać; enkapsulacja dotyczy formy przechowywania maszyny."
+        }
+      ],
+      "hint": "Zastanów się, w jakiej formie fizycznej maszyna wirtualna istnieje na dysku hosta."
+    },
+    {
+      "question": "W nowoczesnej wirtualizacji wspomaganej sprzętowo (Intel VT-x), hypervisor działa w specjalnym trybie znanym jako:",
+      "answerOptions": [
+        {
+          "text": "Ring 0",
+          "isCorrect": false,
+          "rationale": "Ring 0 jest tradycyjnie zarezerwowany dla jądra systemu operacyjnego (w tym przypadku Guest OS)."
+        },
+        {
+          "text": "Ring 3",
+          "isCorrect": false,
+          "rationale": "Ring 3 to poziom najmniej uprzywilejowany, w którym działają standardowe aplikacje użytkownika."
+        },
+        {
+          "text": "Ring -1 (Root Mode)",
+          "isCorrect": true,
+          "rationale": "Wprowadzenie Ring -1 pozwala hypervisorowi kontrolować system operacyjny gościa, który sam 'myśli', że działa w Ring 0."
+        },
+        {
+          "text": "Ring 1",
+          "isCorrect": false,
+          "rationale": "Ring 1 był używany w starszej metodzie 'Ring Compression', a nie w nowoczesnym wsparciu sprzętowym."
+        }
+      ],
+      "hint": "Pomyśl o poziomie uprawnień znajdującym się 'poniżej' standardowego jądra systemu."
+    },
+    {
+      "question": "Na czym polega wyzwanie wirtualizacji pamięci RAM?",
+      "answerOptions": [
+        {
+          "text": "Na konieczności fizycznego dzielenia kości RAM na mniejsze kawałki.",
+          "isCorrect": false,
+          "rationale": "Dzielenie jest logiczne, realizowane przez oprogramowanie, a nie fizyczną ingerencję."
+        },
+        {
+          "text": "Na mapowaniu adresów wirtualnych gościa na adresy fizyczne hosta (Machine Memory).",
+          "isCorrect": true,
+          "rationale": "Hypervisor musi pośredniczyć w mapowaniu, aby każda VM miała wrażenie posiadania własnej, ciągłej pamięci."
+        },
+        {
+          "text": "Na uniemożliwieniu maszynom wirtualnym korzystania z pliku wymiany.",
+          "isCorrect": false,
+          "rationale": "Maszyny wirtualne mogą korzystać z mechanizmów stronicowania, hypervisor nimi zarządza."
+        },
+        {
+          "text": "Na tym, że każda VM musi mieć dokładnie tyle samo pamięci co host fizyczny.",
+          "isCorrect": false,
+          "rationale": "VM zazwyczaj mają znacznie mniej RAM niż host; celem jest współdzielenie zasobów."
+        }
+      ],
+      "hint": "Chodzi o proces tłumaczenia adresów widzianych przez system gościa na rzeczywiste adresy w sprzęcie."
+    },
+    {
+      "question": "Która metoda wirtualizacji I/O charakteryzuje się najwyższą wydajnością, ale ogranicza możliwości takie jak Live Migration?",
+      "answerOptions": [
+        {
+          "text": "Pełna emulacja urządzeń (Full Device Emulation)",
+          "isCorrect": false,
+          "rationale": "Pełna emulacja jest najbardziej kompatybilna, ale zarazem najwolniejsza ze względu na duży narzut."
+        },
+        {
+          "text": "Parawirtualizacja (Split Driver)",
+          "isCorrect": false,
+          "rationale": "Jest to kompromis między wydajnością a kompatybilnością, ale nie osiąga prędkości natywnej."
+        },
+        {
+          "text": "Direct I/O (Passthrough)",
+          "isCorrect": true,
+          "rationale": "Passthrough daje bezpośredni dostęp do sprzętu (natywna prędkość), ale 'przywiązuje' VM do konkretnego fizycznego urządzenia."
+        },
+        {
+          "text": "Wirtualizacja programowa",
+          "isCorrect": false,
+          "rationale": "To ogólne pojęcie, które nie definiuje konkretnej, wydajnej metody obsługi urządzeń wejścia/wyjścia."
+        }
+      ],
+      "hint": "Szukaj metody polegającej na bezpośrednim przekazaniu fizycznego urządzenia do maszyny wirtualnej."
+    },
+    {
+      "question": "Czym różni się model kosztowy CapEx od OpEx w kontekście chmury obliczeniowej?",
+      "answerOptions": [
+        {
+          "text": "CapEx to bieżące wydatki za zużycie, a OpEx to inwestycje w sprzęt.",
+          "isCorrect": false,
+          "rationale": "Jest dokładnie odwrotnie – to CapEx dotyczy nakładów kapitałowych na infrastrukturę."
+        },
+        {
+          "text": "CapEx to nakłady inwestycyjne ponoszone z góry, podczas gdy OpEx to koszty operacyjne płacone za zużycie.",
+          "isCorrect": true,
+          "rationale": "Wirtualizacja pozwala firmom przejść z modelu budowania własnych centrów danych (CapEx) na model subskrypcyjny (OpEx)."
+        },
+        {
+          "text": "OpEx dotyczy tylko licencji oprogramowania, a CapEx tylko energii elektrycznej.",
+          "isCorrect": false,
+          "rationale": "Kategorie te są znacznie szersze i dotyczą całego modelu finansowania IT."
+        },
+        {
+          "text": "Nie ma między nimi różnicy w nowoczesnej infrastrukturze chmurowej.",
+          "isCorrect": false,
+          "rationale": "Rozróżnienie to jest kluczowe dla działów finansowych przy decydowaniu o przejściu do chmury."
+        }
+      ],
+      "hint": "Słowo 'Operational' w OpEx sugeruje wydatki związane z bieżącym działaniem."
+    },
+    {
+      "question": "Zjawisko 'Noisy Neighbor' w środowiskach wielodzierżawnych (multi-tenancy) polega na:",
+      "answerOptions": [
+        {
+          "text": "Zbyt głośnej pracy wentylatorów w serwerowni dostawcy.",
+          "isCorrect": false,
+          "rationale": "Termin ten jest metaforą dotyczącą wydajności cyfrowej, a nie hałasu akustycznego."
+        },
+        {
+          "text": "Przechwytywaniu danych przez jedną VM z innej VM działającej na tym samym hoście.",
+          "isCorrect": false,
+          "rationale": "To opisuje naruszenie izolacji (wyciek danych), a nie problem 'hałaśliwego sąsiada'."
+        },
+        {
+          "text": "Nadmiernym zużywaniu wspólnych zasobów (np. I/O) przez jedną VM, co spowalnia pozostałe.",
+          "isCorrect": true,
+          "rationale": "Gdy jeden użytkownik generuje bardzo duże obciążenie, inni korzystający z tego samego fizycznego serwera mogą odczuć spadki wydajności."
+        },
+        {
+          "text": "Automatycznym przenoszeniu maszyn wirtualnych między centrami danych.",
+          "isCorrect": false,
+          "rationale": "To opisuje mechanizm Live Migration lub Load Balancing."
+        }
+      ],
+      "hint": "Pomyśl o negatywnym wpływie jednego klienta na drugiego w ramach współdzielonego sprzętu."
+    },
+    {
+      "question": "Kto w 1961 roku zaproponował, aby moc obliczeniowa była sprzedawana jako usługa publiczna, podobnie jak woda czy prąd?",
+      "answerOptions": [
+        {
+          "text": "J.C.R. Licklider",
+          "isCorrect": false,
+          "rationale": "Licklider był pionierem globalnej sieci (ARPANet), ale koncepcję 'Utility Computing' sformułował McCarthy."
+        },
+        {
+          "text": "John McCarthy",
+          "isCorrect": true,
+          "rationale": "Wizja McCarthy'ego dotycząca 'Computing as a Utility' stała się fundamentem dzisiejszej chmury obliczeniowej."
+        },
+        {
+          "text": "Daniel Grzonka",
+          "isCorrect": false,
+          "rationale": "To autor prezentacji, a nie historyczny twórca koncepcji z lat 60."
+        },
+        {
+          "text": "Vinton Cerf",
+          "isCorrect": false,
+          "rationale": "Vinton Cerf jest znany jako jeden z 'ojców Internetu', ale nie jest autorem tej konkretnej analogii."
+        }
+      ],
+      "hint": "Był to naukowiec z MIT, znany również z prac nad sztuczną inteligencją."
+    },
+    {
+      "question": "Właściwość chmury 'Task-centric' według Google oznacza, że:",
+      "answerOptions": [
+        {
+          "text": "System operacyjny jest najważniejszym elementem pracy.",
+          "isCorrect": false,
+          "rationale": "W modelu task-centric system i konkretna aplikacja schodzą na dalszy plan."
+        },
+        {
+          "text": "Użytkownik płaci za każde wykonane zadanie osobno.",
+          "isCorrect": false,
+          "rationale": "To dotyczy modelu rozliczeniowego, a nie orientacji na zadanie."
+        },
+        {
+          "text": "Liczy się to, co chcesz osiągnąć, a nie jakiej konkretnej aplikacji do tego używasz.",
+          "isCorrect": true,
+          "rationale": "Przykładem jest chęć 'napisania dokumentu' zamiast skupiania się na posiadaniu konkretnej wersji programu Word."
+        },
+        {
+          "text": "Zasoby są przydzielane tylko na czas trwania konkretnego procesu CPU.",
+          "isCorrect": false,
+          "rationale": "To techniczny opis zarządzania czasem procesora, nie filozofia 'task-centric' użytkownika."
+        }
+      ],
+      "hint": "Skup się na celu użytkownika (np. edycja tekstu) zamiast na narzędziu."
+    },
+    {
+      "question": "Zgodnie z definicją NIST, przetwarzanie w chmurze umożliwia dostęp do wspólnej puli zasobów, które można przydzielać:",
+      "answerOptions": [
+        {
+          "text": "Tylko po podpisaniu długoterminowej umowy z dostawcą.",
+          "isCorrect": false,
+          "rationale": "Chmura charakteryzuje się elastycznością i brakiem konieczności długich zobowiązań."
+        },
+        {
+          "text": "Z minimalnym wysiłkiem zarządczym i bez bezpośredniej interakcji z dostawcą usług.",
+          "isCorrect": true,
+          "rationale": "Kluczem jest samoobsługa (Self-service) oraz szybkość przydzielania i zwalniania zasobów."
+        },
+        {
+          "text": "Wyłącznie w ramach sieci lokalnej (LAN).",
+          "isCorrect": false,
+          "rationale": "Chmura zazwyczaj działa przez Internet (publiczna) lub szerokie sieci (prywatna/VPN)."
+        },
+        {
+          "text": "Tylko w określonych godzinach pracy centrum danych.",
+          "isCorrect": false,
+          "rationale": "Zasoby chmurowe muszą być dostępne 'na żądanie' ($on-demand$) przez całą dobę."
+        }
+      ],
+      "hint": "Zastanów się, jak duża interakcja z człowiekiem po stronie dostawcy jest wymagana przy tworzeniu nowej usługi."
+    },
+    {
+      "question": "Który komponent hypervisora odpowiada za dekodowanie instrukcji, których maszyna wirtualna nie może wykonać bezpośrednio?",
+      "answerOptions": [
+        {
+          "text": "Dispatcher",
+          "isCorrect": false,
+          "rationale": "Dispatcher decyduje, gdzie skierować instrukcję, ale jej nie interpretuje."
+        },
+        {
+          "text": "Allocator",
+          "isCorrect": false,
+          "rationale": "Allocator zajmuje się przydzielaniem zasobów, takich jak pamięć RAM czy czas procesora."
+        },
+        {
+          "text": "Interpreter",
+          "isCorrect": true,
+          "rationale": "Interpreter (lub emulator) emuluje działanie instrukcji wrażliwych, których VM nie może bezpiecznie wykonać natywnie."
+        },
+        {
+          "text": "Hypervisor Core",
+          "isCorrect": false,
+          "rationale": "To ogólne określenie całości, a pytanie dotyczy konkretnego modułu funkcjonalnego."
+        }
+      ],
+      "hint": "Nazwa tego modułu sugeruje wyjaśnianie lub tłumaczenie kodu."
+    },
+    {
+      "question": "Funkcja 'Live Migration' pozwala na:",
+      "answerOptions": [
+        {
+          "text": "Szybkie tworzenie kopii zapasowych wyłączonych maszyn wirtualnych.",
+          "isCorrect": false,
+          "rationale": "Live Migration dotyczy działających maszyn, a nie backupu maszyn wyłączonych."
+        },
+        {
+          "text": "Przenoszenie uruchomionej maszyny wirtualnej między hostami bez przerywania jej pracy.",
+          "isCorrect": true,
+          "rationale": "Dzięki temu administratorzy mogą serwisować sprzęt bez wyłączania usług widocznych dla użytkowników."
+        },
+        {
+          "text": "Automatyczną zmianę systemu operacyjnego z Windows na Linux.",
+          "isCorrect": false,
+          "rationale": "Migracja dotyczy lokalizacji w infrastrukturze, a nie zmiany typu systemu operacyjnego."
+        },
+        {
+          "text": "Zwiększenie liczby rdzeni CPU w trakcie działania aplikacji.",
+          "isCorrect": false,
+          "rationale": "To opisuje mechanizm 'Hot-add CPU', a nie migrację między fizycznymi serwerami."
+        }
+      ],
+      "hint": "Zwróć uwagę na słowo 'Live', które sugeruje działanie systemu w czasie rzeczywistym."
+    },
+    {
+      "question": "Atrybut VM 'Fault Containment' (Ograniczanie Awarii) oznacza, że:",
+      "answerOptions": [
+        {
+          "text": "System operacyjny gościa nigdy nie ulegnie awarii.",
+          "isCorrect": false,
+          "rationale": "Wirtualizacja nie zapobiega błędom wewnątrz OS gościa, ale ogranicza ich skutki dla otoczenia."
+        },
+        {
+          "text": "Awaria jednej maszyny wirtualnej nie wpływa na działanie hosta ani innych VM.",
+          "isCorrect": true,
+          "rationale": "Dzięki izolacji, błąd krytyczny ($blue-screen$) w jednej VM jest niewidoczny dla pozostałych użytkowników sprzętu."
+        },
+        {
+          "text": "Hypervisor automatycznie naprawia błędy w kodzie aplikacji.",
+          "isCorrect": false,
+          "rationale": "Hypervisor nie analizuje ani nie naprawia błędów logicznych w aplikacjach użytkownika."
+        },
+        {
+          "text": "Wszystkie dane są automatycznie replikowane do innego kraju.",
+          "isCorrect": false,
+          "rationale": "Replikacja geograficzna to element Disaster Recovery, a nie cecha izolacji błędów pojedynczej VM."
+        }
+      ],
+      "hint": "Pomyśl o metaforze szczelnych przedziałów na statku."
+    },
+    {
+      "question": "W metodzie 'Parawirtualizacji' I/O (Split Driver), komunikacja odbywa się poprzez:",
+      "answerOptions": [
+        {
+          "text": "Całkowite udawanie (emulację) fizycznego kontrolera dysku.",
+          "isCorrect": false,
+          "rationale": "Emulacja to cecha Full Virtualization, a nie parawirtualizacji."
+        },
+        {
+          "text": "Współdzieloną pamięć i specjalne sterowniki (Front-end w VM, Back-end w Hypervisorze).",
+          "isCorrect": true,
+          "rationale": "Ten model 'dzielonego sterownika' znacznie redukuje narzut obliczeniowy w porównaniu do pełnej emulacji."
+        },
+        {
+          "text": "Bezpośrednie wpięcie kabla sieciowego do procesora VM.",
+          "isCorrect": false,
+          "rationale": "Jest to technicznie niemożliwe; każda komunikacja musi przejść przez warstwy logiczne."
+        },
+        {
+          "text": "Wykorzystanie standardowych sterowników Windows bez żadnych modyfikacji.",
+          "isCorrect": false,
+          "rationale": "Parawirtualizacja wymaga świadomych zmian w Guest OS lub doinstalowania dedykowanych sterowników."
+        }
+      ],
+      "hint": "Szukaj opisu mechanizmu opartego na współpracy dwóch części sterownika."
+    },
+    {
+      "question": "Co to jest 'VDC' (Virtual Data Center)?",
+      "answerOptions": [
+        {
+          "text": "Fizyczny budynek serwerowni dostępny do zwiedzania w goglach VR.",
+          "isCorrect": false,
+          "rationale": "VDC to pojęcie logiczne dotyczące zasobów, a nie wizualizacji budynku."
+        },
+        {
+          "text": "Abstrakcyjna pula zasobów obliczeniowych, sieciowych i pamięci zastępująca fizyczną infrastrukturę.",
+          "isCorrect": true,
+          "rationale": "VDC pozwala zarządzać całymi grupami serwerów i sieci za pomocą oprogramowania, bez dotykania kabli."
+        },
+        {
+          "text": "Specjalny typ procesora przeznaczony tylko do chmury.",
+          "isCorrect": false,
+          "rationale": "VDC to model organizacyjny całej infrastruktury, a nie pojedynczy podzespół."
+        },
+        {
+          "text": "Usługa polegająca na wynajęciu pojedynczego serwera dedykowanego.",
+          "isCorrect": false,
+          "rationale": "Wynajem serwera to tradycyjny hosting; VDC oferuje znacznie wyższy poziom abstrakcji i elastyczności."
+        }
+      ],
+      "hint": "Pomyśl o odpowiedniku całej serwerowni zdefiniowanym programowo."
+    },
+    {
+      "question": "W kontekście Google Cloud, właściwość 'Programmable' oznacza między innymi, że:",
+      "answerOptions": [
+        {
+          "text": "Użytkownik musi sam zaprogramować hypervisor przed użyciem.",
+          "isCorrect": false,
+          "rationale": "Hypervisor jest dostarczany przez operatora; programowalność dotyczy automatyzacji zachowań chmury."
+        },
+        {
+          "text": "Chmura może sama reagować na awarie i przenosić dane bez wiedzy użytkownika.",
+          "isCorrect": true,
+          "rationale": "Automatyzacja procesów naprawczych i skalowania jest kluczowym elementem inteligentnej infrastruktury."
+        },
+        {
+          "text": "Dostęp do chmury jest możliwy tylko poprzez język programowania C++.",
+          "isCorrect": false,
+          "rationale": "Interfejsy chmurowe (API, portale) obsługują wiele języków i narzędzi."
+        },
+        {
+          "text": "Każdy serwer musi być ręcznie konfigurowany przez programistę.",
+          "isCorrect": false,
+          "rationale": "Ręczna konfiguracja zaprzecza idei programowalności i skalowalności chmury."
+        }
+      ],
+      "hint": "Chodzi o zdolność systemu do autonomicznego zarządzania sobą."
+    },
+    {
+      "question": "Jaki jest główny cel techniczny wirtualizacji serwerów w przedsiębiorstwach?",
+      "answerOptions": [
+        {
+          "text": "Zwiększenie zużycia energii elektrycznej.",
+          "isCorrect": false,
+          "rationale": "Wręcz przeciwnie – konsolidacja serwerów ma na celu oszczędność energii."
+        },
+        {
+          "text": "Maksymalizacja utylizacji zasobów sprzętowych (wykorzystanie 'uśpionej' mocy).",
+          "isCorrect": true,
+          "rationale": "Fizyczne serwery często wykorzystują tylko 5-15% mocy; wirtualizacja pozwala uruchomić wiele VM na jednym maszynie, podnosząc ten wskaźnik."
+        },
+        {
+          "text": "Całkowite wyeliminowanie potrzeby posiadania połączenia internetowego.",
+          "isCorrect": false,
+          "rationale": "Wirtualizacja (a zwłaszcza chmura) silnie polega na łączności sieciowej."
+        },
+        {
+          "text": "Zastąpienie szybkich dysków SSD wolniejszymi dyskami wirtualnymi.",
+          "isCorrect": false,
+          "rationale": "Wirtualizacja dąży do zachowania wydajności, a nie jej celowego obniżania."
+        }
+      ],
+      "hint": "Pomyśl o tym, jak efektywnie wykorzystać serwer, który przez większość czasu nic nie robi."
+    },
+    {
+      "question": "Hypervisor typu II (Hosted) różni się od typu I tym, że:",
+      "answerOptions": [
+        {
+          "text": "Zapewnia wyższą wydajność operacji wejścia/wyjścia.",
+          "isCorrect": false,
+          "rationale": "Typ II ma niższą wydajność z powodu dodatkowej warstwy systemu operacyjnego hosta."
+        },
+        {
+          "text": "Jest instalowany bezpośrednio na procesorze bez systemu operacyjnego.",
+          "isCorrect": false,
+          "rationale": "To jest definicja typu I (Bare-metal)."
+        },
+        {
+          "text": "Działa jako proces wewnątrz systemu operacyjnego hosta (np. Windows/macOS).",
+          "isCorrect": true,
+          "rationale": "Typ II (np. VirtualBox) korzysta ze sterowników i usług systemu operacyjnego, na którym jest uruchomiony."
+        },
+        {
+          "text": "Jest niemożliwy do zainstalowania na laptopach.",
+          "isCorrect": false,
+          "rationale": "To właśnie typ II jest najczęściej używany na komputerach osobistych i laptopach."
+        }
+      ],
+      "hint": "Zastanów się, gdzie 'mieszka' taki program jak VMware Workstation lub Oracle VirtualBox."
+    },
+    {
+      "question": "W modelu 'Measured Service' (Usługa Mierzona), opłaty są naliczane:",
+      "answerOptions": [
+        {
+          "text": "Ryczałtowo, niezależnie od liczby uruchomionych usług.",
+          "isCorrect": false,
+          "rationale": "Ryczałt to domena tradycyjnego hostingu, a nie elastycznej chmury."
+        },
+        {
+          "text": "Na podstawie faktycznego wykorzystania zasobów (np. godzin pracy VM, GB transferu).",
+          "isCorrect": true,
+          "rationale": "To kluczowa cecha chmury ($pay-as-you-go$), pozwalająca na precyzyjne rozliczanie kosztów."
+        },
+        {
+          "text": "Tylko za czas, w którym administrator jest zalogowany do panelu.",
+          "isCorrect": false,
+          "rationale": "Płaci się za działanie zasobów (np. serwera), a nie za aktywność administratora w panelu sterowania."
+        },
+        {
+          "text": "Z góry za cały rok użytkowania, bez możliwości rezygnacji.",
+          "isCorrect": false,
+          "rationale": "Taki model przeczy idei elastyczności ($elasticity$) typowej dla chmury."
+        }
+      ],
+      "hint": "Pomyśl o sposobie rozliczania rachunków za prąd lub wodę."
+    },
+    {
+      "question": "Dlaczego stare podejście 'Ring Compression' było wolne?",
+      "answerOptions": [
+        {
+          "text": "Ponieważ hypervisor musiał tłumaczyć instrukcje uprzywilejowane gościa, działające w Ring 1, na Ring 0.",
+          "isCorrect": true,
+          "rationale": "Brak sprzętowego wsparcia wymuszał programową translację instrukcji, co generowało duże opóźnienia."
+        },
+        {
+          "text": "Ponieważ procesory w latach 90. nie miały pamięci RAM.",
+          "isCorrect": false,
+          "rationale": "Pamięć RAM istniała, problemem była architektura uprawnień procesora x86."
+        },
+        {
+          "text": "Bo wymagało fizycznego spowolnienia zegara procesora dla maszyn wirtualnych.",
+          "isCorrect": false,
+          "rationale": "Nikt nie spowalniał zegara; narzut wynikał ze złożoności programowej obsługi instrukcji."
+        },
+        {
+          "text": "Ze względu na konieczność używania dyskietek do uruchamiania VM.",
+          "isCorrect": false,
+          "rationale": "Dyskietki nie mają związku z architekturą Ringów w procesorze."
+        }
+      ],
+      "hint": "Chodzi o konieczność programowego pośrednictwa w wykonywaniu ważnych komend procesora."
+    },
+    {
+      "question": "Co oznacza skrót 'HA' w kontekście infrastruktury wirtualnej?",
+      "answerOptions": [
+        {
+          "text": "Hidden Archive (Ukryte Archiwum)",
+          "isCorrect": false,
+          "rationale": "Skrót ten nie jest standardem w wirtualizacji; terminem technicznym jest High Availability."
+        },
+        {
+          "text": "High Availability (Wysoka Dostępność)",
+          "isCorrect": true,
+          "rationale": "HA to zestaw mechanizmów zapewniających minimalizację czasu przestojów, np. poprzez restart VM na innym hoście po awarii."
+        },
+        {
+          "text": "Hardware Acceleration (Akceleracja Sprzętowa)",
+          "isCorrect": false,
+          "rationale": "Mimo że taki termin istnieje, w kontekście zarządzania klastrem VM skrót HA oznacza wysoką dostępność."
+        },
+        {
+          "text": "Hyper-Active (Nadaktywność procesora)",
+          "isCorrect": false,
+          "rationale": "To nie jest termin techniczny używany w informatyce śledczej czy wirtualizacji."
+        }
+      ],
+      "hint": "Pomyśl o systemach, które muszą działać przez $99,99\\%$ czasu."
+    },
+    {
+      "question": "Wirtualizacja CPU za pomocą 'Binary Translation' (Pełna Wirtualizacja) polega na:",
+      "answerOptions": [
+        {
+          "text": "Przetłumaczeniu całego kodu aplikacji na język binarny przed uruchomieniem.",
+          "isCorrect": false,
+          "rationale": "Kod aplikacji już jest binarny; problemem są specyficzne instrukcje jądra."
+        },
+        {
+          "text": "Wykrywaniu 'w locie' instrukcji wrażliwych i zastępowaniu ich bezpiecznymi wywołaniami hypervisora.",
+          "isCorrect": true,
+          "rationale": "Dzięki temu niezmodyfikowany system operacyjny (np. stary Windows) może działać na hypervisorze."
+        },
+        {
+          "text": "Zmianie fizycznej budowy procesora przez oprogramowanie.",
+          "isCorrect": false,
+          "rationale": "Oprogramowanie nie może zmienić fizycznej budowy ($hardware$) procesora."
+        },
+        {
+          "text": "Uruchamianiu tylko jednej instrukcji na sekundę w celu zapewnienia bezpieczeństwa.",
+          "isCorrect": false,
+          "rationale": "To byłoby skrajnie nieefektywne; celem jest działanie z prędkością zbliżoną do natywnej."
+        }
+      ],
+      "hint": "Chodzi o modyfikowanie kodu systemu gościa 'w locie' podczas jego wykonywania."
+    },
+    {
+      "question": "Która z wymienionych usług jest przykładem modelu SaaS (Software as a Service)?",
+      "answerOptions": [
+        {
+          "text": "Wirtualny serwer z zainstalowanym czystym Linuxem.",
+          "isCorrect": false,
+          "rationale": "To jest przykład modelu IaaS (Infrastructure as a Service)."
+        },
+        {
+          "text": "Baza danych, którą konfigurujemy za pomocą skryptów SQL.",
+          "isCorrect": false,
+          "rationale": "To zazwyczaj model PaaS (Platform as a Service)."
+        },
+        {
+          "text": "Google Docs / Gmail.",
+          "isCorrect": true,
+          "rationale": "W SaaS użytkownik otrzymuje gotową aplikację dostępną przez przeglądarkę, nie martwiąc się o infrastrukturę."
+        },
+        {
+          "text": "Fizyczny kabel światłowodowy wynajęty od dostawcy.",
+          "isCorrect": false,
+          "rationale": "To jest warstwa fizyczna, niebędąca usługą oprogramowania w chmurze."
+        }
+      ],
+      "hint": "Szukaj aplikacji, którą po prostu otwierasz w przeglądarce i od razu używasz."
+    },
+    {
+      "question": "Termin 'Multi-tenancy' (Wielodzierżawność) oznacza, że:",
+      "answerOptions": [
+        {
+          "text": "Jeden klient posiada wiele różnych kont u dostawcy.",
+          "isCorrect": false,
+          "rationale": "Multi-tenancy odnosi się do współdzielenia zasobów przez wielu niezależnych klientów."
+        },
+        {
+          "text": "Wielu niezależnych klientów korzysta z tej samej fizycznej infrastruktury przy zachowaniu izolacji danych.",
+          "isCorrect": true,
+          "rationale": "To kluczowy model ekonomiczny chmury, pozwalający na optymalne wykorzystanie centrów danych."
+        },
+        {
+          "text": "Każdy klient musi mieć własny, oddzielny budynek z serwerami.",
+          "isCorrect": false,
+          "rationale": "To byłoby zaprzeczeniem idei chmury publicznej i współdzielenia zasobów."
+        },
+        {
+          "text": "Dostawca zatrudnia wielu administratorów do obsługi jednego klienta.",
+          "isCorrect": false,
+          "rationale": "Zatrudnienie nie definiuje architektury 'tenancy'; chodzi o architekturę systemu i danych."
+        }
+      ],
+      "hint": "Pomyśl o mieszkańcach jednego bloku, którzy dzielą fundamenty, ale mają oddzielne mieszkania."
+    },
+    {
+      "question": "W triadzie Popeka i Goldberga wymóg 'Resource Control' oznacza, że:",
+      "answerOptions": [
+        {
+          "text": "Użytkownik ma pełne prawo do zmiany ustawień BIOS serwera fizycznego.",
+          "isCorrect": false,
+          "rationale": "Użytkownik VM nie powinien mieć dostępu do fizycznego BIOS-u hosta."
+        },
+        {
+          "text": "Hypervisor (VMM) ma wyłączną i pełną kontrolę nad zasobami sprzętowymi.",
+          "isCorrect": true,
+          "rationale": "Żadna maszyna wirtualna nie może ominąć hypervisora i bezpośrednio zmienić konfiguracji sprzętu."
+        },
+        {
+          "text": "Zasoby są rozdzielane po równo między wszystkie maszyny, niezależnie od potrzeb.",
+          "isCorrect": false,
+          "rationale": "Kontrola zasobów oznacza nadzór, a niekoniecznie sztywny, równy podział."
+        },
+        {
+          "text": "Maszyna wirtualna może w dowolnej chwili przejąć pamięć innej maszyny.",
+          "isCorrect": false,
+          "rationale": "To byłoby naruszenie bezpieczeństwa; wymóg kontroli ma temu zapobiegać."
+        }
+      ],
+      "hint": "Chodzi o to, kto jest ostatecznym 'panem' sprzętu w systemie zwirtualizowanym."
+    },
+    {
+      "question": "Na czym polega 'Partycjonowanie' w wirtualizacji?",
+      "answerOptions": [
+        {
+          "text": "Na fizycznym pocięciu twardego dysku na mniejsze talerze.",
+          "isCorrect": false,
+          "rationale": "Wirtualizacja to proces logiczny, nie mechaniczny."
+        },
+        {
+          "text": "Na podziale zasobów fizycznych (RAM, CPU) na mniejsze, logiczne części przydzielone poszczególnym VM.",
+          "isCorrect": true,
+          "rationale": "Dzięki temu na jednym mocnym serwerze możemy uruchomić wiele słabszych maszyn wirtualnych o różnych parametrach."
+        },
+        {
+          "text": "Na zakazie łączenia serwerów różnych producentów w jednej sieci.",
+          "isCorrect": false,
+          "rationale": "Wirtualizacja sprzyja niezależności od sprzętu ($hardware independence$), a nie ją ogranicza."
+        },
+        {
+          "text": "Na ograniczaniu dostępu użytkowników do Internetu.",
+          "isCorrect": false,
+          "rationale": "To rola zapór ogniowych (firewall), a nie definicja partycjonowania zasobów VM."
+        }
+      ],
+      "hint": "Pomyśl o krojeniu tortu (serwera) na kawałki dla różnych gości (maszyn wirtualnych)."
+    },
+    {
+      "question": "W modelu 'Distributed Computing' (przełom lat 90/2000), kluczową cechą było:",
+      "answerOptions": [
+        {
+          "text": "Używanie tylko jednego, centralnego superkomputera.",
+          "isCorrect": false,
+          "rationale": "To cecha modelu 'Mainframe', systemy rozproszone polegają na wielu jednostkach."
+        },
+        {
+          "text": "Łączenie wielu komputerów w sieć w celu współdzielenia zasobów i zwiększenia mocy.",
+          "isCorrect": true,
+          "rationale": "To podejście stało się bezpośrednim przodkiem nowoczesnej chmury obliczeniowej."
+        },
+        {
+          "text": "Wyeliminowanie potrzeby korzystania z sieci komputerowych.",
+          "isCorrect": false,
+          "rationale": "Systemy rozproszone nie mogą istnieć bez wydajnej sieci komunikacyjnej."
+        },
+        {
+          "text": "Przechowywanie wszystkich danych na dyskietkach 3,5 cala.",
+          "isCorrect": false,
+          "rationale": "Nośniki danych nie definiują modelu przetwarzania rozproszonego."
+        }
+      ],
+      "hint": "Szukaj pojęcia oznaczającego współpracę wielu maszyn połączonych siecią."
+    },
+    {
+      "question": "Co to jest 'VMM'?",
+      "answerOptions": [
+        {
+          "text": "Virtual Machine Manager – inne określenie na Hypervisor.",
+          "isCorrect": true,
+          "rationale": "VMM to warstwa oprogramowania odpowiedzialna za tworzenie i zarządzanie maszynami wirtualnymi."
+        },
+        {
+          "text": "Virtual Memory Module – fizyczna kość RAM.",
+          "isCorrect": false,
+          "rationale": "Skrót VMM w informatyce śledczej i systemowej oznacza monitor maszyny wirtualnej."
+        },
+        {
+          "text": "Very Much Money – termin ekonomiczny dotyczący chmury.",
+          "isCorrect": false,
+          "rationale": "To nie jest termin techniczny używany w prezentacji."
+        },
+        {
+          "text": "Video Master Mode – tryb pracy karty graficznej.",
+          "isCorrect": false,
+          "rationale": "Wirtualizacja używa skrótu VMM w odniesieniu do zarządzania systemami gościa."
+        }
+      ],
+      "hint": "Jest to 'policjant na skrzyżowaniu' między sprzętem a systemami gościa."
+    }
+  ],
+  "questionCount": 30,
+  "exportedAt": "2026-06-05T16:26:54.953Z",
+  "source": "Web Clipper for NotebookLM"
+}

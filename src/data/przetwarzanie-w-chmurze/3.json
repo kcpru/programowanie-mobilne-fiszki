@@ -1,0 +1,788 @@
+{
+  "title": "Chmura Quiz",
+  "questions": [
+    {
+      "question": "Jaka jest zasadnicza relacja między pojęciami 'cloud computing' a 'cloud services' według materiałów?",
+      "answerOptions": [
+        {
+          "text": "Cloud computing to model działania, a cloud services to konkretne produkty, które konsumujemy.",
+          "isCorrect": true,
+          "rationale": "Cloud computing definiuje paradygmat i sposób dostarczania zasobów, podczas gdy usługi to finalne rozwiązania dostępne dla użytkownika."
+        },
+        {
+          "text": "Są to pojęcia tożsame, używane zamiennie w kontekście infrastruktury fizycznej.",
+          "isCorrect": false,
+          "rationale": "Materiały wyraźnie rozróżniają paradygmat przetwarzania od konkretnych ofert rynkowych."
+        },
+        {
+          "text": "Cloud services odnoszą się tylko do warstwy sprzętowej, a cloud computing do oprogramowania.",
+          "isCorrect": false,
+          "rationale": "Oba pojęcia obejmują szeroki zakres od infrastruktury po gotowe aplikacje, ale na innym poziomie abstrakcji."
+        },
+        {
+          "text": "Cloud computing to usługa lokalna, a cloud services to usługi zdalne.",
+          "isCorrect": false,
+          "rationale": "Istotą chmury jest zdalny dostęp, więc oba pojęcia z definicji wykluczają wyłącznie lokalne przetwarzanie."
+        }
+      ],
+      "hint": "Pomyśl o różnicy między ogólną ideą a konkretnym narzędziem, którego używasz."
+    },
+    {
+      "question": "W modelu IaaS (Infrastructure as a Service), za który element bezpośrednio odpowiada klient?",
+      "answerOptions": [
+        {
+          "text": "Zarządzanie systemem operacyjnym i aplikacjami.",
+          "isCorrect": true,
+          "rationale": "W IaaS dostawca dostarcza wirtualny sprzęt, ale to użytkownik musi zainstalować i skonfigurować system oraz soft."
+        },
+        {
+          "text": "Utrzymanie fizycznych serwerów w centrum danych.",
+          "isCorrect": false,
+          "rationale": "Zarządzanie warstwą fizyczną i sprzętem leży całkowicie po stronie dostawcy (Provider)."
+        },
+        {
+          "text": "Zarządzanie warstwą wirtualizacji (hypervisor).",
+          "isCorrect": false,
+          "rationale": "Warstwa wirtualizacji jest częścią infrastruktury zarządzanej przez dostawcę usługi chmurowej."
+        },
+        {
+          "text": "Zapewnienie zasilania i chłodzenia infrastruktury.",
+          "isCorrect": false,
+          "rationale": "Aspekty fizyczne i środowiskowe centrum danych to wyłączna odpowiedzialność dostawcy."
+        }
+      ],
+      "hint": "IaaS to 'wypożyczone centrum danych', gdzie dostajesz czystą maszynę wirtualną."
+    },
+    {
+      "question": "Który z poniższych modeli chmury jest najbardziej odpowiedni dla deweloperów potrzebujących gotowego środowiska do tworzenia i testowania aplikacji?",
+      "answerOptions": [
+        {
+          "text": "PaaS (Platform as a Service)",
+          "isCorrect": true,
+          "rationale": "PaaS dostarcza runtime, middleware i narzędzia programistyczne, odciążając dewelopera od zarządzania infrastrukturą."
+        },
+        {
+          "text": "IaaS (Infrastructure as a Service)",
+          "isCorrect": false,
+          "rationale": "IaaS wymaga od dewelopera samodzielnego przygotowania całego stosu technologicznego i systemu."
+        },
+        {
+          "text": "SaaS (Software as a Service)",
+          "isCorrect": false,
+          "rationale": "SaaS to gotowa aplikacja dla użytkownika końcowego, a nie środowisko do budowy nowego oprogramowania."
+        },
+        {
+          "text": "STaaS (Storage as a Service)",
+          "isCorrect": false,
+          "rationale": "Model ten ogranicza się jedynie do przechowywania danych, nie oferując narzędzi do uruchamiania kodu."
+        }
+      ],
+      "hint": "Szukaj modelu, który oferuje warstwę 'runtime' i serwery aplikacyjne."
+    },
+    {
+      "question": "Co jest kluczową cechą modelu SaaS (Software as a Service)?",
+      "answerOptions": [
+        {
+          "text": "Dostęp do gotowej aplikacji przez przeglądarkę bez konieczności instalacji lokalnej.",
+          "isCorrect": true,
+          "rationale": "Główną ideą SaaS jest konsumpcja gotowego produktu dostarczanego przez Internet w modelu subskrypcyjnym."
+        },
+        {
+          "text": "Konieczność zarządzania bazami danych przez użytkownika.",
+          "isCorrect": false,
+          "rationale": "W SaaS całe zaplecze techniczne, w tym bazy danych, jest zarządzane przez dostawcę aplikacji."
+        },
+        {
+          "text": "Samodzielna aktualizacja poprawek bezpieczeństwa w systemie operacyjnym.",
+          "isCorrect": false,
+          "rationale": "Użytkownik SaaS nie ma dostępu do systemu operacyjnego; aktualizacje są automatyczne po stronie dostawcy."
+        },
+        {
+          "text": "Możliwość pełnej konfiguracji warstwy sprzętowej serwera.",
+          "isCorrect": false,
+          "rationale": "SaaS to najwyższy poziom abstrakcji, gdzie użytkownik widzi tylko interfejs aplikacji, nie sprzęt."
+        }
+      ],
+      "hint": "Przykładem tego modelu jest Gmail lub Salesforce."
+    },
+    {
+      "question": "Który dostawca jest wymieniony jako globalny lider w kategorii SaaS (CRM)?",
+      "answerOptions": [
+        {
+          "text": "Salesforce",
+          "isCorrect": true,
+          "rationale": "Salesforce to pionier i lider rynku CRM dostarczanego w modelu chmurowym."
+        },
+        {
+          "text": "Hetzner",
+          "isCorrect": false,
+          "rationale": "Hetzner to regionalny dostawca, kojarzony głównie z hostingiem i usługami IaaS."
+        },
+        {
+          "text": "VMware",
+          "isCorrect": false,
+          "rationale": "VMware koncentruje się na technologiach wirtualizacji i rozwiązaniach dla chmury prywatnej."
+        },
+        {
+          "text": "Apache Stratos",
+          "isCorrect": false,
+          "rationale": "To platforma typu PaaS o otwartym kodzie źródłowym, a nie dostawca aplikacji CRM."
+        }
+      ],
+      "hint": "Skoncentruj się na firmie, która zdefiniowała nowoczesny rynek zarządzania relacjami z klientem w chmurze."
+    },
+    {
+      "question": "Model DBaaS (Database as a Service) pozwala na:",
+      "answerOptions": [
+        {
+          "text": "Korzystanie z zarządzanej bazy danych bez administrowania serwerem i systemem.",
+          "isCorrect": true,
+          "rationale": "DBaaS przenosi ciężar utrzymania silnika bazy i infrastruktury na dostawcę chmury."
+        },
+        {
+          "text": "Wynajęcie fizycznej macierzy dyskowej na wyłączność.",
+          "isCorrect": false,
+          "rationale": "Wynajem czystej przestrzeni dyskowej to domena STaaS, a nie zarządzanych baz danych."
+        },
+        {
+          "text": "Wyłączne przechowywanie danych w postaci plików binarnych (Object Storage).",
+          "isCorrect": false,
+          "rationale": "DBaaS dotyczy baz strukturalnych (SQL) lub niestrukturalnych, a nie prostego składowania plików."
+        },
+        {
+          "text": "Automatyczne pisanie zapytań SQL przez sztuczną inteligencję dostawcy.",
+          "isCorrect": false,
+          "rationale": "Mimo elementów AI, istotą DBaaS jest zarządzanie infrastrukturą bazy, a nie pisanie logiki za użytkownika."
+        }
+      ],
+      "hint": "Pomyśl o korzyści płynącej z braku konieczności instalowania SQL Servera na maszynie wirtualnej."
+    },
+    {
+      "question": "Czym charakteryzuje się model NaaS (Network as a Service)?",
+      "answerOptions": [
+        {
+          "text": "Udostępnianiem infrastruktury sieciowej w modelu subskrypcyjnym (OpEx).",
+          "isCorrect": true,
+          "rationale": "NaaS pozwala firmom korzystać z zaawansowanych sieci bez konieczności inwestycji we własny kosztowny sprzęt (CapEx)."
+        },
+        {
+          "text": "Dostarczaniem gotowych aplikacji do projektowania graficznego.",
+          "isCorrect": false,
+          "rationale": "NaaS dotyczy warstwy komunikacyjnej i sieciowej, a nie oprogramowania użytkowego."
+        },
+        {
+          "text": "Zastąpieniem Internetu publicznego całkowicie przez prywatne łącza satelitarne.",
+          "isCorrect": false,
+          "rationale": "NaaS może wykorzystywać różne technologie przesyłu, ale nie polega na eliminacji Internetu."
+        },
+        {
+          "text": "Przenoszeniem danych fizycznie za pomocą kuriera (tzw. Snowball).",
+          "isCorrect": false,
+          "rationale": "NaaS to usługa sieciowa (online), a nie fizyczny transport nośników danych."
+        }
+      ],
+      "hint": "Słowo kluczowe to 'Network' i przejście z wydatków inwestycyjnych na operacyjne."
+    },
+    {
+      "question": "W kontekście kryteriów wyboru CSP, 'Financial Stability' oznacza:",
+      "answerOptions": [
+        {
+          "text": "Długoterminową wiarygodność dostawcy, minimalizującą ryzyko jego nagłej upadłości.",
+          "isCorrect": true,
+          "rationale": "Stabilność finansowa gwarantuje, że dane firmy nie zostaną utracone z powodu bankructwa dostawcy."
+        },
+        {
+          "text": "Możliwość płacenia za usługi wyłącznie w kryptowalutach.",
+          "isCorrect": false,
+          "rationale": "Metody płatności są sprawą wtórną wobec kondycji ekonomicznej podmiotu."
+        },
+        {
+          "text": "Gwarancję, że ceny usług nigdy nie wzrosną.",
+          "isCorrect": false,
+          "rationale": "Stabilność finansowa dostawcy nie oznacza braku zmian w cenniku usług."
+        },
+        {
+          "text": "Złożenie depozytu zabezpieczającego przez klienta przed rozpoczęciem współpracy.",
+          "isCorrect": false,
+          "rationale": "To kryterium dotyczy kondycji dostawcy, a nie wymagań kapitałowych wobec klienta."
+        }
+      ],
+      "hint": "Chodzi o bezpieczeństwo Twoich danych w kontekście przetrwania firmy dostarczającej chmurę."
+    },
+    {
+      "question": "Model MaaS (Metal as a Service) jest szczególnie polecany dla:",
+      "answerOptions": [
+        {
+          "text": "Zastosowań wymagających dużej mocy obliczeniowej, jak Big Data czy HPC.",
+          "isCorrect": true,
+          "rationale": "MaaS umożliwia automatyczne przydzielanie 'czystego' sprzętu (bare metal), co eliminuje narzut wirtualizacji."
+        },
+        {
+          "text": "Prostych blogów osobistych o małym ruchu.",
+          "isCorrect": false,
+          "rationale": "Dla prostych stron WWW lepszym wyborem jest współdzielony hosting lub małe VM w IaaS."
+        },
+        {
+          "text": "Użytkowników potrzebujących jedynie poczty elektronicznej.",
+          "isCorrect": false,
+          "rationale": "Poczta e-mail to typowy przykład SaaS; MaaS jest zbyt niskopoziomowy dla takiego zastosowania."
+        },
+        {
+          "text": "Przechowywania kopii zapasowych zdjęć z telefonu.",
+          "isCorrect": false,
+          "rationale": "Do składowania plików służy STaaS; MaaS to surowa moc serwerów fizycznych."
+        }
+      ],
+      "hint": "Skrót 'Metal' odnosi się do serwerów bez warstwy wirtualizacji."
+    },
+    {
+      "question": "Zagrożenie 'Vendor Lock-in' polega na:",
+      "answerOptions": [
+        {
+          "text": "Trudności w przeniesieniu danych i aplikacji do innego dostawcy z powodu specyficznych technologii.",
+          "isCorrect": true,
+          "rationale": "Lock-in występuje, gdy architektura rozwiązania jest zbyt silnie powiązana z unikalnymi usługami jednego CSP."
+        },
+        {
+          "text": "Fizycznym zamknięciu serwerowni przed dostępem osób niepowołanych.",
+          "isCorrect": false,
+          "rationale": "To opis procedur bezpieczeństwa fizycznego, a nie zjawiska rynkowego."
+        },
+        {
+          "text": "Konieczności podpisania umowy z dostawcą na minimum 10 lat.",
+          "isCorrect": false,
+          "rationale": "Lock-in może wynikać z technologii, a nie tylko z zapisów kontraktowych."
+        },
+        {
+          "text": "Braku możliwości logowania się do chmury z innych urządzeń niż autoryzowane.",
+          "isCorrect": false,
+          "rationale": "To opis mechanizmów kontroli dostępu, takich jak białe listy IP."
+        }
+      ],
+      "hint": "Pomyśl o pułapce technologicznej, która wiąże Cię z jednym konkretnym dostawcą."
+    },
+    {
+      "question": "Model HaaS (Hardware as a Service) definiuje się jako:",
+      "answerOptions": [
+        {
+          "text": "Wynajem fizycznego sprzętu (serwerów, sieci) w modelu usługowym.",
+          "isCorrect": true,
+          "rationale": "HaaS pozwala na korzystanie ze sprzętu bez konieczności jego zakupu na własność."
+        },
+        {
+          "text": "Dostarczanie algorytmów sztucznej inteligencji do analizy sprzętu.",
+          "isCorrect": false,
+          "rationale": "HaaS dotyczy zasobów fizycznych, a nie analitycznego oprogramowania AI."
+        },
+        {
+          "text": "Wsparcie techniczne polegające na naprawie komputerów osobistych.",
+          "isCorrect": false,
+          "rationale": "Usługi chmurowe HaaS koncentrują się na infrastrukturze serwerowej i sieciowej, nie na serwisie PC."
+        },
+        {
+          "text": "Wirtualizację systemów operacyjnych na urządzeniach mobilnych.",
+          "isCorrect": false,
+          "rationale": "Wirtualizacja OS to domena IaaS lub rozwiązań typu VDI, nie czystego HaaS."
+        }
+      ],
+      "hint": "To model 'dzierżawy' fizycznych komponentów IT."
+    },
+    {
+      "question": "Co jest główną korzyścią modelu STaaS (Storage as a Service) dla małych firm?",
+      "answerOptions": [
+        {
+          "text": "Brak konieczności inwestowania we własne kosztowne macierze i personel IT do ich obsługi.",
+          "isCorrect": true,
+          "rationale": "STaaS pozwala na elastyczne skalowanie miejsca na dane przy niskich kosztach wejścia."
+        },
+        {
+          "text": "Możliwość całkowitego zrezygnowania z posiadania połączenia internetowego.",
+          "isCorrect": false,
+          "rationale": "Usługi chmurowe wymagają stałego dostępu do sieci w celu przesyłania danych."
+        },
+        {
+          "text": "Gwarancja, że dane będą przechowywane wyłącznie w formie papierowej.",
+          "isCorrect": false,
+          "rationale": "Chmura to technologia cyfrowa; przechowywanie papierowe jest jej przeciwieństwem."
+        },
+        {
+          "text": "Automatyczne generowanie treści reklamowych na podstawie zapisanych plików.",
+          "isCorrect": false,
+          "rationale": "STaaS to usługa składowania, a nie marketingowa analiza treści plików."
+        }
+      ],
+      "hint": "Pomyśl o oszczędnościach wynikających z efektu skali dostawcy."
+    },
+    {
+      "question": "W modelu PaaS, użytkownik zarządza:",
+      "answerOptions": [
+        {
+          "text": "Kodem aplikacji i jej specyficzną konfiguracją.",
+          "isCorrect": true,
+          "rationale": "PaaS zdejmuje z użytkownika obowiązek dbania o system i serwer, zostawiając mu kontrolę nad samą aplikacją."
+        },
+        {
+          "text": "Aktualizacjami kernela systemu operacyjnego Linux.",
+          "isCorrect": false,
+          "rationale": "Utrzymanie i aktualizacja systemu operacyjnego leży w gestii dostawcy platformy (PaaS Provider)."
+        },
+        {
+          "text": "Fizycznym okablowaniem w szafach rackowych.",
+          "isCorrect": false,
+          "rationale": "Warstwa fizyczna jest całkowicie ukryta przed użytkownikiem platformy chmurowej."
+        },
+        {
+          "text": "Instalacją i licencjonowaniem hypervisora.",
+          "isCorrect": false,
+          "rationale": "Warstwa wirtualizacji jest częścią infrastruktury zarządzanej przez dostawcę."
+        }
+      ],
+      "hint": "Skup się na tym, co robi programista po otrzymaniu gotowego środowiska."
+    },
+    {
+      "question": "DaaS (Data as a Service) polega na udostępnianiu przez API:",
+      "answerOptions": [
+        {
+          "text": "Konkretnych zestawów danych, np. finansowych lub geolokalizacyjnych.",
+          "isCorrect": true,
+          "rationale": "DaaS traktuje same dane jako produkt, do którego dostęp uzyskuje się programowo."
+        },
+        {
+          "text": "Mocy obliczeniowej procesora do łamania haseł.",
+          "isCorrect": false,
+          "rationale": "Udostępnianie mocy obliczeniowej to domena IaaS lub HPC, a nie DaaS."
+        },
+        {
+          "text": "Wirtualnych pulpitów dla pracowników zdalnych.",
+          "isCorrect": false,
+          "rationale": "Wirtualne pulpity to Desktop-as-a-Service, często oznaczane tym samym skrótem, ale o innym znaczeniu (VDI)."
+        },
+        {
+          "text": "Kodów źródłowych popularnych systemów operacyjnych.",
+          "isCorrect": false,
+          "rationale": "DaaS dotyczy danych użytkowych/biznesowych, a nie dystrybucji kodu systemowego."
+        }
+      ],
+      "hint": "Pomyśl o serwisach dostarczających aktualne kursy walut lub pogodę do aplikacji."
+    },
+    {
+      "question": "Która platforma Microsoftu jest przykładem usługi PaaS wspomnianej w materiałach?",
+      "answerOptions": [
+        {
+          "text": "Azure App Service",
+          "isCorrect": true,
+          "rationale": "Azure App Service to typowa platforma umożliwiająca szybkie wdrażanie aplikacji webowych."
+        },
+        {
+          "text": "Microsoft Word 2019 (wersja pudełkowa)",
+          "isCorrect": false,
+          "rationale": "Wersja pudełkowa to tradycyjne oprogramowanie lokalne, a nie usługa chmurowa."
+        },
+        {
+          "text": "Windows 10 Pro",
+          "isCorrect": false,
+          "rationale": "To system operacyjny dla użytkownika końcowego, a nie platforma usługowa."
+        },
+        {
+          "text": "Exchange Online",
+          "isCorrect": false,
+          "rationale": "Exchange Online to gotowa usługa pocztowa, czyli model SaaS."
+        }
+      ],
+      "hint": "Szukaj usługi, która pozwala hostować kod bez zarządzania VM-ką."
+    },
+    {
+      "question": "Przykładem hybrydowego modelu usługowego (Hybrid Cloud Service) według prezentacji jest:",
+      "answerOptions": [
+        {
+          "text": "Azure Arc",
+          "isCorrect": true,
+          "rationale": "Azure Arc pozwala na zarządzanie zasobami w chmurze i lokalnie z poziomu jednego panelu."
+        },
+        {
+          "text": "Dropbox",
+          "isCorrect": false,
+          "rationale": "Dropbox to usługa typu SaaS/STaaS przeznaczona głównie do przechowywania plików."
+        },
+        {
+          "text": "Google Search",
+          "isCorrect": false,
+          "rationale": "Wyszukiwarka to darmowa usługa webowa, niebędąca modelem hybrydowego zarządzania infrastrukturą."
+        },
+        {
+          "text": "Tradycyjny serwer FTP w piwnicy firmy.",
+          "isCorrect": false,
+          "rationale": "To infrastruktura On-Premise, nieposiadająca cech integracji hybrydowej z dostawcą CSP."
+        }
+      ],
+      "hint": "Narzędzie to łączy zasoby lokalne (on-prem) z publiczną chmurą Microsoftu."
+    },
+    {
+      "question": "Kryterium 'Industry Adoption' przy wyborze dostawcy chmury sugeruje, aby sprawdzić:",
+      "answerOptions": [
+        {
+          "text": "Jak popularne jest dane rozwiązanie w Twojej branży i czy spełnia jej specyficzne wymogi.",
+          "isCorrect": true,
+          "rationale": "Adopcja branżowa wskazuje na dojrzałość rozwiązania w konkretnych scenariuszach biznesowych."
+        },
+        {
+          "text": "Czy dostawca posiada własną fabrykę procesorów.",
+          "isCorrect": false,
+          "rationale": "Produkcja sprzętu nie jest warunkiem koniecznym do bycia dobrym dostawcą usług chmurowych."
+        },
+        {
+          "text": "Ile reklam telewizyjnych wyemitował dostawca w ostatnim roku.",
+          "isCorrect": false,
+          "rationale": "Marketing konsumencki nie jest wiarygodnym wskaźnikiem jakości technicznej dla biznesu."
+        },
+        {
+          "text": "Czy dostawca oferuje darmowe laptopy dla każdego nowego klienta.",
+          "isCorrect": false,
+          "rationale": "Takie oferty są nierealne i nie stanowią merytorycznego kryterium wyboru CSP."
+        }
+      ],
+      "hint": "Chodzi o zaufanie innych firm z Twojego sektora do danej platformy."
+    },
+    {
+      "question": "Który z wymienionych standardów bezpieczeństwa jest istotnym kryterium wyboru CSP?",
+      "answerOptions": [
+        {
+          "text": "ISO 27001",
+          "isCorrect": true,
+          "rationale": "ISO 27001 to międzynarodowy standard zarządzania bezpieczeństwem informacji, kluczowy w chmurze."
+        },
+        {
+          "text": "USB 3.0",
+          "isCorrect": false,
+          "rationale": "To standard złącza fizycznego, nieposiadający związku z certyfikacją usług chmurowych."
+        },
+        {
+          "text": "MP3",
+          "isCorrect": false,
+          "rationale": "MP3 to format stratnej kompresji dźwięku, a nie certyfikat bezpieczeństwa danych."
+        },
+        {
+          "text": "HTML5",
+          "isCorrect": false,
+          "rationale": "HTML5 to język znaczników do tworzenia stron, niebędący standardem bezpieczeństwa infrastruktury."
+        }
+      ],
+      "hint": "Szukaj certyfikatu dotyczącego zarządzania bezpieczeństwem informacji."
+    },
+    {
+      "question": "Usługa Amazon RDS (Relational Database Service) to przykład modelu:",
+      "answerOptions": [
+        {
+          "text": "PaaS / DBaaS",
+          "isCorrect": true,
+          "rationale": "RDS dostarcza gotową platformę bazodanową, zdejmując z barków klienta zarządzanie systemem i instalację silnika."
+        },
+        {
+          "text": "IaaS",
+          "isCorrect": false,
+          "rationale": "W czystym IaaS klient musiałby sam zainstalować bazę danych na maszynie wirtualnej EC2."
+        },
+        {
+          "text": "SaaS",
+          "isCorrect": false,
+          "rationale": "Baza danych to usługa składowania danych dla innych aplikacji, a nie gotowy program dla użytkownika."
+        },
+        {
+          "text": "NaaS",
+          "isCorrect": false,
+          "rationale": "NaaS dotyczy sieci, a RDS koncentruje się na strukturach danych SQL."
+        }
+      ],
+      "hint": "Dostajesz dostęp do MySQL lub PostgreSQL bez zarządzania serwerem Linux pod spodem."
+    },
+    {
+      "question": "Dlaczego lokalizacja centrów danych (Datacenter Locations) jest ważnym kryterium wyboru dostawcy?",
+      "answerOptions": [
+        {
+          "text": "Ze względu na zgodność regulacyjną (np. RODO) oraz opóźnienia sieciowe (latency).",
+          "isCorrect": true,
+          "rationale": "Dane osobowe muszą być często przechowywane w konkretnych regionach prawnych, a odległość fizyczna wpływa na szybkość aplikacji."
+        },
+        {
+          "text": "Ponieważ serwery muszą znajdować się w tym samym mieście co siedziba klienta.",
+          "isCorrect": false,
+          "rationale": "Chmura pozwala na zdalny dostęp; serwery nie muszą być blisko fizycznej siedziby firmy."
+        },
+        {
+          "text": "Aby prezes firmy mógł osobiście doglądać serwerów w weekendy.",
+          "isCorrect": false,
+          "rationale": "Dostawcy publiczni zazwyczaj nie pozwalają klientom na fizyczny wstęp do hal serwerowych."
+        },
+        {
+          "text": "Tylko centra danych w krajach tropikalnych gwarantują stabilność zasilania.",
+          "isCorrect": false,
+          "rationale": "Lokalizacja geograficzna pod kątem klimatu jest istotna dla dostawcy (chłodzenie), a nie jest kryterium tropikalnym."
+        }
+      ],
+      "hint": "Pomyśl o przepisach o ochronie danych oraz czasie odpowiedzi aplikacji."
+    },
+    {
+      "question": "Model FaaS (Function as a Service) jest ściśle powiązany z koncepcją:",
+      "answerOptions": [
+        {
+          "text": "Serverless Computing",
+          "isCorrect": true,
+          "rationale": "FaaS pozwala uruchamiać pojedyncze fragmenty kodu (funkcje) bez martwienia się o infrastrukturę serwerową."
+        },
+        {
+          "text": "Mainframe Computing",
+          "isCorrect": false,
+          "rationale": "Mainframe to stare, scentralizowane systemy, stojące w opozycji do nowoczesnego, rozproszonego FaaS."
+        },
+        {
+          "text": "Manualnego patchowania systemów.",
+          "isCorrect": false,
+          "rationale": "W FaaS użytkownik w ogóle nie ma dostępu do systemu operacyjnego, więc nie może go patchować."
+        },
+        {
+          "text": "Zakupu sprzętu na własność.",
+          "isCorrect": false,
+          "rationale": "FaaS to model czysto usługowy, płatny za czas wykonania funkcji, bez posiadania hardware'u."
+        }
+      ],
+      "hint": "Chodzi o podejście, w którym programista 'nie widzi' serwera."
+    },
+    {
+      "question": "Który z poniższych to dostawca chmury o zasięgu lokalnym/regionalnym w Polsce?",
+      "answerOptions": [
+        {
+          "text": "Oktawave",
+          "isCorrect": true,
+          "rationale": "Oktawave to polski dostawca usług chmurowych, wymieniony obok globalnych graczy."
+        },
+        {
+          "text": "Amazon Web Services",
+          "isCorrect": false,
+          "rationale": "AWS to globalny lider z centrami danych na całym świecie, a nie dostawca lokalny."
+        },
+        {
+          "text": "Alibaba Cloud",
+          "isCorrect": false,
+          "rationale": "Alibaba Cloud to gigant z Chin, działający na skalę globalną."
+        },
+        {
+          "text": "Google Cloud Platform",
+          "isCorrect": false,
+          "rationale": "GCP to globalna platforma zarządzana przez amerykański koncern Google."
+        }
+      ],
+      "hint": "Szukaj nazwy firmy aktywnie promującej się na polskim rynku jako rodzimy CSP."
+    },
+    {
+      "question": "Wspólna pula zasobów w definicji NIST oznacza, że:",
+      "answerOptions": [
+        {
+          "text": "Zasoby fizyczne są współdzielone przez wielu użytkowników w sposób dynamiczny.",
+          "isCorrect": true,
+          "rationale": "Multitenancy pozwala na efektywne wykorzystanie sprzętu poprzez dynamiczne przydzielanie mocy wielu klientom."
+        },
+        {
+          "text": "Wszyscy klienci mają dostęp do tych samych danych prywatnych innych firm.",
+          "isCorrect": false,
+          "rationale": "Chmura zapewnia izolację danych; współdzielone są tylko zasoby sprzętowe, nie treści."
+        },
+        {
+          "text": "Każdy klient musi przynieść własny serwer do centrum danych dostawcy.",
+          "isCorrect": false,
+          "rationale": "To byłaby kolokacja, a nie chmura obliczeniowa oparta na puli zasobów dostawcy."
+        },
+        {
+          "text": "Dostawca nie posiada własnego sprzętu i pożycza go od klientów.",
+          "isCorrect": false,
+          "rationale": "Relacja jest odwrotna – to dostawca udostępnia swoją potężną infrastrukturę klientom."
+        }
+      ],
+      "hint": "Chodzi o koncepcję 'wielodzierżawności' (multi-tenancy)."
+    },
+    {
+      "question": "Właściwość chmury 'Task-centric' według Google oznacza, że:",
+      "answerOptions": [
+        {
+          "text": "Liczy się cel, jaki chcesz osiągnąć, a nie konkretna aplikacja, której używasz.",
+          "isCorrect": true,
+          "rationale": "Użytkownika interesuje np. 'napisanie dokumentu', a nie to, czy robi to w Wordzie czy Docsach."
+        },
+        {
+          "text": "Komputer w chmurze wykonuje tylko jedno zadanie przez cały czas życia.",
+          "isCorrect": false,
+          "rationale": "Serwery w chmurze są wielozadaniowe i obsługują wiele procesów jednocześnie."
+        },
+        {
+          "text": "Każdy użytkownik musi samodzielnie programować zadania dla procesora.",
+          "isCorrect": false,
+          "rationale": "Model chmurowy dąży do uproszczenia interakcji, a nie zmuszania użytkownika do niskopoziomowego programowania."
+        },
+        {
+          "text": "Zadania w chmurze są zawsze płatne z góry przed ich wykonaniem.",
+          "isCorrect": false,
+          "rationale": "Model 'Task-centric' dotyczy filozofii użytkowania, a nie sposobu rozliczania finansowego."
+        }
+      ],
+      "hint": "Skup się na tym, że dla użytkownika ważniejszy jest 'dokument' niż 'program Word'."
+    },
+    {
+      "question": "Model rozliczeniowy 'Pay-per-use' (lub pay-as-you-go) polega na:",
+      "answerOptions": [
+        {
+          "text": "Płaceniu tylko za faktycznie zużyte zasoby (np. godziny pracy procesora, GB transferu).",
+          "isCorrect": true,
+          "rationale": "To fundamentalna cecha ekonomiczna chmury, eliminująca marnotrawstwo opłaconych, a nieużywanych zasobów."
+        },
+        {
+          "text": "Płaceniu stałego abonamentu niezależnie od tego, czy serwery działają.",
+          "isCorrect": false,
+          "rationale": "To opis tradycyjnego modelu subskrypcyjnego, a nie 'pay-per-use'."
+        },
+        {
+          "text": "Wykupieniu sprzętu na własność po zakończeniu umowy.",
+          "isCorrect": false,
+          "rationale": "W chmurze publicznej klient zazwyczaj nigdy nie staje się właścicielem fizycznego sprzętu."
+        },
+        {
+          "text": "Wymianie barterowej usług IT za produkty klienta.",
+          "isCorrect": false,
+          "rationale": "Modele rozliczeniowe CSP opierają się na walucie i precyzyjnych metrykach zużycia technicznego."
+        }
+      ],
+      "hint": "Pomyśl o rachunku za prąd lub wodę – płacisz za tyle, ile zużyjesz."
+    },
+    {
+      "question": "Platforma Aneka to narzędzie służące do:",
+      "answerOptions": [
+        {
+          "text": "Budowy aplikacji rozproszonych w środowiskach heterogenicznych.",
+          "isCorrect": true,
+          "rationale": "Aneka dostarcza API i framework dla deweloperów tworzących oprogramowanie na wiele różnych typów węzłów."
+        },
+        {
+          "text": "Automatycznego usuwania spamu z poczty Gmail.",
+          "isCorrect": false,
+          "rationale": "Aneka to platforma programistyczna/środowiskowa, a nie filtr antyspamowy dla użytkowników końcowych."
+        },
+        {
+          "text": "Zarządzania wyłącznie fizycznymi centrami danych Google.",
+          "isCorrect": false,
+          "rationale": "Aneka to rozwiązanie programowe, które może działać w różnych chmurach i klastrach."
+        },
+        {
+          "text": "Streamingowania gier wideo w wysokiej rozdzielczości.",
+          "isCorrect": false,
+          "rationale": "Materiały klasyfikują Anekę jako platformę do obliczeń rozproszonych, a nie usługę rozrywkową."
+        }
+      ],
+      "hint": "Jest to framework wspominany obok Hadoop w kontekście technologii CSP."
+    },
+    {
+      "question": "Model CaaS (Container as a Service) znajduje się w hierarchii usług chmurowych:",
+      "answerOptions": [
+        {
+          "text": "Pomiędzy IaaS a PaaS.",
+          "isCorrect": true,
+          "rationale": "CaaS oferuje wyższy poziom abstrakcji niż VM (IaaS), ale niższą niż pełna platforma runtime (PaaS)."
+        },
+        {
+          "text": "Powyżej warstwy SaaS.",
+          "isCorrect": false,
+          "rationale": "SaaS to najwyższy poziom abstrakcji; kontenery są narzędziem infrastrukturalno-platformowym poniżej aplikacji."
+        },
+        {
+          "text": "Jako synonim dla HaaS (Hardware as a Service).",
+          "isCorrect": false,
+          "rationale": "HaaS to surowy sprzęt, podczas gdy kontenery to wirtualizacja na poziomie systemu operacyjnego."
+        },
+        {
+          "text": "Wyłącznie w chmurach prywatnych (On-Premise).",
+          "isCorrect": false,
+          "rationale": "CaaS jest powszechnie oferowany przez wszystkich dużych dostawców chmury publicznej (np. Amazon ECS, Azure AKS)."
+        }
+      ],
+      "hint": "Pomyśl o tym, że kontenery potrzebują systemu operacyjnego (IaaS), ale są bazą dla runtime'u (PaaS)."
+    },
+    {
+      "question": "Ryzyko 'Noisy Neighbor' (hałaśliwy sąsiad) w chmurze wynika z:",
+      "answerOptions": [
+        {
+          "text": "Współdzielenia zasobów fizycznych; jeden użytkownik może nadmiernie obciążyć sprzęt, spowalniając innych.",
+          "isCorrect": true,
+          "rationale": "To typowe wyzwanie w środowiskach wielodzierżawnych (multi-tenant), gdzie izolacja zasobów nie jest idealna."
+        },
+        {
+          "text": "Zbyt głośnej pracy wentylatorów w serwerowni klienta.",
+          "isCorrect": false,
+          "rationale": "Chodzi o zjawisko wirtualne/obliczeniowe, a nie o realny hałas akustyczny."
+        },
+        {
+          "text": "Podsłuchiwania rozmów telefonicznych przez administratorów dostawcy.",
+          "isCorrect": false,
+          "rationale": "Termin ten nie dotyczy szpiegostwa, lecz rywalizacji o zasoby sprzętowe (CPU, I/O)."
+        },
+        {
+          "text": "Ataków hakerskich typu DDoS przeprowadzanych z sąsiednich budynków.",
+          "isCorrect": false,
+          "rationale": "'Noisy Neighbor' to problem wewnętrzny infrastruktury współdzielonej, a nie zewnętrzny atak fizyczny."
+        }
+      ],
+      "hint": "Wyobraź sobie, że Twój sąsiad w bloku zużywa całą wodę, przez co Ty masz słabe ciśnienie."
+    },
+    {
+      "question": "Co oznacza skrót EaaS (Everything as a Service) w nowoczesnym IT?",
+      "answerOptions": [
+        {
+          "text": "Trend dostarczania niemal każdego elementu IT (sprzętu, softu, danych) w modelu usługowym.",
+          "isCorrect": true,
+          "rationale": "EaaS to zbiorcza nazwa dla postępującej serwicyzacji wszystkich zasobów technologicznych."
+        },
+        {
+          "text": "System automatycznego sprzątania biur dostawców chmury.",
+          "isCorrect": false,
+          "rationale": "Skrót dotyczy usług cyfrowych i infrastrukturalnych, nie usług porządkowych."
+        },
+        {
+          "text": "Eksport wszystkich danych do zewnętrznych dysków twardych raz w roku.",
+          "isCorrect": false,
+          "rationale": "To opis procedury archiwizacji, a nie modelu biznesowego 'as a service'."
+        },
+        {
+          "text": "Model, w którym klient musi posiadać udziały w firmie dostawcy.",
+          "isCorrect": false,
+          "rationale": "EaaS dotyczy sposobu dostarczania technologii, a nie struktury własnościowej akcji."
+        }
+      ],
+      "hint": "To wizja, w której 'wszystko' jest dostępne na żądanie przez sieć."
+    },
+    {
+      "question": "Zaleta chmury 'Programmable' (programowalna) przejawia się w tym, że:",
+      "answerOptions": [
+        {
+          "text": "Chmura potrafi automatycznie reagować na awarie i przenosić dane bez wiedzy użytkownika.",
+          "isCorrect": true,
+          "rationale": "Automatyzacja i orkiestracja pozwalają na samoleczenie infrastruktury i dynamiczne skalowanie."
+        },
+        {
+          "text": "Użytkownik musi samodzielnie napisać kod systemu operacyjnego przed użyciem chmury.",
+          "isCorrect": false,
+          "rationale": "Systemy są dostarczane gotowe lub prekonfigurowane; programowalność dotyczy zarządzania zasobami."
+        },
+        {
+          "text": "Dostawca przesyła klientowi co miesiąc kurs programowania w języku Java.",
+          "isCorrect": false,
+          "rationale": "Właściwość ta dotyczy technicznej natury infrastruktury, a nie usług edukacyjnych."
+        },
+        {
+          "text": "Każdy serwer w chmurze musi być fizycznie przeprogramowany przez człowieka po każdym użyciu.",
+          "isCorrect": false,
+          "rationale": "Istotą chmury jest automatyzacja, która wyklucza potrzebę ręcznej interwencji przy rutynowych operacjach."
+        }
+      ],
+      "hint": "Pomyśl o scenariuszu, w którym serwer Google pada, a Ty nawet tego nie zauważasz."
+    }
+  ],
+  "questionCount": 30,
+  "exportedAt": "2026-06-05T16:27:54.030Z",
+  "source": "Web Clipper for NotebookLM"
+}

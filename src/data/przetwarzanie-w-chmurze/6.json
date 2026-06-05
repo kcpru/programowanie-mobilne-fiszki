@@ -1,0 +1,788 @@
+{
+  "title": "Chmura Quiz",
+  "questions": [
+    {
+      "question": "Który z poniższych czynników jest głównym ograniczeniem modelu scentralizowanej chmury w kontekście aplikacji czasu rzeczywistego?",
+      "answerOptions": [
+        {
+          "text": "Opóźnienia sieciowe (latency)",
+          "isCorrect": true,
+          "rationale": "Przesyłanie danych do odległego centrum danych i z powrotem wprowadza zwłokę, która jest krytyczna dla systemów wymagających natychmiastowej reakcji."
+        },
+        {
+          "text": "Brak możliwości skalowania zasobów",
+          "isCorrect": false,
+          "rationale": "Centralna chmura oferuje niemal nieograniczone możliwości skalowania, co jest jedną z jej głównych zalet, a nie ograniczeniem."
+        },
+        {
+          "text": "Wysoki koszt zakupu fizycznych serwerów",
+          "isCorrect": false,
+          "rationale": "Model chmurowy eliminuje konieczność zakupu własnego sprzętu przez klienta, przenosząc koszty na model operacyjny."
+        },
+        {
+          "text": "Niska wydajność procesorów w centrach danych",
+          "isCorrect": false,
+          "rationale": "Centra danych wykorzystują najnowocześniejsze i najwydajniejsze jednostki obliczeniowe dostępne na rynku."
+        }
+      ],
+      "hint": "Zastanów się, co dzieje się z sygnałem, gdy musi on pokonać fizyczną drogę do odległego serwera i wrócić."
+    },
+    {
+      "question": "Zjawisko 'Data Gravity' (grawitacja danych) sugeruje, że:",
+      "answerOptions": [
+        {
+          "text": "Dane stają się lżejsze i łatwiejsze do migracji wraz ze wzrostem ich objętości",
+          "isCorrect": false,
+          "rationale": "W rzeczywistości większa ilość danych stwarza większy opór przed ich przenoszeniem ze względu na czas i koszty transferu."
+        },
+        {
+          "text": "Aplikacje i usługi mają tendencję do przybliżania się do dużych zbiorów danych",
+          "isCorrect": true,
+          "rationale": "Zasada ta mówi, że koszt i trudność przenoszenia dużych zbiorów danych zmusza systemy obliczeniowe do działania blisko miejsca ich składowania."
+        },
+        {
+          "text": "Dane w chmurze są automatycznie usuwane, jeśli nie są używane",
+          "isCorrect": false,
+          "rationale": "Trwałość danych jest gwarantowana przez dostawców chmury i nie zależy od ich 'przyciągania' czy aktywności użytkownika."
+        },
+        {
+          "text": "Większe zbiory danych zawsze wymagają mniejszej mocy obliczeniowej",
+          "isCorrect": false,
+          "rationale": "Zazwyczaj przetwarzanie większych zbiorów danych wymaga proporcjonalnie większych zasobów obliczeniowych."
+        }
+      ],
+      "hint": "Pomyśl o analogii do obiektów o dużej masie, które przyciągają mniejsze obiekty w swojej okolicy."
+    },
+    {
+      "question": "W modelu Edge Computing przetwarzanie danych odbywa się:",
+      "answerOptions": [
+        {
+          "text": "Wyłącznie w centralnym centrum danych dostawcy",
+          "isCorrect": false,
+          "rationale": "To opisuje model tradycyjnej chmury centralnej, a nie przetwarzania krawędziowego."
+        },
+        {
+          "text": "Bezpośrednio na urządzeniu końcowym lub bardzo blisko źródła danych",
+          "isCorrect": true,
+          "rationale": "Celem Edge Computing jest minimalizacja opóźnień poprzez eliminację konieczności przesyłania danych do chmury centralnej."
+        },
+        {
+          "text": "W warstwie fizycznej sieci WAN",
+          "isCorrect": false,
+          "rationale": "Choć sieć jest niezbędna, Edge skupia się na zasobach obliczeniowych zlokalizowanych przy sensorach lub użytkownikach."
+        },
+        {
+          "text": "Tylko w trybie offline bez połączenia z Internetem",
+          "isCorrect": false,
+          "rationale": "Urządzenia Edge często są połączone z siecią w celu synchronizacji, choć mogą pracować autonomicznie."
+        }
+      ],
+      "hint": "Słowo 'krawędź' (Edge) odnosi się do granicy sieci, tam gdzie znajdują się sensory i użytkownicy."
+    },
+    {
+      "question": "Głównym zadaniem warstwy Fog Computing w modelu Cloud–Fog–Edge jest:",
+      "answerOptions": [
+        {
+          "text": "Długoterminowa archiwizacja wszystkich surowych danych",
+          "isCorrect": false,
+          "rationale": "Archiwizacja jest zazwyczaj domeną chmury centralnej ze względu na niższe koszty składowania dużych mas danych."
+        },
+        {
+          "text": "Lokalna agregacja, filtracja i koordynacja danych",
+          "isCorrect": true,
+          "rationale": "Fog działa jako warstwa pośrednia, która zarządza ruchem i wstępnie przetwarza dane przed wysłaniem ich do chmury."
+        },
+        {
+          "text": "Wykonywanie najbardziej złożonych analiz uczenia maszynowego",
+          "isCorrect": false,
+          "rationale": "Trenowanie ciężkich modeli ML zazwyczaj wymaga mocy obliczeniowej dostępnej jedynie w chmurze centralnej."
+        },
+        {
+          "text": "Zastąpienie sensorów w zbieraniu informacji",
+          "isCorrect": false,
+          "rationale": "Fog nie zastępuje sensorów (Edge), lecz zarządza danymi, które te sensory generują."
+        }
+      ],
+      "hint": "Zastanów się nad rolą pośrednika, który znajduje się między szybką reakcją na dole a głęboką analizą na górze."
+    },
+    {
+      "question": "Która warstwa modelu Cloud–Fog–Edge jest odpowiedzialna za reakcję w czasie rzeczywistym, np. zatrzymanie robota przemysłowego?",
+      "answerOptions": [
+        {
+          "text": "Cloud Layer",
+          "isCorrect": false,
+          "rationale": "Zbyt duże opóźnienia uniemożliwiają chmurze reagowanie w milisekundach."
+        },
+        {
+          "text": "Fog Layer",
+          "isCorrect": false,
+          "rationale": "Fog służy raczej do koordynacji regionalnej niż do natychmiastowej reakcji pojedynczego aktuatora."
+        },
+        {
+          "text": "Edge Layer",
+          "isCorrect": true,
+          "rationale": "Dzięki lokalizacji bezpośrednio przy źródle, warstwa Edge gwarantuje najniższe czasy odpowiedzi."
+        },
+        {
+          "text": "Database Layer",
+          "isCorrect": false,
+          "rationale": "To komponent składowania, a nie warstwa architektury przetwarzania rozproszonego."
+        }
+      ],
+      "hint": "Szukaj warstwy znajdującej się najbliżej fizycznego działania."
+    },
+    {
+      "question": "W przykładzie 'Inteligentnego Miasta' (Smart City), lokalne sterowanie skrzyżowaniami najlepiej wpisuje się w warstwę:",
+      "answerOptions": [
+        {
+          "text": "Cloud",
+          "isCorrect": false,
+          "rationale": "Chmura służy tu raczej do analizy trendów ruchu w skali całego miasta, a nie sterowania pojedynczą sygnalizacją."
+        },
+        {
+          "text": "Fog",
+          "isCorrect": true,
+          "rationale": "Bramki lokalne w warstwie Fog idealnie nadają się do koordynacji pracy kilku powiązanych skrzyżowań w danym rejonie."
+        },
+        {
+          "text": "Edge",
+          "isCorrect": false,
+          "rationale": "Edge to pojedyncza kamera lub czujnik; sterowanie ruchem wymaga agregacji danych z wielu punktów."
+        },
+        {
+          "text": "Internet",
+          "isCorrect": false,
+          "rationale": "To medium transmisyjne, a nie warstwa logiczna przetwarzania danych."
+        }
+      ],
+      "hint": "Chodzi o poziom wyższy niż pojedynczy czujnik, ale niższy niż globalne centrum zarządzania miastem."
+    },
+    {
+      "question": "Jednym z kluczowych wyzwań technicznych w Edge/Fog Computing jest 'heterogeniczny sprzęt'. Oznacza to, że:",
+      "answerOptions": [
+        {
+          "text": "Wszystkie urządzenia pochodzą od jednego dostawcy",
+          "isCorrect": false,
+          "rationale": "Heterogeniczność to przeciwieństwo jednolitości; oznacza duże zróżnicowanie sprzętowe."
+        },
+        {
+          "text": "Sieć rozproszona składa się z urządzeń o różnych architekturach i możliwościach",
+          "isCorrect": true,
+          "rationale": "Zarządzanie flotą urządzeń o różnej mocy CPU, pamięci i systemach operacyjnych jest skomplikowane i wymaga abstrakcji."
+        },
+        {
+          "text": "Urządzenia nie posiadają żadnych zasobów obliczeniowych",
+          "isCorrect": false,
+          "rationale": "Węzły krawędziowe z definicji posiadają pewną moc obliczeniową, choć może być ona ograniczona."
+        },
+        {
+          "text": "Sprzęt jest zawsze zasilany z odnawialnych źródeł energii",
+          "isCorrect": false,
+          "rationale": "Kwestia zasilania jest wyzwaniem (ograniczona energia), ale nie definiuje heterogeniczności."
+        }
+      ],
+      "hint": "Przedrostek 'hetero-' sugeruje różnorodność."
+    },
+    {
+      "question": "Podejście Infrastructure as Code (IaC) zakłada, że definicja infrastruktury powinna być traktowana jak:",
+      "answerOptions": [
+        {
+          "text": "Kod źródłowy aplikacji",
+          "isCorrect": true,
+          "rationale": "IaC pozwala na wersjonowanie, testowanie i automatyczne wdrażanie infrastruktury przy użyciu tych samych praktyk, co w programowaniu."
+        },
+        {
+          "text": "Zbiór instrukcji w formacie PDF",
+          "isCorrect": false,
+          "rationale": "Dokumentacja statyczna nie pozwala na automatyzację procesów wdrażania."
+        },
+        {
+          "text": "Seria ręcznych kroków w konsoli administratora",
+          "isCorrect": false,
+          "rationale": "IaC ma na celu wyeliminowanie ręcznego konfigurowania na rzecz automatycznych skryptów."
+        },
+        {
+          "text": "Fizyczny schemat połączeń kablowych",
+          "isCorrect": false,
+          "rationale": "IaC dotyczy logicznej definicji zasobów wirtualnych, a nie fizycznego okablowania."
+        }
+      ],
+      "hint": "Skoncentruj się na tym, co programiści robią ze swoim kodem (wersjonowanie, repozytoria)."
+    },
+    {
+      "question": "Która cecha IaC zapewnia, że wielokrotne uruchomienie tego samego skryptu da zawsze ten sam rezultat końcowy?",
+      "answerOptions": [
+        {
+          "text": "Idempotentność",
+          "isCorrect": true,
+          "rationale": "Idempotentność gwarantuje, że jeśli system jest już w pożądanym stanie, skrypt nie wprowadzi żadnych nadmiarowych zmian."
+        },
+        {
+          "text": "Polimorfizm",
+          "isCorrect": false,
+          "rationale": "To koncepcja programowania obiektowego, nie związana bezpośrednio z przewidywalnością wdrożeń infrastruktury."
+        },
+        {
+          "text": "Agregacja",
+          "isCorrect": false,
+          "rationale": "Odnosi się do zbierania danych, a nie do mechanizmu zapewniania spójności stanu systemu."
+        },
+        {
+          "text": "Enkapsulacja",
+          "isCorrect": false,
+          "rationale": "To technika ukrywania implementacji, która nie wpływa na wynik powtarzalnych operacji wdrożeniowych."
+        }
+      ],
+      "hint": "Termin ten pochodzi z matematyki i opisuje operację, której wielokrotne stosowanie nie zmienia wyniku."
+    },
+    {
+      "question": "Czym jest 'Configuration Drift' (dryf konfiguracji)?",
+      "answerOptions": [
+        {
+          "text": "Automatyczną aktualizacją oprogramowania do najnowszej wersji",
+          "isCorrect": false,
+          "rationale": "Aktualizacje są planowanymi zmianami, podczas gdy dryf jest zazwyczaj efektem niekontrolowanych działań."
+        },
+        {
+          "text": "Zjawiskiem, w którym stan rzeczywisty infrastruktury różni się od definicji zapisanej w kodzie",
+          "isCorrect": true,
+          "rationale": "Dryf powstaje najczęściej przez ręczne zmiany dokonywane bezpośrednio na serwerach z pominięciem narzędzi IaC."
+        },
+        {
+          "text": "Procesem przenoszenia danych między różnymi regionami chmury",
+          "isCorrect": false,
+          "rationale": "To migracja danych, a nie rozbieżność w konfiguracji zasobów."
+        },
+        {
+          "text": "Zwiększeniem wydajności systemu dzięki optymalizacji kodu",
+          "isCorrect": false,
+          "rationale": "Dryf jest postrzegany jako problem negatywny, utrudniający zarządzanie, a nie jako optymalizacja."
+        }
+      ],
+      "hint": "Pomyśl o różnicy między tym, co masz zaplanowane 'na papierze', a tym, co faktycznie znajduje się w centrum danych."
+    },
+    {
+      "question": "W modelu 'Immutable Infrastructure' (niezmienna infrastruktura), gdy wymagana jest zmiana konfiguracji maszyny wirtualnej:",
+      "answerOptions": [
+        {
+          "text": "Łączymy się przez SSH i modyfikujemy pliki konfiguracyjne",
+          "isCorrect": false,
+          "rationale": "To opisuje tradycyjną, 'mutowalną' infrastrukturę, która prowadzi do problemów z powtarzalnością."
+        },
+        {
+          "text": "Usuwamy starą maszynę i uruchamiamy nową z poprawioną konfiguracją",
+          "isCorrect": true,
+          "rationale": "Dzięki temu unikamy 'śmieci konfiguracji' i mamy pewność, że każda instancja jest identyczna z definicją w kodzie."
+        },
+        {
+          "text": "Czekamy na automatyczny restart systemu przez dostawcę",
+          "isCorrect": false,
+          "rationale": "Dostawca chmury nie zarządza logiką Twojej aplikacji i jej specyficzną konfiguracją."
+        },
+        {
+          "text": "Zmieniamy parametry maszyny 'w locie' bez jej restartowania",
+          "isCorrect": false,
+          "rationale": "Modyfikacja działającego systemu bez jego wymiany jest sprzeczna z zasadą niezmienności (immutability)."
+        }
+      ],
+      "hint": "Pomyśl o wymianie całego klocka zamiast próby jego naprawy czy przemalowania, gdy jest już częścią budowli."
+    },
+    {
+      "question": "Do czego służy plik stanu (Terraform State)?",
+      "answerOptions": [
+        {
+          "text": "Do przechowywania haseł użytkowników aplikacji",
+          "isCorrect": false,
+          "rationale": "Hasła powinny być przechowywane w dedykowanych bezpiecznych magazynach (vaultach), a nie w pliku stanu."
+        },
+        {
+          "text": "Jako 'źródło prawdy' o mapowaniu zasobów z kodu na rzeczywiste zasoby u dostawcy",
+          "isCorrect": true,
+          "rationale": "Terraform używa tego pliku, aby wiedzieć, które zasoby w chmurze stworzył i jakie mają one aktualnie parametry."
+        },
+        {
+          "text": "Do kompilacji kodu HCL na język maszynowy",
+          "isCorrect": false,
+          "rationale": "Terraform jest narzędziem interpretowanym/wykonywanym bezpośrednio, a plik stanu nie służy do kompilacji."
+        },
+        {
+          "text": "Jako kopia zapasowa danych przechowywanych w bazach danych",
+          "isCorrect": false,
+          "rationale": "Plik stanu dotyczy metadanych infrastruktury, a nie zawartości merytorycznej baz danych użytkownika."
+        }
+      ],
+      "hint": "To 'pamięć' narzędzia o tym, co zostało zbudowane w poprzednich krokach."
+    },
+    {
+      "question": "Dlaczego korzystanie z 'Remote State' (zdalnego stanu) jest zalecane przy pracy zespołowej z Terraformem?",
+      "answerOptions": [
+        {
+          "text": "Umożliwia szybsze pobieranie obrazów systemowych",
+          "isCorrect": false,
+          "rationale": "Zdalny stan dotyczy tylko metadanych Terraform, nie wpływa na pobieranie obrazów maszyn."
+        },
+        {
+          "text": "Zapobiega konfliktom i pozwala na blokowanie stanu (locking) podczas zmian",
+          "isCorrect": true,
+          "rationale": "Dzięki temu dwie osoby nie mogą wprowadzać zmian w infrastrukturze w tym samym czasie, co mogłoby uszkodzić stan."
+        },
+        {
+          "text": "Zmniejsza koszty korzystania z chmury publicznej",
+          "isCorrect": false,
+          "rationale": "Sposób przechowywania stanu nie ma bezpośredniego wpływu na cennik zasobów u dostawcy chmury."
+        },
+        {
+          "text": "Pozwala na uruchamianie kodu bez połączenia z Internetem",
+          "isCorrect": false,
+          "rationale": "Zdalny stan wymaga stałego połączenia z serwerem, na którym jest przechowywany."
+        }
+      ],
+      "hint": "Zastanów się, co mogłoby się stać, gdyby dwóch administratorów edytowało tę samą infrastrukturę naraz."
+    },
+    {
+      "question": "W ekosystemie Terraform 'Provider' (Dostawca) to:",
+      "answerOptions": [
+        {
+          "text": "Osoba odpowiedzialna za płacenie rachunków za chmurę",
+          "isCorrect": false,
+          "rationale": "To rola finansowa lub organizacyjna, a nie techniczny komponent narzędzia IaC."
+        },
+        {
+          "text": "Wtyczka umożliwiająca komunikację z konkretnym API (np. AWS, Azure, Google Cloud)",
+          "isCorrect": true,
+          "rationale": "Dostawcy tłumaczą ogólne komendy Terraform na specyficzne żądania zrozumiałe dla platformy danego dostawcy."
+        },
+        {
+          "text": "Serwer fizyczny, na którym uruchamiany jest Terraform",
+          "isCorrect": false,
+          "rationale": "Terraform to oprogramowanie klienckie, a dostawca to moduł programowy, a nie sprzęt."
+        },
+        {
+          "text": "Lokalny system plików przechowujący kody źródłowe",
+          "isCorrect": false,
+          "rationale": "System plików to warstwa systemu operacyjnego, niezależna od definicji dostawców w IaC."
+        }
+      ],
+      "hint": "To pomost łączący uniwersalny język narzędzia z konkretną technologią chmurową."
+    },
+    {
+      "question": "Główną zaletą stosowania modułów w Terraformie jest:",
+      "answerOptions": [
+        {
+          "text": "Możliwość wielokrotnego wykorzystania tego samego fragmentu konfiguracji",
+          "isCorrect": true,
+          "rationale": "Moduły pozwalają na enkapsulację sprawdzonych wzorców infrastrukturalnych i łatwe ich replikowanie w różnych projektach."
+        },
+        {
+          "text": "Zwiększenie bezpieczeństwa poprzez szyfrowanie dysków",
+          "isCorrect": false,
+          "rationale": "Szyfrowanie to cecha zasobów chmurowych, a moduły to jedynie sposób organizacji kodu."
+        },
+        {
+          "text": "Całkowite wyeliminowanie konieczności posiadania konta u dostawcy chmury",
+          "isCorrect": false,
+          "rationale": "Niezależnie od struktury kodu, do stworzenia zasobów zawsze wymagany jest dostęp do platformy dostawcy."
+        },
+        {
+          "text": "Zastąpienie języka HCL językiem Python",
+          "isCorrect": false,
+          "rationale": "Moduły Terraform są pisane w natywnym języku HCL (HashiCorp Configuration Language)."
+        }
+      ],
+      "hint": "Pomyśl o funkcjach lub bibliotekach w tradycyjnym programowaniu."
+    },
+    {
+      "question": "Koncepcja 'Policy as Code' pozwala na:",
+      "answerOptions": [
+        {
+          "text": "Pisanie regulaminu pracy administratorów w Notatniku",
+          "isCorrect": false,
+          "rationale": "Polityka jako kod musi być wykonywalna i automatycznie sprawdzalna przez maszyny."
+        },
+        {
+          "text": "Automatyczne egzekwowanie zasad (np. tylko regiony EU) przed utworzeniem zasobów",
+          "isCorrect": true,
+          "rationale": "Narzędzia Policy as Code sprawdzają, czy planowane zmiany są zgodne z wymogami bezpieczeństwa i prawnymi organizacji."
+        },
+        {
+          "text": "Generowanie faktur za zużycie energii w sposób programistyczny",
+          "isCorrect": false,
+          "rationale": "To domena systemów billingowych, a nie polityk zarządzania infrastrukturą."
+        },
+        {
+          "text": "Umożliwienie każdemu pracownikowi tworzenia dowolnych zasobów bez ograniczeń",
+          "isCorrect": false,
+          "rationale": "Policy as Code służy właśnie do nakładania inteligentnych ograniczeń, a nie do ich usuwania."
+        }
+      ],
+      "hint": "Chodzi o automatycznego strażnika, który pilnuje zgodności z prawem i normami firmy."
+    },
+    {
+      "question": "Rola SRE (Site Reliability Engineering) różni się od tradycyjnej roli administratora tym, że kładzie nacisk na:",
+      "answerOptions": [
+        {
+          "text": "Ręczne naprawianie każdego błędu na serwerze",
+          "isCorrect": false,
+          "rationale": "SRE dąży do wyeliminowania powtarzalnych, ręcznych prac (tzw. toil) na rzecz automatyzacji."
+        },
+        {
+          "text": "Inżynierskie podejście do operacji, automatyzację i skalowalność",
+          "isCorrect": true,
+          "rationale": "SRE traktuje operacje jak problem programistyczny, tworząc systemy, które same dbają o swoją niezawodność."
+        },
+        {
+          "text": "Ograniczenie dostępu programistów do środowisk testowych",
+          "isCorrect": false,
+          "rationale": "Filozofia SRE promuje współpracę i wspólne dbanie o dostępność usług, a nie izolację."
+        },
+        {
+          "text": "Wykonywanie codziennych kopii zapasowych na taśmy magnetyczne",
+          "isCorrect": false,
+          "rationale": "Choć backupy są ważne, nowoczesne podejście SRE opiera się na automatycznych systemach odzyskiwania w chmurze."
+        }
+      ],
+      "hint": "To ewolucja z 'administratora od klikania' w 'inżyniera od budowania systemów automatycznych'."
+    },
+    {
+      "question": "Które z poniższych urządzeń jest typowym przykładem 'Edge Node' (węzła krawędziowego)?",
+      "answerOptions": [
+        {
+          "text": "Inteligentna kamera AI analizująca obraz lokalnie",
+          "isCorrect": true,
+          "rationale": "Przetwarza dane bezpośrednio tam, gdzie są zbierane, co czyni ją węzłem Edge."
+        },
+        {
+          "text": "Główna baza danych w regionie AWS Frankfurt",
+          "isCorrect": false,
+          "rationale": "To zasób chmury centralnej, oddalony od źródła danych."
+        },
+        {
+          "text": "Serwerownia korporacyjna w piwnicy budynku",
+          "isCorrect": false,
+          "rationale": "Może być częścią chmury prywatnej lub warstwy Fog, ale nie jest urządzeniem krawędziowym bezpośrednio przy sensorze."
+        },
+        {
+          "text": "Światłowód łączący Europę z USA",
+          "isCorrect": false,
+          "rationale": "To infrastruktura transmisyjna, a nie jednostka obliczeniowa."
+        }
+      ],
+      "hint": "Szukaj urządzenia, które ma wbudowany sensor i od razu podejmuje decyzje."
+    },
+    {
+      "question": "W modelu Cloud–Fog–Edge, chmura (Cloud) jest zazwyczaj wykorzystywana do:",
+      "answerOptions": [
+        {
+          "text": "Natychmiastowego hamowania pojazdu autonomicznego",
+          "isCorrect": false,
+          "rationale": "Zbyt długi czas przesyłu danych mógłby doprowadzić do wypadku; to zadanie dla Edge."
+        },
+        {
+          "text": "Historycznej analityki danych z wielu miesięcy i uczenia modeli ML",
+          "isCorrect": true,
+          "rationale": "Chmura oferuje ogromną przestrzeń dyskową i moc obliczeniową idealną do analizy wielkich zbiorów danych."
+        },
+        {
+          "text": "Bezpośredniego odczytu temperatury z pojedynczego sensora",
+          "isCorrect": false,
+          "rationale": "Odczyt to zadanie fizycznego sensora na krawędzi; chmura otrzymuje już przetworzoną informację."
+        },
+        {
+          "text": "Lokalnego sterowania oświetleniem w jednym pokoju",
+          "isCorrect": false,
+          "rationale": "Wysyłanie danych do chmury tylko po to, by zapalić światło, jest nieefektywne; to domena Edge lub Fog."
+        }
+      ],
+      "hint": "Pomyśl o zadaniach, które wymagają 'dużego obrazu' i ogromnych zasobów, ale nie pośpiechu."
+    },
+    {
+      "question": "Problem 'przeciążenia łączy i warstwy I/O' w chmurze centralnej rozwiązuje się poprzez:",
+      "answerOptions": [
+        {
+          "text": "Zwiększenie liczby administratorów w centrum danych",
+          "isCorrect": false,
+          "rationale": "Liczba pracowników nie wpływa na fizyczną przepustowość łączy sieciowych."
+        },
+        {
+          "text": "Przetwarzanie i filtrację danych na brzegu (Edge/Fog)",
+          "isCorrect": true,
+          "rationale": "Dzięki wysyłaniu tylko istotnych informacji do chmury, drastycznie zmniejsza się zapotrzebowanie na transfer danych."
+        },
+        {
+          "text": "Używanie tylko czarno-białych obrazów w kamerach",
+          "isCorrect": false,
+          "rationale": "To prymitywna metoda redukcji danych, która nie adresuje systemowych problemów architektury chmury."
+        },
+        {
+          "text": "Wyłączanie Internetu w godzinach szczytu",
+          "isCorrect": false,
+          "rationale": "Jest to rozwiązanie niedopuszczalne w nowoczesnym świecie technologii i biznesu."
+        }
+      ],
+      "hint": "Zastanów się, jak wysłać mniej 'śmieciowych' danych przez sieć."
+    },
+    {
+      "question": "Co oznacza, że infrastruktura jest 'deklaratywna' w narzędziach takich jak Terraform?",
+      "answerOptions": [
+        {
+          "text": "Opisujemy kolejne kroki, które narzędzie musi wykonać (jak w przepisie)",
+          "isCorrect": false,
+          "rationale": "To opisuje podejście imperatywne (proceduralne), typowe dla tradycyjnych skryptów Bash."
+        },
+        {
+          "text": "Opisujemy stan docelowy, a narzędzie samo wypracowuje drogę do jego osiągnięcia",
+          "isCorrect": true,
+          "rationale": "To kluczowa cecha nowoczesnych narzędzi IaC; skupiamy się na tym 'co' chcemy mieć, a nie 'jak' to stworzyć."
+        },
+        {
+          "text": "Każda zmiana wymaga osobnego zatwierdzenia przez prezesa firmy",
+          "isCorrect": false,
+          "rationale": "Jest to polityka administracyjna, a nie techniczna cecha języka definicji infrastruktury."
+        },
+        {
+          "text": "Kod jest pisany w formie deklaracji miłości do technologii",
+          "isCorrect": false,
+          "rationale": "Termin 'deklaratywny' odnosi się do logiki sterowania, a nie emocjonalnego charakteru treści."
+        }
+      ],
+      "hint": "Różnica między powiedzeniem taksówkarzowi 'skręć w prawo, potem w lewo' a podaniem mu adresu docelowego."
+    },
+    {
+      "question": "Które z wymienionych jest wyzwaniem specyficznym dla Fog Computing w przemyśle?",
+      "answerOptions": [
+        {
+          "text": "Niestabilna sieć i trudne warunki środowiskowe",
+          "isCorrect": true,
+          "rationale": "Urządzenia Fog często pracują w fabrykach, kopalniach czy na zewnątrz, gdzie łączność może być przerywana."
+        },
+        {
+          "text": "Zbyt duża ilość darmowej energii elektrycznej",
+          "isCorrect": false,
+          "rationale": "Wręcz przeciwnie, ograniczona energia jest często wyzwaniem dla urządzeń rozproszonych."
+        },
+        {
+          "text": "Brak jakichkolwiek standardów bezpieczeństwa w chmurze",
+          "isCorrect": false,
+          "rationale": "Standardy istnieją i są bardzo rygorystyczne, wyzwaniem jest ich wdrożenie na rozproszonych urządzeniach."
+        },
+        {
+          "text": "Nadmiar wykwalifikowanych inżynierów SRE na rynku",
+          "isCorrect": false,
+          "rationale": "Na rynku brakuje specjalistów od nowoczesnych paradygmatów chmurowych i brzegowych."
+        }
+      ],
+      "hint": "Pomyśl o różnicy między czystym centrum danych a halą produkcyjną."
+    },
+    {
+      "question": "W kontekście IaC, termin 'Idempotentność' oznacza, że:",
+      "answerOptions": [
+        {
+          "text": "System ulega awarii po drugim uruchomieniu tego samego skryptu",
+          "isCorrect": false,
+          "rationale": "Idempotentność ma zapobiegać awariom i nieprzewidywalnym stanom."
+        },
+        {
+          "text": "Wykonanie operacji $n$ razy daje taki sam efekt jak wykonanie jej $1$ raz",
+          "isCorrect": true,
+          "rationale": "Jest to fundament stabilności IaC, pozwalający na bezpieczne ponawianie prób wdrożenia."
+        },
+        {
+          "text": "Każde uruchomienie skryptu tworzy nową kopię tych samych zasobów",
+          "isCorrect": false,
+          "rationale": "To byłoby zachowanie niepożądane, prowadzące do chaosu i nadmiarowych kosztów."
+        },
+        {
+          "text": "Kod automatycznie zmienia język z polskiego na angielski",
+          "isCorrect": false,
+          "rationale": "Tłumaczenie języka nie ma nic wspólnego z matematyczną cechą idempotentności operacji."
+        }
+      ],
+      "hint": "Wyobraź sobie przycisk windy – naciśnięcie go pięć razy nie sprawi, że winda przyjedzie pięć razy szybciej."
+    },
+    {
+      "question": "Jakie ryzyko niesie ze sobą ręczne zarządzanie infrastrukturą (tzw. 'klikanie w konsoli')?",
+      "answerOptions": [
+        {
+          "text": "Zbyt szybkie tempo wdrażania zmian",
+          "isCorrect": false,
+          "rationale": "Ręczne zmiany są zazwyczaj znacznie wolniejsze od automatycznych skryptów."
+        },
+        {
+          "text": "Trudność w audytowaniu zmian i brak powtarzalności",
+          "isCorrect": true,
+          "rationale": "Nie wiemy dokładnie kto, kiedy i co zmienił, co uniemożliwia łatwe odtworzenie systemu po awarii."
+        },
+        {
+          "text": "Zwiększona odporność na błędy ludzkie",
+          "isCorrect": false,
+          "rationale": "Ręczne działania są najbardziej podatne na błędy i pomyłki."
+        },
+        {
+          "text": "Nadmierna dokumentacja każdego kroku w kodzie",
+          "isCorrect": false,
+          "rationale": "Przy 'klikaniu' dokumentacji zazwyczaj brakuje, podczas gdy IaC 'dokumentuje się sam' poprzez kod."
+        }
+      ],
+      "hint": "Pomyśl o tym, jak trudno jest przypomnieć sobie wszystkie kroki wykonane rok temu w skomplikowanym interfejsie graficznym."
+    },
+    {
+      "question": "Czym różni się Terraform od OpenTofu?",
+      "answerOptions": [
+        {
+          "text": "OpenTofu jest płatną wersją Terraforma",
+          "isCorrect": false,
+          "rationale": "OpenTofu powstało jako otwarta (open-source) alternatywa po zmianie licencjonowania Terraforma."
+        },
+        {
+          "text": "Są to obecnie dwa rozwijające się niezależnie narzędzia o wspólnym rodowodzie",
+          "isCorrect": true,
+          "rationale": "OpenTofu jest 'forkiem' Terraforma, stworzonym przez społeczność w celu zachowania w pełni otwartego modelu rozwoju."
+        },
+        {
+          "text": "Terraform służy tylko do AWS, a OpenTofu tylko do Azure",
+          "isCorrect": false,
+          "rationale": "Oba narzędzia są uniwersalne i obsługują setki różnych dostawców chmury."
+        },
+        {
+          "text": "OpenTofu nie używa plików stanu (state files)",
+          "isCorrect": false,
+          "rationale": "Oba narzędzia opierają się na niemal identycznej logice zarządzania stanem infrastruktury."
+        }
+      ],
+      "hint": "Historia ta wiąże się ze zmianą licencji przez firmę HashiCorp i reakcją społeczności."
+    },
+    {
+      "question": "W architekturze Edge AI, trend 'AI na brzegu' oznacza, że:",
+      "answerOptions": [
+        {
+          "text": "Algorytmy sztucznej inteligencji są pisane przez roboty",
+          "isCorrect": false,
+          "rationale": "To wizja science-fiction, nie związana z architekturą systemów rozproszonych."
+        },
+        {
+          "text": "Modele uczenia maszynowego są uruchamiane lokalnie na urządzeniu końcowym",
+          "isCorrect": true,
+          "rationale": "Pozwala to na podejmowanie inteligentnych decyzji w milisekundach bez wysyłania danych do chmury."
+        },
+        {
+          "text": "Sztuczna Inteligencja zarządza cenami prądu w centrum danych",
+          "isCorrect": false,
+          "rationale": "Może to być zastosowanie AI, ale nie definiuje pojęcia Edge AI."
+        },
+        {
+          "text": "Dane do uczenia AI są zbierane wyłącznie z gazet i książek",
+          "isCorrect": false,
+          "rationale": "Modele Edge AI uczą się i działają na danych z sensorów w czasie rzeczywistym."
+        }
+      ],
+      "hint": "Zamiast wysyłać zdjęcie do Google, by rozpoznało twarz, Twój telefon robi to sam."
+    },
+    {
+      "question": "Dlaczego 'fizyczny dostęp do urządzeń' jest wymieniany jako wyzwanie w Edge Computing?",
+      "answerOptions": [
+        {
+          "text": "Ponieważ urządzenia są zbyt ciężkie, by je podnieść",
+          "isCorrect": false,
+          "rationale": "Waga urządzeń nie jest problemem technologicznym w skali systemowej."
+        },
+        {
+          "text": "Zwiększa to ryzyko kradzieży, sabotażu lub nieautoryzowanej modyfikacji sprzętu",
+          "isCorrect": true,
+          "rationale": "W przeciwieństwie do strzeżonego centrum danych, urządzenia Edge są rozproszone w miejscach publicznych."
+        },
+        {
+          "text": "Utrudnia to użytkownikom korzystanie z ekranów dotykowych",
+          "isCorrect": false,
+          "rationale": "Wyzwanie dotyczy bezpieczeństwa i serwisu, a nie wygody interfejsu."
+        },
+        {
+          "text": "Urządzenia Edge muszą być zawsze dotykane przez administratora, by działać",
+          "isCorrect": false,
+          "rationale": "Dążymy do pełnej zdalnej autonomii; fizyczny kontakt jest koniecznością tylko przy awariach sprzętowych."
+        }
+      ],
+      "hint": "Pomyśl o kamerze zamontowanej na latarni przy ulicy w porównaniu do serwera w zamkniętym bunkrze."
+    },
+    {
+      "question": "Które z poniższych stwierdzeń najlepiej opisuje przyszłość architektury chmurowej zgodnie z trendami?",
+      "answerOptions": [
+        {
+          "text": "Powrót do wielkich komputerów typu mainframe w biurach",
+          "isCorrect": false,
+          "rationale": "Trend idzie w stronę rozproszenia i abstrakcji, a nie centralizacji sprzętowej w biurach."
+        },
+        {
+          "text": "Dalsza abstrakcja (serverless), automatyzacja i rozwój Edge Computing",
+          "isCorrect": true,
+          "rationale": "Chmura staje się coraz bardziej 'przezroczysta' dla użytkownika, a obliczenia zbliżają się do źródeł danych."
+        },
+        {
+          "text": "Całkowite zrezygnowanie z Internetu na rzecz gołębi pocztowych",
+          "isCorrect": false,
+          "rationale": "To oczywiście absurdalne stwierdzenie, sprzeczne z jakimkolwiek rozwojem technologicznym."
+        },
+        {
+          "text": "Zastąpienie wszystkich baz danych arkuszami Excel",
+          "isCorrect": false,
+          "rationale": "Excel nie posiada cech niezbędnych do budowy skalowalnych systemów chmurowych (skalowalność, współbieżność)."
+        }
+      ],
+      "hint": "Szukaj opcji, która łączy wzrost inteligencji urządzeń z mniejszą potrzebą ręcznej konfiguracji."
+    },
+    {
+      "question": "Czym jest 'Cloud–Fog–Edge Continuum'?",
+      "answerOptions": [
+        {
+          "text": "Darmowym pakietem usług od Microsoft Azure",
+          "isCorrect": false,
+          "rationale": "To koncepcyjny model architektury, a nie nazwa produktu handlowego."
+        },
+        {
+          "text": "Zintegrowanym stosem technologicznym, w którym role są podzielone między różne poziomy przetwarzania",
+          "isCorrect": true,
+          "rationale": "Model ten zakłada płynne przechodzenie danych i zadań między krawędzią, warstwą pośrednią a centrum danych."
+        },
+        {
+          "text": "Grą komputerową symulującą pracę administratora sieci",
+          "isCorrect": false,
+          "rationale": "Termin ten dotyczy poważnych rozwiązań inżynierii systemów rozproszonych."
+        },
+        {
+          "text": "Rodzajem kabla o bardzo dużej przepustowości",
+          "isCorrect": false,
+          "rationale": "Continuum to koncepcja logiczna i architektoniczna, a nie element fizyczny."
+        }
+      ],
+      "hint": "Pomyśl o 'ciągłości' (continuum) działań od momentu powstania danych do ich głębokiej analizy."
+    },
+    {
+      "question": "Jaki jest cel stosowania aktualizacji OTA (Over-The-Air) w systemach Edge?",
+      "answerOptions": [
+        {
+          "text": "Zwiększenie wilgotności powietrza w serwerowni",
+          "isCorrect": false,
+          "rationale": "Skrót OTA nie ma związku z meteorologią ani warunkami klimatycznymi."
+        },
+        {
+          "text": "Zdalna i bezpieczna aktualizacja oprogramowania tysięcy rozproszonych urządzeń",
+          "isCorrect": true,
+          "rationale": "W modelu Edge ręczna aktualizacja każdego urządzenia byłaby fizycznie niemożliwa do wykonania."
+        },
+        {
+          "text": "Emitowanie muzyki przez głośniki urządzeń krawędziowych",
+          "isCorrect": false,
+          "rationale": "Choć technicznie możliwe, nie jest to główny cel mechanizmu aktualizacji systemowych."
+        },
+        {
+          "text": "Chłodzenie procesorów za pomocą fal radiowych",
+          "isCorrect": false,
+          "rationale": "Fale radiowe służą do transmisji danych, a nie do odprowadzania ciepła."
+        }
+      ],
+      "hint": "Pomyśl o tym, jak Twój smartfon lub samochód Tesla otrzymuje nowe funkcje bez wizyty w serwisie."
+    }
+  ],
+  "questionCount": 30,
+  "exportedAt": "2026-06-05T16:24:33.102Z",
+  "source": "Web Clipper for NotebookLM"
+}
