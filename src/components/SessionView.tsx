@@ -1,18 +1,18 @@
-import { useState, useMemo } from 'react';
-import { Flashcard } from './Flashcard';
-import { RadioQuiz } from './RadioQuiz';
-import type { Question, FlashcardState } from '../types';
-import { calculateSM2, initialSM2Data, type SM2Data } from '../lib/sm2';
-import { Button } from './Button';
-import { ArrowLeft, Undo2 } from 'lucide-react';
-import { shuffleArray } from '../lib/utils';
-import { ConfirmModal } from './ConfirmModal';
-import { useNavigate } from '@tanstack/react-router';
+import { useState, useMemo } from "react";
+import { Flashcard } from "./Flashcard";
+import { RadioQuiz } from "./RadioQuiz";
+import type { Question, FlashcardState } from "../types";
+import { calculateSM2, initialSM2Data, type SM2Data } from "../lib/sm2";
+import { Button } from "./Button";
+import { ArrowLeft, Undo2 } from "lucide-react";
+import { shuffleArray } from "../lib/utils";
+import { ConfirmModal } from "./ConfirmModal";
+import { useNavigate } from "@tanstack/react-router";
 
 type SessionViewProps = {
   questions: Question[];
-  mode: 'random' | 'smart';
-  dataSet: 'mobile' | 'cloud';
+  mode: "random" | "smart";
+  dataSet: "mobile" | "cloud";
   limit?: number;
   flashcardState: FlashcardState;
   setFlashcardState: React.Dispatch<React.SetStateAction<FlashcardState>>;
@@ -23,19 +23,30 @@ type HistoryEntry = {
   queue: Question[];
   currentIndex: number;
   cardsPassed: number;
+  gradedWrongCount: number; // Added to history
   flashcardStateEntry: { id: number; data: SM2Data | undefined };
+  grade: number; // Store the grade of the action
 };
 
-export function SessionView({ questions, mode, dataSet, limit, flashcardState, setFlashcardState, onNextSession }: SessionViewProps) {
+export function SessionView({
+  questions,
+  mode,
+  dataSet,
+  limit,
+  flashcardState,
+  setFlashcardState,
+  onNextSession,
+}: SessionViewProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPassed, setCardsPassed] = useState(0);
+  const [gradedWrongCount, setGradedWrongCount] = useState(0); // New state for incorrectly answered cards
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [isConfirmExitModalOpen, setIsConfirmExitModalOpen] = useState(false);
   const navigate = useNavigate();
 
   const initialQueue = useMemo(() => {
     let selected: Question[];
-    if (mode === 'random') {
+    if (mode === "random") {
       selected = shuffleArray(questions);
       if (limit) {
         selected = selected.slice(0, limit);
@@ -43,9 +54,16 @@ export function SessionView({ questions, mode, dataSet, limit, flashcardState, s
     } else {
       // eslint-disable-next-line react-hooks/purity
       const now = Date.now();
-      const newCards = questions.filter(q => !flashcardState[q.id]);
-      const reviewCards = questions.filter(q => flashcardState[q.id] && flashcardState[q.id].nextReviewDate <= now);
-      reviewCards.sort((a, b) => flashcardState[a.id].nextReviewDate - flashcardState[b.id].nextReviewDate);
+      const newCards = questions.filter((q) => !flashcardState[q.id]);
+      const reviewCards = questions.filter(
+        (q) =>
+          flashcardState[q.id] && flashcardState[q.id].nextReviewDate <= now,
+      );
+      reviewCards.sort(
+        (a, b) =>
+          flashcardState[a.id].nextReviewDate -
+          flashcardState[b.id].nextReviewDate,
+      );
       selected = [...reviewCards, ...newCards];
       if (limit) {
         selected = selected.slice(0, limit);
@@ -62,45 +80,52 @@ export function SessionView({ questions, mode, dataSet, limit, flashcardState, s
 
   const handleGrade = (grade: number) => {
     const currentQ = queue[currentIndex];
-    
-    setHistory(prev => [...prev, {
-      queue: [...queue],
-      currentIndex,
-      cardsPassed,
-      flashcardStateEntry: {
-        id: currentQ.id,
-        data: flashcardState[currentQ.id]
-      }
-    }]);
 
-    setFlashcardState(prev => {
+    setHistory((prev) => [
+      ...prev,
+      {
+        queue: [...queue],
+        currentIndex,
+        cardsPassed,
+        gradedWrongCount, // Save current wrong count
+        flashcardStateEntry: {
+          id: currentQ.id,
+          data: flashcardState[currentQ.id],
+        },
+        grade, // Save the grade of the current action
+      },
+    ]);
+
+    setFlashcardState((prev) => {
       const currentData = prev[currentQ.id] || initialSM2Data;
       return {
         ...prev,
-        [currentQ.id]: calculateSM2(currentData, grade)
+        [currentQ.id]: calculateSM2(currentData, grade),
       };
     });
 
     if (grade === 1) {
-      setQueue(prev => [...prev, currentQ]);
+      setQueue((prev) => [...prev, currentQ]);
+      setGradedWrongCount((prev) => prev + 1);
     } else {
-      setCardsPassed(prev => prev + 1);
+      setCardsPassed((prev) => prev + 1);
     }
 
-    setCurrentIndex(prev => prev + 1);
+    setCurrentIndex((prev) => prev + 1);
   };
 
   const handleUndo = () => {
     if (history.length === 0) return;
 
     const last = history[history.length - 1];
-    setHistory(prev => prev.slice(0, -1));
+    setHistory((prev) => prev.slice(0, -1));
 
     setQueue(last.queue);
     setCurrentIndex(last.currentIndex);
     setCardsPassed(last.cardsPassed);
-    
-    setFlashcardState(prev => {
+    setGradedWrongCount(last.gradedWrongCount); // Restore wrong count
+
+    setFlashcardState((prev) => {
       const newState = { ...prev };
       if (last.flashcardStateEntry.data === undefined) {
         delete newState[last.flashcardStateEntry.id];
@@ -113,11 +138,15 @@ export function SessionView({ questions, mode, dataSet, limit, flashcardState, s
 
   const handleConfirmExit = () => {
     setIsConfirmExitModalOpen(false);
-    navigate({ to: '/$dataSet', params: { dataSet } });
+    navigate({ to: "/$dataSet", params: { dataSet } });
   };
 
   const ExitButton = (
-    <Button variant="text" onClick={() => setIsConfirmExitModalOpen(true)} className="p-2 -ml-2">
+    <Button
+      variant="text"
+      onClick={() => setIsConfirmExitModalOpen(true)}
+      className="p-2 -ml-2"
+    >
       <ArrowLeft className="w-5 h-5 mr-2" />
       Zakończ
     </Button>
@@ -127,7 +156,9 @@ export function SessionView({ questions, mode, dataSet, limit, flashcardState, s
     return (
       <div className="text-center p-8">
         <h2 className="text-2xl mb-4">Brak fiszek do powtórki!</h2>
-        <p className="text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark mb-8">Wróć później lub rozpocznij nową sesję.</p>
+        <p className="text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark mb-8">
+          Wróć później lub rozpocznij nową sesję.
+        </p>
         {ExitButton}
       </div>
     );
@@ -137,21 +168,26 @@ export function SessionView({ questions, mode, dataSet, limit, flashcardState, s
     return (
       <div className="text-center p-8 bg-surfaceContainer-light dark:bg-surfaceContainer-dark rounded-3xl max-w-md mx-auto">
         <h2 className="text-3xl font-medium mb-4">Koniec sesji! 🎉</h2>
-        <p className="mb-8">Przerobiłeś poprawnie {cardsPassed} fiszek (łącznie {queue.length} odpowiedzi).</p>
+        <p className="mb-8">
+          Przerobiłeś poprawnie {cardsPassed} fiszek (łącznie {queue.length}{" "}
+          odpowiedzi).
+        </p>
         <div className="flex flex-col gap-4">
-          {onNextSession && (
-            <Button onClick={onNextSession}>
-              Przerób kolejne {limit ? limit : 'pytania'}
-            </Button>
-          )}
-          {history.length > 0 && (
-            <Button variant="outlined" onClick={handleUndo}>
-              <Undo2 className="w-5 h-5 mr-2" />
-              Cofnij ostatnią odpowiedź
-            </Button>
-          )}
-          {ExitButton}
-        </div>
+                              {onNextSession && (
+                                <Button onClick={onNextSession}>
+                                  Przerób kolejne {limit ? limit : 'pytania'}
+                                </Button>
+                              )}
+                              {history.length > 0 && (
+                                <Button variant="outlined" onClick={handleUndo}>
+                                  <Undo2 className="w-5 h-5 mr-2" />
+                                  Cofnij ostatnią odpowiedź
+                                </Button>
+                              )}
+                              {/* Replaced {ExitButton} with a direct navigation button for session completion screen */}
+                              <Button variant="filled" onClick={() => navigate({ to: '/$dataSet', params: { dataSet } })}>
+                                Zakończ i wróć do menu głównego
+                              </Button>        </div>
       </div>
     );
   }
@@ -169,27 +205,46 @@ export function SessionView({ questions, mode, dataSet, limit, flashcardState, s
               Cofnij
             </Button>
           )}
-          <div className="text-sm font-medium ml-2">
-            {currentIndex + 1} / {queue.length}
+          <div className="flex gap-2 text-sm font-medium ml-2">
+            <span className="text-red-500" title="Źle odpowiedziane">
+              {gradedWrongCount}
+            </span>
+            <span className="text-green-500" title="Dobrze odpowiedziane">
+              {cardsPassed}
+            </span>
+            <span
+              className="text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark"
+              title="Pozostało"
+            >
+              {queue.length - currentIndex}
+            </span>
           </div>
         </div>
       </div>
-      
+
       {/* Progress bar */}
       <div className="px-2">
         <div className="w-full bg-surfaceContainerHighest-light dark:bg-surfaceContainerHighest-dark h-2 rounded-full overflow-hidden">
-          <div 
+          <div
             className="bg-primary-500 h-full transition-all duration-300"
-            style={{ width: `${((currentIndex) / queue.length) * 100}%` }}
+            style={{ width: `${(currentIndex / queue.length) * 100}%` }}
           />
         </div>
       </div>
 
       <div className="pt-2">
-        {dataSet === 'cloud' ? (
-          <RadioQuiz key={currentIndex} question={currentQ} onGrade={handleGrade} />
+        {dataSet === "cloud" ? (
+          <RadioQuiz
+            key={currentIndex}
+            question={currentQ}
+            onGrade={handleGrade}
+          />
         ) : (
-          <Flashcard key={currentIndex} question={currentQ} onGrade={handleGrade} />
+          <Flashcard
+            key={currentIndex}
+            question={currentQ}
+            onGrade={handleGrade}
+          />
         )}
       </div>
 

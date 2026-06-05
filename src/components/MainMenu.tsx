@@ -3,14 +3,21 @@ import { BookOpen, RefreshCw, Layers, ArrowLeft } from "lucide-react";
 import { Link, useParams } from '@tanstack/react-router';
 import { useState } from "react";
 
+const dataSetDisplayNames: Record<string, string> = {
+  mobile: "Programowanie Mobilne",
+  cloud: "Przetwarzanie w Chmurze",
+};
+
 export function MainMenu() {
   const { dataSet } = useParams({ from: '/$dataSet/' });
   const [limit, setLimit] = useState<number>(10);
 
+  const displayName = dataSetDisplayNames[dataSet] || "Quiz";
+
   return (
     <div className="flex flex-col items-center justify-center min-h-[80vh] space-y-8 max-w-md mx-auto p-6">
       <div className="text-center space-y-2">
-        <h1 className="text-4xl font-semibold tracking-tight">Quiz</h1>
+        <h1 className="text-4xl font-semibold tracking-tight">{displayName}</h1>
         <p className="text-onSurfaceVariant-light dark:text-onSurfaceVariant-dark">
           Wybierz tryb nauki, aby rozpocząć
         </p>

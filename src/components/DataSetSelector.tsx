@@ -1,6 +1,6 @@
 import { Button } from "./Button";
 import { Book, Cloud, GitBranch } from "lucide-react";
-import { Link } from '@tanstack/react-router';
+import { Link } from "@tanstack/react-router";
 
 export function DataSetSelector() {
   return (
@@ -13,7 +13,7 @@ export function DataSetSelector() {
       </div>
 
       <div className="flex flex-col w-full space-y-4">
-        <Link to="/$dataSet" params={{ dataSet: 'mobile' }} className="w-full">
+        <Link to="/$dataSet" params={{ dataSet: "mobile" }} className="w-full">
           <Button
             variant="tonal"
             className="justify-start px-6 py-4 h-auto text-base w-full"
@@ -23,7 +23,7 @@ export function DataSetSelector() {
           </Button>
         </Link>
 
-        <Link to="/$dataSet" params={{ dataSet: 'cloud' }} className="w-full">
+        <Link to="/$dataSet" params={{ dataSet: "cloud" }} className="w-full">
           <Button
             variant="tonal"
             className="justify-start px-6 py-4 h-auto text-base w-full"
@@ -45,7 +45,7 @@ export function DataSetSelector() {
           className="justify-center px-6 py-4 h-auto text-base w-full"
         >
           <GitBranch className="mr-3 h-5 w-5" />
-          Zostaw gwiazdkę byku
+          Kot źrudłowy
         </Button>
       </a>
     </div>
